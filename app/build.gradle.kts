@@ -19,6 +19,9 @@ android {
     }
 
     buildTypes {
+        defaultConfig {
+            buildConfigField("String", "FW_CLIENT_ID", "\"f6d6ec1275217f178cdff91363825cb390e038c1168f64f6efa23cb95ec6b325\"")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
@@ -53,4 +56,20 @@ dependencies {
 
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+
+    // Glide
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+
+    // Firework Android SDK v2
+    val fireworkSdkVersion = "1.0.0"
+    implementation("com.github.loopsocial.firework_sdk_v2:fireworkSdk:$fireworkSdkVersion")
+
+    // Carousel feature
+    implementation("com.github.loopsocial.firework_sdk_v2:carouselFeature:$fireworkSdkVersion")
+
+    // Glide (optional)
+    implementation("com.github.loopsocial.firework_sdk_v2:glideImageLoader:$fireworkSdkVersion")
+
+    // Picasso (optional)
+    // implementation("com.github.loopsocial.firework_sdk_v2:picassoImageLoader:$fireworkSdkVersion")
 }

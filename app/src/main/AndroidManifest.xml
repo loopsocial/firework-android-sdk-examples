@@ -4,6 +4,7 @@
     package="tv.fw.example">
 
     <application
+        android:name=".ExampleApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -22,6 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- this is required by Firework Android SDK v2 to get advertising_id from Android Ad SDK -->
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
     </application>
 
 </manifest>

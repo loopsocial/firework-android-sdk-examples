@@ -6,13 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- All custom app attributes are optional here -->
+    <!-- You can remove all of them and let the widget use the default values -->
+    <!-- Or set them programmatically -->
+    <!-- Keep in mind if you use the Channel feedType then you must provide ChannelId too -->
+    <!-- Keep in mind if you use the Playlist feedType then you must provide ChannelId and PlaylistId too -->
+    <tv.fw.carousel.CarouselView
+        android:id="@+id/carouselView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:fw_carousel__adBadgeBackgroundColor="#FFFECD"
+        app:fw_carousel__adBadgeLabel="sponsored"
+        app:fw_carousel__adBadgeTextColor="#000000"
+        app:fw_carousel__backColor="@color/white"
+        app:fw_carousel__channelId="Your channel Id"
+        app:fw_carousel__columns="3"
+        app:fw_carousel__feedLayout="grid"
+        app:fw_carousel__feedResource="discovery"
+        app:fw_carousel__feedTextColor="@color/black"
+        app:fw_carousel__feedTextNumberOfLines="1"
+        app:fw_carousel__feedTextPadding="4dp"
+        app:fw_carousel__feedTextSize="12sp"
+        app:fw_carousel__itemSpacing="4dp"
+        app:fw_carousel__pageSize="25"
+        app:fw_carousel__playerMode="fit_mode"
+        app:fw_carousel__playlistId="Your playlist Id"
+        app:fw_carousel__showFeedTitle="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
