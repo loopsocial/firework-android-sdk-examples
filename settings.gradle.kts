@@ -16,5 +16,7 @@ dependencyResolutionManagement {
     }
 }
 
-// Example app
-include (":app")
+// Discovery feed sample app
+include (":discovery:app")
+// Shopping sample app
+include (":shopping:app")
