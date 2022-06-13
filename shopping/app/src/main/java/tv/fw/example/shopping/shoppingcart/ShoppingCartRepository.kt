@@ -1,4 +1,4 @@
-package tv.fw.example.shoppingcart
+package tv.fw.example.shopping.shoppingcart
 
 import tv.fw.common.video.Product
 import tv.fw.common.video.ProductUnit
@@ -11,8 +11,8 @@ object ShoppingCartRepository {
     private val orders = mutableListOf<Order>()
 
     fun setProducts(products: List<Product>) {
-        this.products.clear()
-        this.products.addAll(products)
+        ShoppingCartRepository.products.clear()
+        ShoppingCartRepository.products.addAll(products)
     }
 
     fun getOrders(): List<Order> {

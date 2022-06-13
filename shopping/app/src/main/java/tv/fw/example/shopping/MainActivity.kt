@@ -1,4 +1,4 @@
-package tv.fw.example
+package tv.fw.example.shopping
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,10 +11,10 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import tv.fw.common.video.Product
-import tv.fw.example.databinding.ActivityMainBinding
-import tv.fw.example.shoppingcart.ShoppingActivity
-import tv.fw.example.shoppingcart.ShoppingCartFragment
-import tv.fw.example.shoppingcart.ShoppingCartRepository
+import tv.fw.example.shopping.databinding.ActivityMainBinding
+import tv.fw.example.shopping.shoppingcart.ShoppingActivity
+import tv.fw.example.shopping.shoppingcart.ShoppingCartFragment
+import tv.fw.example.shopping.shoppingcart.ShoppingCartRepository
 import tv.fw.fireworksdk.FireworkSdk
 import tv.fw.shopping.EmbeddedCartFactory
 import tv.fw.shopping.ProductHydrator

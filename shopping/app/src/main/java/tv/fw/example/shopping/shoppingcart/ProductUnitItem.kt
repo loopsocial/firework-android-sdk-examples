@@ -1,4 +1,4 @@
-package tv.fw.example.shoppingcart
+package tv.fw.example.shopping.shoppingcart
 
 internal data class ProductUnitItem(
     val title: String,

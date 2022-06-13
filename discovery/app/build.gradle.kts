@@ -4,10 +4,12 @@ plugins {
 }
 
 android {
+    namespace = "tv.fw.example.discovery"
+
     compileSdk = 32
 
     defaultConfig {
-        applicationId = "tv.fw.example"
+        applicationId = "tv.fw.example.discovery"
 
         minSdk = 21
         targetSdk = 32
@@ -43,9 +45,9 @@ android {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.4.1")
-    implementation("com.google.android.material:material:1.6.0")
+    implementation("androidx.core:core-ktx:1.8.0")
+    implementation("androidx.appcompat:appcompat:1.4.2")
+    implementation("com.google.android.material:material:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     testImplementation("junit:junit:4.13.2")
@@ -61,7 +63,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.13.2")
 
     // Firework Android SDK v2
-    val fireworkSdkVersion = "1.0.0"
+    val fireworkSdkVersion = "1.2.0-rc.1"
     implementation("com.github.loopsocial.firework_sdk_v2:fireworkSdk:$fireworkSdkVersion")
 
     // Carousel feature
@@ -72,4 +74,8 @@ dependencies {
 
     // Picasso (optional)
     // implementation("com.github.loopsocial.firework_sdk_v2:picassoImageLoader:$fireworkSdkVersion")
+
+    // Required to avoid crash on Android 12 API 31
+    // https://stackoverflow.com/a/69152986/2359762
+    implementation("androidx.work:work-runtime-ktx:2.7.1")
 }

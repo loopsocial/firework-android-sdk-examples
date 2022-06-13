@@ -1,10 +1,10 @@
-package tv.fw.example.shoppingcart
+package tv.fw.example.shopping.shoppingcart
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import tv.fw.example.databinding.ProductUnitItemBinding
+import tv.fw.example.shopping.databinding.ProductUnitItemBinding
 import tv.fw.imageloading.ImageLoader
 
 internal class ShoppingCartAdapter(

@@ -1,11 +1,11 @@
-package tv.fw.example.shoppingcart
+package tv.fw.example.shopping.shoppingcart
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import tv.fw.example.R
+import tv.fw.example.shopping.R
 
 class ShoppingActivity : AppCompatActivity(), ShoppingCartListener {
 

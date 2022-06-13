@@ -1,4 +1,4 @@
-package tv.fw.example
+package tv.fw.example.discovery
 
 import android.graphics.Color
 import android.os.Bundle
@@ -9,7 +9,7 @@ import tv.fw.common.AdBadgeTextType
 import tv.fw.common.FeedLayout
 import tv.fw.common.FeedResource
 import tv.fw.common.PlayerMode
-import tv.fw.example.databinding.ActivityMainBinding
+import tv.fw.example.discovery.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,7 +1,7 @@
-package tv.fw.example
+package tv.fw.example.shopping
 
 import android.app.Application
-import tv.fw.example.BuildConfig.FW_CLIENT_ID
+import tv.fw.example.shopping.BuildConfig.FW_CLIENT_ID
 import tv.fw.fireworksdk.FireworkSdk
 import tv.fw.fireworksdk.FireworkSdkConfig
 import tv.fw.imageloading.glide.GlideImageLoaderFactory
