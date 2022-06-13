@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".discovery.MainActivity">
+    tools:context=".MainActivity">
 
     <!-- All custom app attributes are optional here -->
     <!-- You can remove all of them and let the widget use the default values -->
@@ -18,6 +18,7 @@
         app:fw_adBadgeBackgroundColor="#FFFECD"
         app:fw_adBadgeLabel="sponsored"
         app:fw_adBadgeTextColor="#000000"
+        app:fw_autoPlayOnComplete="true"
         app:fw_backColor="@color/white"
         app:fw_channelId="Your channel Id"
         app:fw_columns="3"
@@ -28,9 +29,14 @@
         app:fw_feedTextPadding="4dp"
         app:fw_feedTextSize="12sp"
         app:fw_itemSpacing="4dp"
+        app:fw_muteOnLaunch="true"
         app:fw_pageSize="25"
         app:fw_playerMode="fit_mode"
         app:fw_playlistId="Your playlist Id"
-        app:fw_showFeedTitle="true" />
+        app:fw_showFeedTitle="true"
+        app:fw_showFireworkLogo="true"
+        app:fw_showMuteButton="true"
+        app:fw_showPlayPauseButton="true"
+        app:fw_showShareButton="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
