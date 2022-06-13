@@ -63,7 +63,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.13.2")
 
     // Firework Android SDK v2
-    val fireworkSdkVersion = "1.2.0-rc.1"
+    val fireworkSdkVersion = "1.2.0-SNAPSHOT"
     implementation("com.github.loopsocial.firework_sdk_v2:fireworkSdk:$fireworkSdkVersion")
 
     // Carousel feature
