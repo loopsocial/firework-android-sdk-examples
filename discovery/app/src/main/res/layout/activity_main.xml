@@ -30,7 +30,6 @@
         app:fw_feedTextSize="12sp"
         app:fw_itemSpacing="4dp"
         app:fw_muteOnLaunch="true"
-        app:fw_pageSize="25"
         app:fw_playerMode="fit_mode"
         app:fw_playlistId="Your playlist Id"
         app:fw_showFeedTitle="true"

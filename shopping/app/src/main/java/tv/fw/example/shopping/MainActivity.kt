@@ -10,7 +10,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import tv.fw.common.video.Product
+import tv.fw.common.product.Product
 import tv.fw.example.shopping.databinding.ActivityMainBinding
 import tv.fw.example.shopping.shoppingcart.ShoppingActivity
 import tv.fw.example.shopping.shoppingcart.ShoppingCartFragment
@@ -67,10 +67,8 @@ class MainActivity : AppCompatActivity() {
         )
         FireworkSdk.shopping.setOnProductActionListener(
             object : Shopping.OnProductActionListener {
-                override fun onProductHydration(
-                    products: List<Product>,
-                    hydrator: ProductHydrator,
-                ) {
+
+                override fun onProductHydration(products: List<Product>, hydrator: ProductHydrator) {
                     ShoppingCartRepository.setProducts(products)
                     uiScope.launch {
                         delay(LONG_OPERATION_DELAY)
@@ -82,11 +80,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
 
-                override fun onDisplayProductInfo(
-                    productId: String,
-                    unitId: String,
-                    productWebUrl: String?,
-                ): Boolean {
+                override fun onDisplayProductInfo(productId: String, unitId: String, productWebUrl: String?): Boolean {
                     Toast.makeText(
                         this@MainActivity,
                         "Host App: Product Url: $productWebUrl",
@@ -116,10 +110,12 @@ class MainActivity : AppCompatActivity() {
                             hydratedOptions["Box color"] = "Red"
                             hydratedOptions.putAll(unit.options)
                             options(options = hydratedOptions)
+                            this
                         }
                     }
                 }
                 attributes(attributes)
+                this
             }
         }
     }

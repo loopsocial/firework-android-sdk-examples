@@ -6,13 +6,13 @@ plugins {
 android {
     namespace = "tv.fw.example.shopping"
 
-    compileSdk = 32
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "tv.fw.example.shopping"
 
         minSdk = 21
-        targetSdk = 32
+        targetSdk = 33
 
         versionCode = 1
         versionName = "1.0.0"
@@ -48,31 +48,28 @@ android {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.8.0")
-    implementation("androidx.appcompat:appcompat:1.4.2")
+    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.appcompat:appcompat:1.5.1")
     implementation("com.google.android.material:material:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.6.10"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
 
     // Glide
     implementation("com.github.bumptech.glide:glide:4.13.2")
 
     // Firework Android SDK v2
-    val fireworkSdkVersion = "1.2.0-SNAPSHOT"
+    val fireworkSdkVersion = "1.2.0-SNAPSHOT.7"
     implementation("com.github.loopsocial.firework_sdk_v2:fireworkSdk:$fireworkSdkVersion")
 
-    // Carousel feature
-    implementation("com.github.loopsocial.firework_sdk_v2:carouselFeature:$fireworkSdkVersion")
-
-    // Glide (optional)
+    // Glide (optional image loader)
     implementation("com.github.loopsocial.firework_sdk_v2:glideImageLoader:$fireworkSdkVersion")
 
-    // Picasso (optional)
-    implementation("com.github.loopsocial.firework_sdk_v2:picassoImageLoader:$fireworkSdkVersion")
+    // Picasso (optional image loader)
+    // implementation("com.github.loopsocial.firework_sdk_v2:picassoImageLoader:$fireworkSdkVersion")
 
     // Required to avoid crash on Android 12 API 31
     // https://stackoverflow.com/a/69152986/2359762
