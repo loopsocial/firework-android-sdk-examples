@@ -28,7 +28,6 @@
         app:fw_feedTextPadding="4dp"
         app:fw_feedTextSize="12sp"
         app:fw_itemSpacing="4dp"
-        app:fw_pageSize="25"
         app:fw_playerMode="fit_mode"
         app:fw_playlistId="gk1qx5"
         app:fw_showFeedTitle="true" />

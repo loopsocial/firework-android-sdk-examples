@@ -6,10 +6,10 @@ import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import tv.fw.carousel.FeedItemClickListener
 import tv.fw.carousel.options.ViewOptions
-import tv.fw.common.AdBadgeTextType
-import tv.fw.common.FeedLayout
-import tv.fw.common.FeedResource
 import tv.fw.common.PlayerMode
+import tv.fw.common.ad.AdBadgeTextType
+import tv.fw.common.feed.FeedLayout
+import tv.fw.common.feed.FeedResource
 import tv.fw.example.discovery.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -45,7 +45,6 @@ class MainActivity : AppCompatActivity() {
             .feedTextSize(12)
             .itemSpacing(48)
             .muteOnLaunch(true)
-            .pageSize(30)
             .playerMode(PlayerMode.FIT_MODE)
             .roundedCorner(true)
             .roundedCornerRadius(2.0F)
@@ -62,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
         carouselView.init()
 
-        carouselView.setOnFeedItemClickListener (object : FeedItemClickListener{
+        carouselView.setOnFeedItemClickListener(object : FeedItemClickListener {
             override fun onItemClicked(feedItem: FeedItemClickListener.FeedItem) {
                 // maybe trigger some analytics event
             }
