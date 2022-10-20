@@ -4,31 +4,32 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
-import tv.fw.carousel.FeedItemClickListener
-import tv.fw.carousel.options.ViewOptions
 import tv.fw.common.PlayerMode
 import tv.fw.common.ad.AdBadgeTextType
 import tv.fw.common.feed.FeedLayout
 import tv.fw.common.feed.FeedResource
 import tv.fw.example.discovery.databinding.ActivityMainBinding
+import tv.fw.videofeed.FeedItemClickListener
+import tv.fw.videofeed.options.ViewOptions
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
-        setupCarouselView()
+        setupVideoFeedView()
     }
 
-    private fun setupCarouselView() {
-        val carouselView = binding.carouselView
+    private fun setupVideoFeedView() {
+        val videoFeedView = binding.videoFeedView
 
-        // You can create a view options with your custom parameters or ignore this step if you already have them in your layout
-        // Also creating ViewOptions is not mandatory and you can let the widget use its default values
+        // You ignore this step if you already have the options in your layout,
+        // Or create a ViewOptions object with your custom parameters.
+        // Creating ViewOptions or passing all options is not mandatory and the widget use its default values
         val viewOptions = ViewOptions.Builder()
             .adBadgeBackColor(Color.CYAN)
             .adBadgeLabel(AdBadgeTextType.SPONSORED)
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             .columnCount(3)
             .feedBackgroundColor(Color.GRAY)
             .feedLayout(FeedLayout.GRID)
-            .feedResource(FeedResource.Discovery) // It also can be Channel and Playlist
+            .feedResource(FeedResource.Discovery) // Check Channel or Playlist Example apps for other feed sources
             .feedTextColor(Color.WHITE)
             .feedTextNumberOfLines(1)
             .feedTextPadding(12)
@@ -56,12 +57,12 @@ class MainActivity : AppCompatActivity() {
             .supportBackwardAds(true)
             .build()
 
-        // Uncomment this line if you prefer setting the Carousel view options in code instead of XML layout
-        // carouselView.init(viewOptions)
+        // Uncomment this line if you prefer setting the videoFeedView options in code instead of XML layout
+        // videoFeedView.init(viewOptions)
 
-        carouselView.init()
+        videoFeedView.init(viewOptions)
 
-        carouselView.setOnFeedItemClickListener(object : FeedItemClickListener {
+        videoFeedView.setOnFeedItemClickListener(object : FeedItemClickListener {
             override fun onItemClicked(feedItem: FeedItemClickListener.FeedItem) {
                 // maybe trigger some analytics event
             }

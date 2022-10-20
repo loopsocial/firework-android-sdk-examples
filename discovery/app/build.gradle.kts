@@ -63,7 +63,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.13.2")
 
     // Firework Android SDK v2
-    val fireworkSdkVersion = "1.2.0-SNAPSHOT.7"
+    val fireworkSdkVersion = "1.2.0-SNAPSHOT.16"
     implementation("com.github.loopsocial.firework_sdk_v2:fireworkSdk:$fireworkSdkVersion")
 
     // Glide (optional image loader)
