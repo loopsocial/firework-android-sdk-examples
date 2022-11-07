@@ -1,41 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- All custom app attributes are optional here -->
-    <!-- You can remove all of them and let the widget use the default values -->
-    <!-- Or set them programmatically -->
-    <!-- Keep in mind if you use the Channel feedType then you must provide ChannelId too -->
-    <!-- Keep in mind if you use the Playlist feedType then you must provide ChannelId and PlaylistId too -->
     <tv.fw.videofeed.VideoFeedView
         android:id="@+id/videoFeedView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:fw_adBadgeBackgroundColor="#FFFECD"
-        app:fw_adBadgeLabel="sponsored"
-        app:fw_adBadgeTextColor="#000000"
-        app:fw_autoPlayOnComplete="true"
-        app:fw_backColor="@color/white"
-        app:fw_channelId="Your channel Id"
-        app:fw_columns="3"
-        app:fw_feedLayout="grid"
-        app:fw_feedResource="discovery"
-        app:fw_feedTextColor="@color/black"
-        app:fw_feedTextNumberOfLines="1"
-        app:fw_feedTextPadding="4dp"
-        app:fw_feedTextSize="12sp"
-        app:fw_itemSpacing="4dp"
-        app:fw_muteOnLaunch="true"
-        app:fw_playerMode="fit_mode"
-        app:fw_playlistId="Your playlist Id"
-        app:fw_showFeedTitle="true"
-        app:fw_showFireworkLogo="true"
-        app:fw_showMuteButton="true"
-        app:fw_showPlayPauseButton="true"
-        app:fw_showShareButton="true" />
+        android:layout_height="match_parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

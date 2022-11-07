@@ -1,6 +1,7 @@
 package tv.fw.example.discovery
 
 import android.app.Application
+import android.util.Log
 import tv.fw.example.discovery.BuildConfig.FW_CLIENT_ID
 import tv.fw.fireworksdk.FireworkSdk
 import tv.fw.fireworksdk.FireworkSdkConfig
@@ -20,6 +21,14 @@ class ExampleApplication : Application() {
             .build()
 
         // initialize Firework Android SDK v2
-        FireworkSdk.init(config)
+        FireworkSdk.init(
+            fireworkSdkConfig = config,
+            onSuccess = {
+                Log.i("FireworkSDK", "Firework SDK initialized successfully")
+            },
+            onError = { initError ->
+                Log.e("FireworkSDK", "Error initializing Firework - $initError")
+            }
+        )
     }
 }
