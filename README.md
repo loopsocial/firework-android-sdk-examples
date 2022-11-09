@@ -8,6 +8,7 @@ This repo holds the Firework Android SDK example applications.
 * [Channel](#channel-example-app)
 * [Playlist](#playlist-example-app)
 * [Shopping](#shopping-example-app)
+* [Single-Host Livestream](#single-host-livestream-example-app)
 
 **Read more about the integration here** https://docs.firework.tv/
 
@@ -58,6 +59,18 @@ In this example app, the `VideoFeedView` is initialized for showing a playlist f
 | Playlist Feed                                     | Player screen                                      |
 | -------------------------------------------------- | -------------------------------------------------- |
 | ![playlist Screenshot](playlist/Screenshot1.png) | ![playlist Screenshot](playlist/Screenshot2.png) |
+
+---
+
+## Single-Host Livestream example app
+
+In this example app, the `VideoFeedView` is initialized for showing single-host Livestreams.
+
+[Single-Host Livestream example app](single_host_livestream)
+
+| Livestream Feed                                              | Livestream Player                                            | Livestream Features                                          |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![single host livestream Screenshot](single_host_livestream/Screenshot1.png) | ![single host livestream Screenshot](single_host_livestream/Screenshot2.png) | ![single host livestream Screenshot](single_host_livestream/Screenshot3.png) |
 
 ---
 
