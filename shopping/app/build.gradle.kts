@@ -16,20 +16,15 @@ android {
 
         versionCode = 1
         versionName = "1.0.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         defaultConfig {
-            buildConfigField("String",
-                "FW_CLIENT_ID",
-                "\"f6d6ec1275217f178cdff91363825cb390e038c1168f64f6efa23cb95ec6b325\"")
+            buildConfigField("String", "FW_CLIENT_ID", "\"f6d6ec1275217f178cdff91363825cb390e038c1168f64f6efa23cb95ec6b325\"")
         }
         release {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro")
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
 
@@ -48,21 +43,18 @@ android {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.5.1")
-    implementation("com.google.android.material:material:1.6.1")
+    implementation("com.google.android.material:material:1.7.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.6.10"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
-
     // Glide
     implementation("com.github.bumptech.glide:glide:4.13.2")
 
-    // Firework Android SDK v2
-    val fireworkSdkVersion = "1.2.0-SNAPSHOT.7"
+    // Firework SDK
+    val fireworkSdkVersion = "6.0.0-beta.1"
     implementation("com.github.loopsocial.firework_sdk_v2:fireworkSdk:$fireworkSdkVersion")
 
     // Glide (optional image loader)
@@ -70,8 +62,4 @@ dependencies {
 
     // Picasso (optional image loader)
     // implementation("com.github.loopsocial.firework_sdk_v2:picassoImageLoader:$fireworkSdkVersion")
-
-    // Required to avoid crash on Android 12 API 31
-    // https://stackoverflow.com/a/69152986/2359762
-    implementation("androidx.work:work-runtime-ktx:2.7.1")
 }

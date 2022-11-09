@@ -1,7 +1,7 @@
 package tv.fw.example.shopping.shoppingcart
 
-import tv.fw.common.video.Product
-import tv.fw.common.video.ProductUnit
+import tv.fw.common.product.Product
+import tv.fw.common.product.ProductUnit
 
 /**
  * Dummy repository class that emulates adding items to the shopping cart
@@ -22,7 +22,7 @@ object ShoppingCartRepository {
 
     fun add(productId: String, unitId: String) {
         val product = products.firstOrNull { it.id == productId } ?: return
-        val unit = product.units?.firstOrNull { it.id == unitId } ?: return
+        val unit = product.units.firstOrNull { it.id == unitId } ?: return
         orders.add(Order(product = product, unit = unit))
     }
 

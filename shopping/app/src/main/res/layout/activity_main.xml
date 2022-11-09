@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
-    <!-- All custom app attributes are optional here -->
-    <!-- You can remove all of them and let the widget use the default values -->
-    <!-- Or set them programmatically -->
-    <!-- Keep in mind if you use the Channel feedType then you must provide ChannelId too -->
-    <!-- Keep in mind if you use the Playlist feedType then you must provide ChannelId and PlaylistId too -->
-    <tv.fw.carousel.CarouselView
-        android:id="@+id/carouselView"
+    <tv.fw.videofeed.VideoFeedView
+        android:id="@+id/videoFeedView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:fw_adBadgeBackgroundColor="#FFFECD"
@@ -23,10 +18,10 @@
         app:fw_columns="3"
         app:fw_feedLayout="grid"
         app:fw_feedResource="playlist"
-        app:fw_feedTextColor="@color/black"
-        app:fw_feedTextNumberOfLines="1"
-        app:fw_feedTextPadding="4dp"
-        app:fw_feedTextSize="12sp"
+        app:fw_feedTitleTextColor="@color/black"
+        app:fw_feedTitleTextNumberOfLines="1"
+        app:fw_feedTitleTextPadding="4dp"
+        app:fw_feedTitleTextSize="12sp"
         app:fw_itemSpacing="4dp"
         app:fw_playerMode="fit_mode"
         app:fw_playlistId="gk1qx5"

@@ -10,6 +10,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import tv.fw.common.product.CurrencyCode
 import tv.fw.common.product.Product
 import tv.fw.example.shopping.databinding.ActivityMainBinding
 import tv.fw.example.shopping.shoppingcart.ShoppingActivity
@@ -19,10 +20,14 @@ import tv.fw.fireworksdk.FireworkSdk
 import tv.fw.shopping.EmbeddedCartFactory
 import tv.fw.shopping.ProductHydrator
 import tv.fw.shopping.Shopping
+import tv.fw.videofeed.VideoFeedView
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
+    private val videoFeedView: VideoFeedView
+        get() = binding.videoFeedView
 
     private val uiScope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
 
@@ -36,9 +41,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
-        val carouselView = binding.carouselView
-        carouselView.init()
+
+        initVideoFeedView()
+
         setupShopping()
+    }
+
+    private fun initVideoFeedView() {
+        videoFeedView.init()
     }
 
     private fun setupShopping() {
@@ -72,8 +82,8 @@ class MainActivity : AppCompatActivity() {
                     ShoppingCartRepository.setProducts(products)
                     uiScope.launch {
                         delay(LONG_OPERATION_DELAY)
-                        products.forEach { product ->
-                            hydrateProduct(product, hydrator)
+                        products.forEachIndexed { i, product ->
+                            hydrateProduct(product, hydrator, i)
                         }
                         val hydratedProducts = hydrator.completeHydration()
                         ShoppingCartRepository.setProducts(hydratedProducts)
@@ -92,30 +102,21 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
-    private fun hydrateProduct(product: Product, hydrator: ProductHydrator) {
-        product.id?.let { productId ->
-            hydrator.hydrate(productId) {
-                name(name = "new product name")
+    private fun hydrateProduct(product: Product, hydrator: ProductHydrator, position: Int) {
+        product.id?.let { id ->
+            hydrator.hydrate(id) {
+                name("new product name")
                 description("This is modified product description from the host app.")
-                isAvailable(isAvailable = true)
-                val attributes = product.attributeNames.toMutableList()
-                attributes.add("Box color")
-                product.units?.forEach { unit ->
+                product.units.forEach { unit ->
                     unit.id?.let { variantId ->
                         variant(variantId) {
-                            currency("EUR")
+                            currency(CurrencyCode.EUR)
                             price(price = 23.04)
-                            name(name = "New variant")
-                            val hydratedOptions = mutableMapOf<String?, String?>()
-                            hydratedOptions["Box color"] = "Red"
-                            hydratedOptions.putAll(unit.options)
-                            options(options = hydratedOptions)
-                            this
+                            name("New variant")
                         }
                     }
                 }
-                attributes(attributes)
-                this
+                isAvailable(position == 2)
             }
         }
     }

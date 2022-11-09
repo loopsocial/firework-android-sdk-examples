@@ -7,9 +7,9 @@ This repo holds the Firework Android SDK example applications.
 * [Discovery](#discovery-example-app)
 * [Channel](#channel-example-app)
 * [Playlist](#playlist-example-app)
-* [Shopping](#shopping-example-app)
 * [Single-Host Livestream](#single-host-livestream-example-app)
 * [Multi-Host Livestream](#multi-host-livestream-example-app)
+* [Shopping](#multi-host-livestream-example-app)
 
 **Read more about the integration here** https://docs.firework.tv/
 
