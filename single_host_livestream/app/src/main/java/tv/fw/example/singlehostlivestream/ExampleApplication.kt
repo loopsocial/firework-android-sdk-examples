@@ -19,7 +19,8 @@ class ExampleApplication : Application() {
             .clientId(FW_CLIENT_ID) // Client OAUTH Id
             .userId("example app user ID") // User Id in your eco-system
             .imageLoader(GlideImageLoaderFactory.createInstance()) // glide, picasso, or your implementation
-            .addLivestreamPlayerInitializer(LivestreamPlayerInitializer()) // Single-Host Livestream and Multi-Host Livestream can be used together, and single-host can be used as a fallback for missing multi-host
+            // Single-Host and Multi-Host Livestreams can be used together, and single-host will be used as a fallback if multi-host is missing
+            .addLivestreamPlayerInitializer(LivestreamPlayerInitializer())
             .build()
 
         // initialize Firework Android SDK v2

@@ -3,6 +3,8 @@ plugins {
     id("com.android.application") version "7.3.1" apply false
     id("com.android.library") version "7.3.1" apply false
     id("org.jetbrains.kotlin.android") version "1.6.10" apply false
+    id("org.jlleitschuh.gradle.ktlint") version "10.3.0" apply false
+    id("io.gitlab.arturbosch.detekt") version "1.20.0" apply false
 }
 
 task<Delete>("clean") {
