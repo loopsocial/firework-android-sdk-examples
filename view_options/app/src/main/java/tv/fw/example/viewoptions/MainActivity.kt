@@ -1,5 +1,6 @@
 package tv.fw.example.viewoptions
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
@@ -32,9 +33,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
+        setupDetails()
+
         initVideoFeedView()
 
         setupVideoFeedViewCallbacks()
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun setupDetails() {
+        binding.details.source.text = "Discovery"
+        binding.details.channel.text = "N/A"
+        binding.details.playlist.text = "N/A"
     }
 
     private fun initVideoFeedView() {
@@ -64,7 +74,7 @@ class MainActivity : AppCompatActivity() {
             .ctaButtonTextColor(ContextCompat.getColor(this, R.color.white))
             .ctaButtonTypeface(ResourcesCompat.getFont(this, R.font.roboto_black)!!)
             .feedLayout(FeedLayout.GRID)
-            .feedResource(FeedResource.Discovery) // Check Channel or Playlist Example apps for other feed sources
+            .feedResource(FeedResource.Discovery)
             .feedTitleBackgroundColor(ContextCompat.getColor(this, R.color.purple_transparent))
             .feedTitlePosition(FeedTitlePosition.NESTED)
             .feedTitleTextColor(ContextCompat.getColor(this, R.color.black))

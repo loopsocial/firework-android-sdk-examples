@@ -9,22 +9,28 @@
     <tv.fw.videofeed.VideoFeedView
         android:id="@+id/videoFeedView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:fw_adBadgeBackgroundColor="#FFFECD"
         app:fw_adBadgeLabel="sponsored"
         app:fw_adBadgeTextColor="#000000"
         app:fw_backColor="@color/white"
-        app:fw_channelId="7RXwK8k"
         app:fw_columns="3"
         app:fw_feedLayout="grid"
-        app:fw_feedResource="playlist"
         app:fw_feedTitleTextColor="@color/black"
         app:fw_feedTitleTextNumberOfLines="1"
         app:fw_feedTitleTextPadding="4dp"
         app:fw_feedTitleTextSize="12sp"
         app:fw_itemSpacing="4dp"
         app:fw_playerMode="fit_mode"
-        app:fw_playlistId="gk1qx5"
-        app:fw_showFeedTitle="true" />
+        app:fw_showFeedTitle="true"
+        app:layout_constraintBottom_toTopOf="@id/details"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/details"
+        layout="@layout/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

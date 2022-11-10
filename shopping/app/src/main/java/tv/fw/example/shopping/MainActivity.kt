@@ -1,5 +1,6 @@
 package tv.fw.example.shopping
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Toast
@@ -10,8 +11,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import tv.fw.common.feed.FeedResource
 import tv.fw.common.product.CurrencyCode
 import tv.fw.common.product.Product
+import tv.fw.example.shopping.BuildConfig.FW_CHANNEL_ID
+import tv.fw.example.shopping.BuildConfig.FW_PLAYLIST_ID
 import tv.fw.example.shopping.databinding.ActivityMainBinding
 import tv.fw.example.shopping.shoppingcart.ShoppingActivity
 import tv.fw.example.shopping.shoppingcart.ShoppingCartFragment
@@ -21,6 +25,7 @@ import tv.fw.shopping.EmbeddedCartFactory
 import tv.fw.shopping.ProductHydrator
 import tv.fw.shopping.Shopping
 import tv.fw.videofeed.VideoFeedView
+import tv.fw.videofeed.options.ViewOptions
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,13 +47,28 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
+        setupDetails()
+
         initVideoFeedView()
 
         setupShopping()
     }
 
+    @SuppressLint("SetTextI18n")
+    private fun setupDetails() {
+        binding.details.source.text = "Playlist"
+        binding.details.channel.text = FW_CHANNEL_ID
+        binding.details.playlist.text = FW_PLAYLIST_ID
+    }
+
     private fun initVideoFeedView() {
-        videoFeedView.init()
+        val playlistFeedResource = FeedResource.Playlist(channelId = FW_CHANNEL_ID, playlistId = FW_PLAYLIST_ID)
+
+        val viewOptions = ViewOptions.Builder()
+            .feedResource(playlistFeedResource)
+            .build()
+
+        videoFeedView.init(viewOptions)
     }
 
     private fun setupShopping() {
@@ -63,7 +83,7 @@ class MainActivity : AppCompatActivity() {
                         val status = Shopping.AddToCartStatus.Success(
                             productId = productId,
                             unitId = unitId,
-                            numberOfItemsInCart = 1
+                            numberOfItemsInCart = 1,
                         )
                         FireworkSdk.shopping.setAddToCartStatus(status)
                         ShoppingCartRepository.add(productId, unitId)
