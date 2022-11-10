@@ -1,5 +1,6 @@
 package tv.fw.example.shopping.shoppingcart
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +13,7 @@ internal class ShoppingCartAdapter(
 ) : RecyclerView.Adapter<ShoppingCartAdapter.ViewHolder>() {
     private val items = mutableListOf<ProductUnitItem>()
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setData(data: List<ProductUnitItem>) {
         items.clear()
         items.addAll(data)

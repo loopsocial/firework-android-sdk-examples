@@ -60,9 +60,11 @@ class MainActivity : AppCompatActivity() {
                     uiScope.launch {
                         FireworkSdk.shopping.setAddToCartStatus(Shopping.AddToCartStatus.Loading)
                         delay(LONG_OPERATION_DELAY)
-                        val status = Shopping.AddToCartStatus.Success(productId = productId,
+                        val status = Shopping.AddToCartStatus.Success(
+                            productId = productId,
                             unitId = unitId,
-                            numberOfItemsInCart = 1)
+                            numberOfItemsInCart = 1
+                        )
                         FireworkSdk.shopping.setAddToCartStatus(status)
                         ShoppingCartRepository.add(productId, unitId)
                         Toast.makeText(this@MainActivity, "Added to cart", Toast.LENGTH_SHORT)
