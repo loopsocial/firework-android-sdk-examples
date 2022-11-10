@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("org.jlleitschuh.gradle.ktlint")
+    id("io.gitlab.arturbosch.detekt")
 }
 
 android {
@@ -34,12 +36,26 @@ android {
     }
 
     kotlinOptions {
+        allWarningsAsErrors = true
         jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    lint {
+        abortOnError = true
+        ignoreWarnings = false
+        warningsAsErrors = true
     }
 
     buildFeatures {
         viewBinding = true
     }
+}
+
+detekt {
+    allRules = true
+    config = files("$rootDir/config/detekt/detekt-config.yml")
+    baseline = file("detekt-baseline.xml")
+    buildUponDefaultConfig = true
 }
 
 dependencies {

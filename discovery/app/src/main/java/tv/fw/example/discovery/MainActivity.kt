@@ -1,10 +1,8 @@
 package tv.fw.example.discovery
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
-import tv.fw.common.feed.FeedLayout
 import tv.fw.common.feed.FeedResource
 import tv.fw.example.discovery.databinding.ActivityMainBinding
 import tv.fw.videofeed.options.ViewOptions
