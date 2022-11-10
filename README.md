@@ -7,6 +7,7 @@ This repo holds the Firework Android SDK example applications.
 * [Discovery](#discovery-example-app)
 * [Channel](#channel-example-app)
 * [Playlist](#playlist-example-app)
+* [Dynamic](#dynamic-example-app)
 * [Single-Host Livestream](#single-host-livestream-example-app)
 * [Multi-Host Livestream](#multi-host-livestream-example-app)
 * [Shopping](#multi-host-livestream-example-app)
@@ -48,6 +49,18 @@ In this example app, the `VideoFeedView` is initialized for showing a channel fe
 | Channel Feed                                     | Player screen                                      |
 | -------------------------------------------------- | -------------------------------------------------- |
 | ![channel Screenshot](channel/Screenshot1.png) | ![channel Screenshot](channel/Screenshot2.png) |
+
+---
+
+## Dynamic example app
+
+In this example app, the `VideoFeedView` is initialized for showing a dynamic feed.
+
+[Dynamic example app](dynamic)
+
+| Dynamic Feed                                     | Player screen                                      |
+| -------------------------------------------------- | -------------------------------------------------- |
+| ![dynamic Screenshot](dynamic/Screenshot1.png) | ![dynamic Screenshot](dynamic/Screenshot2.png) |
 
 ---
 

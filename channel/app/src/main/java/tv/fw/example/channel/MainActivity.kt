@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         val videoFeedView = binding.videoFeedView
 
         val viewOptions = ViewOptions.Builder()
-            // Check Discovery or Playlist Example apps for other feed sources
+            // Check Discovery, Playlist, or Dynamic example apps for other feed sources
             .feedResource(FeedResource.Channel(channelId = FW_CHANNEL_ID))
             .build()
 

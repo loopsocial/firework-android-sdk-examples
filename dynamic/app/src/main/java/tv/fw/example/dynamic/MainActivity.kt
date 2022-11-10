@@ -1,13 +1,12 @@
-package tv.fw.example.playlist
+package tv.fw.example.dynamic
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import tv.fw.common.feed.FeedResource
-import tv.fw.example.playlist.BuildConfig.FW_CHANNEL_ID
-import tv.fw.example.playlist.BuildConfig.FW_PLAYLIST_ID
-import tv.fw.example.playlist.databinding.ActivityMainBinding
+import tv.fw.example.dynamic.BuildConfig.FW_CHANNEL_ID
+import tv.fw.example.dynamic.databinding.ActivityMainBinding
 import tv.fw.videofeed.options.ViewOptions
 
 class MainActivity : AppCompatActivity() {
@@ -26,19 +25,22 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun setupDetails() {
-        binding.details.source.text = "Playlist"
+        binding.details.source.text = "Dynamic"
         binding.details.channel.text = FW_CHANNEL_ID
-        binding.details.playlist.text = FW_PLAYLIST_ID
+        binding.details.playlist.text = "N/A"
+        binding.details.categories.text = "Test category"
     }
 
     private fun initVideoFeedView() {
         val videoFeedView = binding.videoFeedView
 
-        val playlistFeedResource = FeedResource.Playlist(channelId = FW_CHANNEL_ID, playlistId = FW_PLAYLIST_ID)
+        val categories = listOf("Test category")
+        val parameters = mapOf("category" to categories)
+        val feedResource = FeedResource.DynamicContent(channelId = FW_CHANNEL_ID, parameters = parameters)
 
         val viewOptions = ViewOptions.Builder()
-            // Check Discovery, Channel, or Dynamic example apps for other feed sources
-            .feedResource(playlistFeedResource)
+            // Check Discovery, Channel, or Playlist example apps for other feed sources
+            .feedResource(feedResource)
             .build()
 
         videoFeedView.init(viewOptions)

@@ -1,13 +1,13 @@
-name: Discovery CI
+name: Dynamic CI
 
 concurrency:
-  group: discovery:${{ github.head_ref }}
+  group: dynamic:${{ github.head_ref }}
   cancel-in-progress: true
 
 on:
   pull_request:
     branches: [ "develop" ]
-    paths: [ "discovery/**" ]
+    paths: [ "dynamic/**" ]
 
 jobs:
 
@@ -27,6 +27,6 @@ jobs:
 
       - name: Build with Gradle
         run: |
-          cd discovery
+          cd dynamic
           chmod +x ./gradlew
           ./gradlew build

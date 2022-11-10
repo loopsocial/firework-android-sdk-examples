@@ -28,4 +28,5 @@ jobs:
       - name: Build with Gradle
         run: |
           cd view_options
+          chmod +x ./gradlew
           ./gradlew build
