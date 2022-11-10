@@ -14,7 +14,7 @@
     <tv.fw.videofeed.VideoFeedView
         android:id="@+id/videoFeedView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:fw_adBadgeBackgroundColor="@color/cyan"
         app:fw_adBadgeIsHidden="false"
         app:fw_adBadgeLabel="sponsored"
@@ -50,6 +50,15 @@
         app:fw_showPlayIcon="true"
         app:fw_showPlayPauseButton="true"
         app:fw_showShareButton="true"
-        app:fw_supportBackwardAds="true" />
+        app:fw_supportBackwardAds="true"
+        app:layout_constraintBottom_toTopOf="@id/details"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/details"
+        layout="@layout/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

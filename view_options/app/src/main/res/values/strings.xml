@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">FW View Options</string>
+
+    <string name="source_type">Source Type:</string>
+    <string name="channel_id">Channel ID:</string>
+    <string name="playlist_id">Playlist ID:</string>
 </resources>

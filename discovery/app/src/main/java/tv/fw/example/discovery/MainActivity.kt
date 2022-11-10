@@ -1,5 +1,6 @@
 package tv.fw.example.discovery
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
@@ -16,14 +17,24 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
-        setupVideoFeedView()
+        setupDetails()
+
+        initVideoFeedView()
     }
 
-    private fun setupVideoFeedView() {
+    @SuppressLint("SetTextI18n")
+    private fun setupDetails() {
+        binding.details.source.text = "Discovery"
+        binding.details.channel.text = "N/A"
+        binding.details.playlist.text = "N/A"
+    }
+
+    private fun initVideoFeedView() {
         val videoFeedView = binding.videoFeedView
 
         val viewOptions = ViewOptions.Builder()
-            .feedResource(FeedResource.Discovery) // Check Channel or Playlist Example apps for other feed sources
+            // Check Channel or Playlist Example apps for other feed sources
+            .feedResource(FeedResource.Discovery)
             .build()
 
         videoFeedView.init(viewOptions)

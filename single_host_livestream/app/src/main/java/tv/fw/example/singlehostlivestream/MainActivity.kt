@@ -1,5 +1,6 @@
 package tv.fw.example.singlehostlivestream
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +19,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
+        setupDetails()
+
         initVideoFeedView()
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun setupDetails() {
+        binding.details.source.text = "Playlist"
+        binding.details.channel.text = FW_CHANNEL_ID
+        binding.details.playlist.text = FW_PLAYLIST_ID
     }
 
     private fun initVideoFeedView() {
