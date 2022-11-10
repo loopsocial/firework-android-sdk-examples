@@ -22,17 +22,19 @@ output.json
 
 # IntelliJ
 *.iml
-.idea/
+.idea/*
+!.idea/codeStyles/
+!.idea/detekt.xml
 misc.xml
 deploymentTargetDropDown.xml
 render.experimental.xml
 
 # Keystore files
-*.jks
-*.keystore
+# *.jks
+# *.keystore
 
 # Google Services (e.g. APIs or Firebase)
-google-services.json
+# google-services.json
 
 # Android Profiling
 *.hprof
