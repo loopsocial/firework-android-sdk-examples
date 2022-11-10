@@ -1,7 +1,7 @@
 name: Shopping CI
 
 concurrency:
-  group: ${{ github.head_ref }}
+  group: shopping:${{ github.head_ref }}
   cancel-in-progress: true
 
 on:

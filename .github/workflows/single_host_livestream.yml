@@ -1,7 +1,7 @@
 name: Single-Host Livestream CI
 
 concurrency:
-  group: ${{ github.head_ref }}
+  group: single_host_livestream:${{ github.head_ref }}
   cancel-in-progress: true
 
 on:

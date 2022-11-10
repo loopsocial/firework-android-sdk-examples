@@ -1,7 +1,7 @@
 name: Multi-Host Livestream CI
 
 concurrency:
-  group: ${{ github.head_ref }}
+  group: multi_host_livestream:${{ github.head_ref }}
   cancel-in-progress: true
 
 on:

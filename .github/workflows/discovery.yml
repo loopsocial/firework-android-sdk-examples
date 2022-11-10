@@ -1,7 +1,7 @@
 name: Discovery CI
 
 concurrency:
-  group: ${{ github.head_ref }}
+  group: discovery:${{ github.head_ref }}
   cancel-in-progress: true
 
 on:

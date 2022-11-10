@@ -1,7 +1,7 @@
 name: Playlist CI
 
 concurrency:
-  group: ${{ github.head_ref }}
+  group: playlist:${{ github.head_ref }}
   cancel-in-progress: true
 
 on:

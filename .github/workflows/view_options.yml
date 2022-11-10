@@ -1,7 +1,7 @@
 name: View Options CI
 
 concurrency:
-  group: ${{ github.head_ref }}
+  group: view_options:${{ github.head_ref }}
   cancel-in-progress: true
 
 on:
