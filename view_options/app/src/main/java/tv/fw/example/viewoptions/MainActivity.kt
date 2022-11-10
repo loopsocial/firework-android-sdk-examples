@@ -90,7 +90,6 @@ class MainActivity : AppCompatActivity() {
         videoFeedView.init(viewOptions)
     }
 
-
     private fun setupVideoFeedViewCallbacks() {
 
         // All errors related to this video feed view can be collected using this callback to handle
