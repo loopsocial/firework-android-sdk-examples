@@ -4,4 +4,6 @@
     <string name="source_type">Source Type:</string>
     <string name="channel_id">Channel ID:</string>
     <string name="playlist_id">Playlist ID:</string>
+
+    <string name="checkout">Checkout</string>
 </resources>

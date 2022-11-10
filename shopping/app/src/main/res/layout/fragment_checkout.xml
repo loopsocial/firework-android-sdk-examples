@@ -34,7 +34,7 @@
         android:backgroundTint="@color/fw__gnt_blue"
         android:gravity="center"
         android:padding="@dimen/fw__space_xsmall"
-        android:text="Checkout"
+        android:text="@string/checkout"
         android:textAllCaps="false"
         android:textColor="@color/fw__gnt_white"
         android:textSize="@dimen/fw__font_size_16"
