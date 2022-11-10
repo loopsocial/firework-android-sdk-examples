@@ -7,14 +7,5 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="fw__gnt_black">#000000</color>
-    <color name="fw__gnt_black_50">#80000000</color>
-    <color name="fw__gnt_white">#FFFFFF</color>
-    <color name="fw__gnt_red">#FF0000</color>
-    <color name="fw__gnt_green">#00FF00</color>
-    <color name="fw__gnt_blue">#4285f4</color>
-    <color name="fw__gnt_gray">#808080</color>
-    <color name="fw__bg_bluelake">#3A86FF</color>
-    <color name="fw__dark_grey">#2B2B2B</color>
-    <color name="fw__text_grey">#BDBDBD</color>
+
 </resources>

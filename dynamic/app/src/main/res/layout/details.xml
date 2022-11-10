@@ -5,8 +5,7 @@
     android:id="@+id/detailsContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200">
-    <!--    tools:showIn="@layout/activity_main">-->
+    tools:showIn="@layout/activity_main">
 
     <TextView
         android:id="@+id/sourceLabel"

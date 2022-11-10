@@ -5,7 +5,6 @@
     android:id="@+id/detailsContainer"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/purple_200"
     tools:showIn="@layout/activity_main">
 
     <TextView
