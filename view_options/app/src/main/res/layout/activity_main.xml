@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- All custom view attributes are optional here -->
+    <!-- You can remove all of them and let the widget use the default values -->
+    <!-- Or set them programmatically -->
+    <!-- Keep in mind if you use the Channel feedType then you must provide ChannelId too -->
+    <!-- Keep in mind if you use the Playlist feedType then you must provide ChannelId and PlaylistId too -->
+    <tv.fw.videofeed.VideoFeedView
+        android:id="@+id/videoFeedView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:fw_adBadgeBackgroundColor="@color/cyan"
+        app:fw_adBadgeIsHidden="false"
+        app:fw_adBadgeLabel="sponsored"
+        app:fw_adBadgeShowOnThumbnails="true"
+        app:fw_adBadgeTextColor="@color/white"
+        app:fw_adBadgeTextTypeface="@font/roboto_black"
+        app:fw_autoPlayOnComplete="true"
+        app:fw_backColor="@color/black"
+        app:fw_columns="3"
+        app:fw_ctaButtonBackgroundColor="@color/cyan"
+        app:fw_ctaButtonDelayDuration="0.2"
+        app:fw_ctaButtonDelayUnitType="percentage"
+        app:fw_ctaButtonTextColor="@color/white"
+        app:fw_ctaButtonTypeface="@font/roboto_black"
+        app:fw_feedLayout="grid"
+        app:fw_feedResource="discovery"
+        app:fw_feedTitleBackgroundColor="@color/purple_transparent"
+        app:fw_feedTitlePosition="nested"
+        app:fw_feedTitleTextColor="@color/black"
+        app:fw_feedTitleTextNumberOfLines="1"
+        app:fw_feedTitleTextPadding="8dp"
+        app:fw_feedTitleTextSize="14sp"
+        app:fw_feedTitleTextTypeface="@font/roboto_regular"
+        app:fw_itemSpacing="4dp"
+        app:fw_muteOnLaunch="true"
+        app:fw_playIconWidth="24dp"
+        app:fw_playerMode="fit_mode"
+        app:fw_roundedCorner="true"
+        app:fw_roundedCornerRadius="16dp"
+        app:fw_showFeedTitle="true"
+        app:fw_showFireworkLogo="true"
+        app:fw_showMuteButton="true"
+        app:fw_showPlayIcon="true"
+        app:fw_showPlayPauseButton="true"
+        app:fw_showShareButton="true"
+        app:fw_supportBackwardAds="true"
+        app:layout_constraintBottom_toTopOf="@id/details"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/details"
+        layout="@layout/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
