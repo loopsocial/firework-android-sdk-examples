@@ -28,4 +28,5 @@ jobs:
       - name: Build with Gradle
         run: |
           cd shopping
+          chmod +x ./gradlew
           ./gradlew build
