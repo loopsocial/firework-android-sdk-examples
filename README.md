@@ -11,6 +11,7 @@ This repo holds the Firework Android SDK example applications.
 * [Single-Host Livestream](#single-host-livestream-example-app)
 * [Multi-Host Livestream](#multi-host-livestream-example-app)
 * [Shopping](#multi-host-livestream-example-app)
+* [Compose](#jetpack-compose-example-app)
 
 **Read more about the integration here** https://docs.firework.tv/
 
@@ -109,3 +110,15 @@ In this example app, the `VideoFeedView` is initialized and integrated with the 
 |         Shopping Button         |          Shopping Cart          |
 | ------------------------------- | ------------------------------- |
 | ![shopping Screenshot](shopping/Screenshot1.png) | ![shopping Screenshot](shopping/Screenshot2.png) |
+
+## Jetpack Compose example app
+
+In this example app, the `VideoFeedView` is initialized for showing a discovery feed using Jetpack Compose.
+
+[Compose example app](compose)
+
+| Discovery Feed                                   | Player screen                                 |
+|--------------------------------------------------|-----------------------------------------------|
+| ![discovery Screenshot](compose/Screenshot1.png) | ![player Screenshot](compose/Screenshot2.png) |
+
+---

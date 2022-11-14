@@ -1,0 +1,21 @@
+style:
+  MaxLineLength:
+    maxLineLength: 150
+
+  ReturnCount:
+    max: 5
+
+  UnusedPrivateMember:
+    allowedNames: '(_|ignored|expected|serialVersionUID|Preview\w*)'
+
+complexity:
+  LongParameterList:
+    constructorThreshold: 15
+
+  TooManyFunctions:
+    ignorePrivate: true
+
+naming:
+  FunctionNaming:
+    ignoreAnnotated:
+      - 'Composable'
