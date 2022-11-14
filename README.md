@@ -52,18 +52,6 @@ In this example app, the `VideoFeedView` is initialized for showing a channel fe
 
 ---
 
-## Dynamic example app
-
-In this example app, the `VideoFeedView` is initialized for showing a dynamic feed.
-
-[Dynamic example app](dynamic)
-
-| Dynamic Feed                                     | Player screen                                      |
-| -------------------------------------------------- | -------------------------------------------------- |
-| ![dynamic Screenshot](dynamic/Screenshot1.png) | ![dynamic Screenshot](dynamic/Screenshot2.png) |
-
----
-
 ## Playlist example app
 
 In this example app, the `VideoFeedView` is initialized for showing a playlist feed.
@@ -73,6 +61,18 @@ In this example app, the `VideoFeedView` is initialized for showing a playlist f
 | Playlist Feed                                     | Player screen                                      |
 | -------------------------------------------------- | -------------------------------------------------- |
 | ![playlist Screenshot](playlist/Screenshot1.png) | ![playlist Screenshot](playlist/Screenshot2.png) |
+
+---
+
+## Dynamic example app
+
+In this example app, the `VideoFeedView` is initialized for showing a dynamic feed.
+
+[Dynamic example app](dynamic)
+
+| Dynamic Feed                                     | Player screen                                      |
+| -------------------------------------------------- | -------------------------------------------------- |
+| ![dynamic Screenshot](dynamic/Screenshot1.png) | ![dynamic Screenshot](dynamic/Screenshot2.png) |
 
 ---
 
