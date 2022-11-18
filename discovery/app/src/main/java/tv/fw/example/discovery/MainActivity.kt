@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         val videoFeedView = binding.videoFeedView
 
         val viewOptions = ViewOptions.Builder()
-            // Check Channel, Playlist, or Dynamic example apps for other feed sources
+            // Check Channel, Playlist, or Dynamic example apps for other feed sources.
             .feedResource(FeedResource.Discovery)
             .build()
 
