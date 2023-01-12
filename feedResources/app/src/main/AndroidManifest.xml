@@ -22,6 +22,8 @@
 
         <activity android:name="tv.fw.example.discovery.DiscoveryActivity" />
 
+        <activity android:name="tv.fw.example.playlist.PlaylistActivity" />
+
     </application>
 
 </manifest>
