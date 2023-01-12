@@ -1,11 +1,11 @@
-package tv.fw.example.discovery
+package tv.fw.example
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import tv.fw.common.feed.FeedResource
-import tv.fw.example.discovery.databinding.ActivityMainBinding
+import tv.fw.example.feedResources.databinding.ActivityMainBinding
 import tv.fw.videofeed.options.ViewOptions
 
 class MainActivity : AppCompatActivity() {

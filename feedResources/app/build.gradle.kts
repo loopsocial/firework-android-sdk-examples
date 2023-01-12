@@ -6,12 +6,12 @@ plugins {
 }
 
 android {
-    namespace = "tv.fw.example.discovery"
+    namespace = "tv.fw.example.feedResources"
 
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "tv.fw.example.discovery"
+        applicationId = "tv.fw.example.feedResources"
 
         minSdk = 21
         targetSdk = 33
@@ -59,7 +59,7 @@ detekt {
 }
 
 dependencies {
-    implementation("androidx.appcompat:appcompat:1.5.1")
+    implementation("androidx.appcompat:appcompat:1.6.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.6.10"))
