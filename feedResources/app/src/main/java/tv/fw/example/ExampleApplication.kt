@@ -1,8 +1,8 @@
-package tv.fw.example.discovery
+package tv.fw.example
 
 import android.app.Application
 import android.util.Log
-import tv.fw.example.discovery.BuildConfig.FW_CLIENT_ID
+import tv.fw.example.feedResources.BuildConfig.FW_CLIENT_ID
 import tv.fw.fireworksdk.FireworkSdk
 import tv.fw.fireworksdk.FireworkSdkConfig
 import tv.fw.imageloading.glide.GlideImageLoaderFactory
