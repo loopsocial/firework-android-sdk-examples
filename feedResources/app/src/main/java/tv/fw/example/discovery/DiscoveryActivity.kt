@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import tv.fw.common.feed.FeedResource
+import tv.fw.example.feedResources.R
 import tv.fw.example.feedResources.databinding.ActivityDiscoveryBinding
 import tv.fw.videofeed.baseOptions
 import tv.fw.videofeed.viewOptions
@@ -19,6 +20,7 @@ class DiscoveryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDiscoveryBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
+        setTitle(R.string.discovery_screen_title)
 
         setupDetails()
 

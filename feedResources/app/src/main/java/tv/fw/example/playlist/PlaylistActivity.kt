@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import tv.fw.common.feed.FeedResource
 import tv.fw.example.feedResources.BuildConfig.FW_CHANNEL_ID
 import tv.fw.example.feedResources.BuildConfig.FW_PLAYLIST_ID
+import tv.fw.example.feedResources.R
 import tv.fw.example.feedResources.databinding.ActivityPlaylistBinding
 import tv.fw.videofeed.baseOptions
 import tv.fw.videofeed.viewOptions
@@ -21,6 +22,7 @@ class PlaylistActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPlaylistBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
+        setTitle(R.string.playlist_screen_title)
 
         setupDetails()
 

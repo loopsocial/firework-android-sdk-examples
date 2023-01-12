@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import tv.fw.example.channel.ChannelActivity
 import tv.fw.example.discovery.DiscoveryActivity
+import tv.fw.example.dynamiccontent.DynamicContentActivity
 import tv.fw.example.feedResources.databinding.ActivityMainBinding
 import tv.fw.example.playlist.PlaylistActivity
 
@@ -23,6 +24,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnChannel.setOnClickListener {
             startActivity(ChannelActivity.intent(this))
+        }
+        binding.btnDynamicContent.setOnClickListener {
+            startActivity(DynamicContentActivity.intent(this))
         }
     }
 }
