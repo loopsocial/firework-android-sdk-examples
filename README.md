@@ -4,10 +4,7 @@ This repo holds the Firework Android SDK example applications.
 **List of example apps:**
 
 * [View Options](#view-options-example-app)
-* [Discovery](#discovery-example-app)
-* [Channel](#channel-example-app)
-* [Playlist](#playlist-example-app)
-* [Dynamic](#dynamic-example-app)
+* [Feed Resources](#feedresources-example-app)
 * [Single-Host Livestream](#single-host-livestream-example-app)
 * [Multi-Host Livestream](#multi-host-livestream-example-app)
 * [Shopping](#multi-host-livestream-example-app)
@@ -29,51 +26,25 @@ This example app demonstrates all possible view options that can be used for the
 
 ---
 
-## Discovery example app
+## Feed Resources example app
 
-In this example app, the `VideoFeedView` is initialized for showing a discovery feed.
-
-[Discovery example app](discovery)
+In this example app, the `VideoFeedView` is initialized with different feedResources: Discovery, Playlist, Channel, Dynamic Content.
 
 | Discovery Feed                                     | Player screen                                      |
 | -------------------------------------------------- | -------------------------------------------------- |
-| ![discovery Screenshot](discovery/Screenshot1.png) | ![discovery Screenshot](discovery/Screenshot2.png) |
-
----
-
-## Channel example app
-
-In this example app, the `VideoFeedView` is initialized for showing a channel feed.
-
-[Channel example app](channel)
+| ![discovery Screenshot](feedResources/DiscoveryScreenshot1.png) | ![discovery Screenshot](feedResources/DiscoveryScreenshot2.png) |
 
 | Channel Feed                                     | Player screen                                      |
 | -------------------------------------------------- | -------------------------------------------------- |
-| ![channel Screenshot](channel/Screenshot1.png) | ![channel Screenshot](channel/Screenshot2.png) |
-
----
-
-## Playlist example app
-
-In this example app, the `VideoFeedView` is initialized for showing a playlist feed.
-
-[Playlist example app](playlist)
+| ![channel Screenshot](feedResources/ChannelScreenshot1.png) | ![channel Screenshot](feedResources/ChannelScreenshot2.png) |
 
 | Playlist Feed                                     | Player screen                                      |
 | -------------------------------------------------- | -------------------------------------------------- |
-| ![playlist Screenshot](playlist/Screenshot1.png) | ![playlist Screenshot](playlist/Screenshot2.png) |
-
----
-
-## Dynamic example app
-
-In this example app, the `VideoFeedView` is initialized for showing a dynamic feed.
-
-[Dynamic example app](dynamic)
+| ![playlist Screenshot](feedResources/PlaylistScreenshot1.png) | ![playlist Screenshot](feedResources/PlaylistScreenshot2.png) |
 
 | Dynamic Feed                                     | Player screen                                      |
 | -------------------------------------------------- | -------------------------------------------------- |
-| ![dynamic Screenshot](dynamic/Screenshot1.png) | ![dynamic Screenshot](dynamic/Screenshot2.png) |
+| ![dynamic Screenshot](feedResources/DynamicScreenshot1.png) | ![dynamic Screenshot](feedResources/DynamicScreenshot2.png) |
 
 ---
 
