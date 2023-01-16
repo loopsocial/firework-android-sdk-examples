@@ -4,4 +4,8 @@
     <string name="source_type">Source Type:</string>
     <string name="channel_id">Channel ID:</string>
     <string name="playlist_id">Playlist ID:</string>
+    <string name="discovery">Discovery</string>
+    <string name="channel">Channel</string>
+    <string name="playlist">Playlist</string>
+    <string name="dynamic_content">Dynamic content</string>
 </resources>
