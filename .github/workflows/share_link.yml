@@ -1,13 +1,13 @@
-name: FeedResources CI
+name: Share Link CI
 
 concurrency:
-  group: feed_resources:${{ github.head_ref }}
+  group: share_link:${{ github.head_ref }}
   cancel-in-progress: true
 
 on:
   pull_request:
     branches: [ "develop" ]
-    paths: [ "feed_resources/**" ]
+    paths: [ "share_link/**" ]
 
 jobs:
 
@@ -27,6 +27,6 @@ jobs:
 
       - name: Build with Gradle
         run: |
-          cd feed_resources
+          cd share_link
           chmod +x ./gradlew
           ./gradlew build
