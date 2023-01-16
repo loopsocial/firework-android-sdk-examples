@@ -4,7 +4,7 @@ This repo holds the Firework Android SDK example applications.
 **List of example apps:**
 
 * [View Options](#view-options-example-app)
-* [Feed Resources](#feedresources-example-app)
+* [Feed Resources](#feed-resources-example-app)
 * [Single-Host Livestream](#single-host-livestream-example-app)
 * [Multi-Host Livestream](#multi-host-livestream-example-app)
 * [Shopping](#multi-host-livestream-example-app)
@@ -28,23 +28,25 @@ This example app demonstrates all possible view options that can be used for the
 
 ## Feed Resources example app
 
+[Feed Resources example app](feed_resources)
+
 In this example app, the `VideoFeedView` is initialized with different feedResources: Discovery, Playlist, Channel, Dynamic Content.
 
 | Discovery Feed                                     | Player screen                                      |
 | -------------------------------------------------- | -------------------------------------------------- |
-| ![discovery Screenshot](feedResources/DiscoveryScreenshot1.png) | ![discovery Screenshot](feedResources/DiscoveryScreenshot2.png) |
+| ![discovery Screenshot](feed_resources/DiscoveryScreenshot1.png) | ![discovery Screenshot](feed_resources/DiscoveryScreenshot2.png) |
 
 | Channel Feed                                     | Player screen                                      |
 | -------------------------------------------------- | -------------------------------------------------- |
-| ![channel Screenshot](feedResources/ChannelScreenshot1.png) | ![channel Screenshot](feedResources/ChannelScreenshot2.png) |
+| ![channel Screenshot](feed_resources/ChannelScreenshot1.png) | ![channel Screenshot](feed_resources/ChannelScreenshot2.png) |
 
 | Playlist Feed                                     | Player screen                                      |
 | -------------------------------------------------- | -------------------------------------------------- |
-| ![playlist Screenshot](feedResources/PlaylistScreenshot1.png) | ![playlist Screenshot](feedResources/PlaylistScreenshot2.png) |
+| ![playlist Screenshot](feed_resources/PlaylistScreenshot1.png) | ![playlist Screenshot](feed_resources/PlaylistScreenshot2.png) |
 
 | Dynamic Feed                                     | Player screen                                      |
 | -------------------------------------------------- | -------------------------------------------------- |
-| ![dynamic Screenshot](feedResources/DynamicScreenshot1.png) | ![dynamic Screenshot](feedResources/DynamicScreenshot2.png) |
+| ![dynamic Screenshot](feed_resources/DynamicScreenshot1.png) | ![dynamic Screenshot](feed_resources/DynamicScreenshot2.png) |
 
 ---
 
