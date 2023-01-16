@@ -24,6 +24,8 @@
 
         <activity android:name="tv.fw.example.playlist.PlaylistActivity" />
 
+        <activity android:name="tv.fw.example.channel.ChannelActivity" />
+
     </application>
 
 </manifest>
