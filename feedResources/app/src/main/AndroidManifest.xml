@@ -26,6 +26,8 @@
 
         <activity android:name="tv.fw.example.channel.ChannelActivity" />
 
+        <activity android:name="tv.fw.example.dynamiccontent.DynamicContentActivity" />
+
     </application>
 
 </manifest>

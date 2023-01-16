@@ -1,4 +1,4 @@
-package tv.fw.example.channel
+package tv.fw.example.dynamiccontent
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -9,19 +9,19 @@ import androidx.appcompat.app.AppCompatActivity
 import tv.fw.common.feed.FeedResource
 import tv.fw.example.feedResources.BuildConfig.FW_CHANNEL_ID
 import tv.fw.example.feedResources.R
-import tv.fw.example.feedResources.databinding.ActivityChannelBinding
+import tv.fw.example.feedResources.databinding.ActivityDynamicContentBinding
 import tv.fw.videofeed.baseOptions
 import tv.fw.videofeed.viewOptions
 
-class ChannelActivity : AppCompatActivity() {
+class DynamicContentActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityChannelBinding
+    private lateinit var binding: ActivityDynamicContentBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityChannelBinding.inflate(LayoutInflater.from(this))
+        binding = ActivityDynamicContentBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
-        setTitle(R.string.channel_screen_title)
+        setTitle(R.string.dynamic_content_screen_title)
 
         setupDetails()
 
@@ -30,24 +30,27 @@ class ChannelActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun setupDetails() {
-        binding.details.source.text = "Channel"
+        binding.details.source.text = "Dynamic"
         binding.details.channel.text = FW_CHANNEL_ID
         binding.details.playlist.text = "N/A"
+        binding.details.categories.text = "Test category"
     }
 
     private fun initVideoFeedView() {
-        val videoFeedView = binding.videoFeedView
+        val videoFeedView = binding.fwVideoFeedView
 
+        val categories = listOf("Test category")
+        val parameters = mapOf("category" to categories)
+        val feedResource = FeedResource.DynamicContent(channelId = FW_CHANNEL_ID, parameters = parameters)
         val viewOptions = viewOptions {
             baseOptions {
-                feedResource(FeedResource.Channel(channelId = FW_CHANNEL_ID))
+                feedResource(feedResource)
             }
         }
-
         videoFeedView.init(viewOptions)
     }
 
     companion object {
-        fun intent(context: Context) = Intent(context, ChannelActivity::class.java)
+        fun intent(context: Context) = Intent(context, DynamicContentActivity::class.java)
     }
 }

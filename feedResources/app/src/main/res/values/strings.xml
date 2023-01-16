@@ -4,8 +4,13 @@
     <string name="source_type">Source Type:</string>
     <string name="channel_id">Channel ID:</string>
     <string name="playlist_id">Playlist ID:</string>
+    <string name="categories">Categories:</string>
     <string name="discovery">Discovery</string>
     <string name="channel">Channel</string>
     <string name="playlist">Playlist</string>
     <string name="dynamic_content">Dynamic content</string>
+    <string name="discovery_screen_title">FW Discovery</string>
+    <string name="playlist_screen_title">FW Playlist</string>
+    <string name="channel_screen_title">FW Channel</string>
+    <string name="dynamic_content_screen_title">FW Dynamic Content</string>
 </resources>
