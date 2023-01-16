@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import tv.fw.example.discovery.DiscoveryActivity
 import tv.fw.example.feedResources.databinding.ActivityMainBinding
+import tv.fw.example.playlist.PlaylistActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -13,6 +14,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.btnDiscovery.setOnClickListener {
             startActivity(DiscoveryActivity.intent(this))
+        }
+        binding.btnPlaylist.setOnClickListener {
+            startActivity(PlaylistActivity.intent(this))
         }
     }
 }
