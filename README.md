@@ -4,7 +4,7 @@ This repo holds the Firework Android SDK example applications.
 **List of example apps:**
 
 * [View Options](#view-options-example-app)
-* [Feed Resources](#feedresources-example-app)
+* [Feed Resources](#feed-resources-example-app)
 * [Single-Host Livestream](#single-host-livestream-example-app)
 * [Multi-Host Livestream](#multi-host-livestream-example-app)
 * [Shopping](#multi-host-livestream-example-app)
@@ -27,6 +27,8 @@ This example app demonstrates all possible view options that can be used for the
 ---
 
 ## Feed Resources example app
+
+[Feed Resources example app](feed_resources)
 
 In this example app, the `VideoFeedView` is initialized with different feedResources: Discovery, Playlist, Channel, Dynamic Content.
 
