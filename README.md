@@ -32,19 +32,19 @@ In this example app, the `VideoFeedView` is initialized with different feedResou
 
 | Discovery Feed                                     | Player screen                                      |
 | -------------------------------------------------- | -------------------------------------------------- |
-| ![discovery Screenshot](feedResources/DiscoveryScreenshot1.png) | ![discovery Screenshot](feedResources/DiscoveryScreenshot2.png) |
+| ![discovery Screenshot](feed_resources/DiscoveryScreenshot1.png) | ![discovery Screenshot](feed_resources/DiscoveryScreenshot2.png) |
 
 | Channel Feed                                     | Player screen                                      |
 | -------------------------------------------------- | -------------------------------------------------- |
-| ![channel Screenshot](feedResources/ChannelScreenshot1.png) | ![channel Screenshot](feedResources/ChannelScreenshot2.png) |
+| ![channel Screenshot](feed_resources/ChannelScreenshot1.png) | ![channel Screenshot](feed_resources/ChannelScreenshot2.png) |
 
 | Playlist Feed                                     | Player screen                                      |
 | -------------------------------------------------- | -------------------------------------------------- |
-| ![playlist Screenshot](feedResources/PlaylistScreenshot1.png) | ![playlist Screenshot](feedResources/PlaylistScreenshot2.png) |
+| ![playlist Screenshot](feed_resources/PlaylistScreenshot1.png) | ![playlist Screenshot](feed_resources/PlaylistScreenshot2.png) |
 
 | Dynamic Feed                                     | Player screen                                      |
 | -------------------------------------------------- | -------------------------------------------------- |
-| ![dynamic Screenshot](feedResources/DynamicScreenshot1.png) | ![dynamic Screenshot](feedResources/DynamicScreenshot2.png) |
+| ![dynamic Screenshot](feed_resources/DynamicScreenshot1.png) | ![dynamic Screenshot](feed_resources/DynamicScreenshot2.png) |
 
 ---
 
