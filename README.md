@@ -8,6 +8,7 @@ This repo holds the Firework Android SDK example applications.
 * [Single-Host Livestream](#single-host-livestream-example-app)
 * [Multi-Host Livestream](#multi-host-livestream-example-app)
 * [Shopping](#multi-host-livestream-example-app)
+* [Share Link](#share-link-example-app)
 * [Compose](#jetpack-compose-example-app)
 
 **Read more about the integration here** https://docs.firework.tv/
@@ -95,3 +96,13 @@ In this example app, the `VideoFeedView` is initialized for showing a discovery 
 | ![discovery Screenshot](compose/Screenshot1.png) | ![player Screenshot](compose/Screenshot2.png) |
 
 ---
+## Share link example app
+
+[Share link example app](share_link)
+
+This example app demonstrates the share link functionality.
+It contains two activities: which . 
+1. `MainActivity` - allows to lunch player and share the video
+2. `ShareLinkActivity` - handles the deep link and opens the shared video.
+Also this example demonstrates how to replace the base url of the share video with custom one.
+
