@@ -1,7 +1,7 @@
-name: Discovery CI
+name: FeedResources CI
 
 concurrency:
-  group: discovery:${{ github.head_ref }}
+  group: feed_resources:${{ github.head_ref }}
   cancel-in-progress: true
 
 on:
