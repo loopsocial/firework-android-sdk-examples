@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tv.fw.feedintegration.MainActivity">
+
+
+    <Button
+        android:id="@+id/btn_activity"
+        style="@style/MainActivityButtonStyle"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_fragment"
+        style="@style/MainActivityButtonStyle"
+        android:text="@string/btn_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_activity" />
+
+    <Button
+        android:id="@+id/btn_recycler_view"
+        style="@style/MainActivityButtonStyle"
+        android:text="@string/btn_recycler_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_fragment" />
+
+    <Button
+        android:id="@+id/btn_add_remove"
+        style="@style/MainActivityButtonStyle"
+        android:text="@string/btn_add_remove"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_recycler_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
