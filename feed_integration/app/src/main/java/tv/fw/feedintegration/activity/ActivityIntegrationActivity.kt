@@ -46,6 +46,11 @@ class ActivityIntegrationActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    override fun onDestroy() {
+        binding.fwVideoFeedView.destroy()
+        super.onDestroy()
+    }
+
     companion object {
         fun intent(context: Context) = Intent(context, ActivityIntegrationActivity::class.java)
     }
