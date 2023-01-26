@@ -48,6 +48,11 @@ class PlaylistActivity : AppCompatActivity() {
         videoFeedView.init(viewOptions)
     }
 
+    override fun onDestroy() {
+        binding.fwVideoFeedView.destroy()
+        super.onDestroy()
+    }
+
     companion object {
         fun intent(context: Context) = Intent(context, PlaylistActivity::class.java)
     }

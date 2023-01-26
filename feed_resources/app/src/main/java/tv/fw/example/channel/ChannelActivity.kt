@@ -36,7 +36,7 @@ class ChannelActivity : AppCompatActivity() {
     }
 
     private fun initVideoFeedView() {
-        val videoFeedView = binding.videoFeedView
+        val videoFeedView = binding.fwVideoFeedView
 
         val viewOptions = viewOptions {
             baseOptions {
@@ -45,6 +45,11 @@ class ChannelActivity : AppCompatActivity() {
         }
 
         videoFeedView.init(viewOptions)
+    }
+
+    override fun onDestroy() {
+        binding.fwVideoFeedView.destroy()
+        super.onDestroy()
     }
 
     companion object {
