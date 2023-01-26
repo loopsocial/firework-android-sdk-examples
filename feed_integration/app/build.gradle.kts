@@ -69,7 +69,7 @@ dependencies {
 
     // Glide
     implementation("com.github.bumptech.glide:glide:4.13.2")
-    implementation("com.google.android.material:material:1.7.0")
+    implementation("com.google.android.material:material:1.8.0")
 
     // Firework SDK
     val fireworkSdkVersion = "6.0.0-beta.2-SNAPSHOT.23"
