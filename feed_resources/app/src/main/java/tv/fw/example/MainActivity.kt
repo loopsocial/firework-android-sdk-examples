@@ -16,16 +16,16 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        binding.btnDiscovery.setOnClickListener {
+        binding.discovery.setOnClickListener {
             startActivity(DiscoveryActivity.intent(this))
         }
-        binding.btnPlaylist.setOnClickListener {
+        binding.playlist.setOnClickListener {
             startActivity(PlaylistActivity.intent(this))
         }
-        binding.btnChannel.setOnClickListener {
+        binding.channel.setOnClickListener {
             startActivity(ChannelActivity.intent(this))
         }
-        binding.btnDynamicContent.setOnClickListener {
+        binding.dynamicContent.setOnClickListener {
             startActivity(DynamicContentActivity.intent(this))
         }
     }

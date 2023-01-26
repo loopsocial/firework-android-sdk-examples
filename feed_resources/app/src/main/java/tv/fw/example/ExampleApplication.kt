@@ -28,7 +28,7 @@ class ExampleApplication : Application() {
             },
             onError = { initError ->
                 Log.e("FireworkSDK", "Error initializing Firework - $initError")
-            }
+            },
         )
     }
 }
