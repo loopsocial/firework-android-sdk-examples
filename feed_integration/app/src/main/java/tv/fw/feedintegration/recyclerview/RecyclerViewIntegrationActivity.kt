@@ -7,23 +7,21 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import tv.fw.feedintegration.R
-import tv.fw.feedintegration.databinding.ActivityRecyclerViewBinding
+import tv.fw.feedintegration.databinding.ActivityRecyclerViewIntegrationBinding
 
 class RecyclerViewIntegrationActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityRecyclerViewBinding
+    private lateinit var binding: ActivityRecyclerViewIntegrationBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityRecyclerViewBinding.inflate(LayoutInflater.from(this))
+        binding = ActivityRecyclerViewIntegrationBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
         supportActionBar?.title = getString(R.string.recycler_view_screen_title)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
         if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .add(R.id.container, FeedListFragment.newInstance(), null)
-                .commit()
+            supportFragmentManager.beginTransaction().add(R.id.container, FeedListFragment.newInstance(), null).commit()
         }
     }
 

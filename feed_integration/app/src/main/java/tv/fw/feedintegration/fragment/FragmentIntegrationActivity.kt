@@ -22,9 +22,7 @@ class FragmentIntegrationActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
         if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .add(R.id.container, FeedViewFragment.newInstance(), null)
-                .commit()
+            supportFragmentManager.beginTransaction().add(R.id.container, FeedViewFragment.newInstance(), null).commit()
         }
     }
 

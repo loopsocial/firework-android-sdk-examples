@@ -4,40 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context="tv.fw.feedintegration.MainActivity">
 
-
     <Button
-        android:id="@+id/btn_activity"
+        android:id="@+id/activityFeed"
         style="@style/MainActivityButtonStyle"
-        android:layout_marginTop="16dp"
         android:text="@string/btn_activity"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentFeed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
-        android:id="@+id/btn_fragment"
+        android:id="@+id/fragmentFeed"
         style="@style/MainActivityButtonStyle"
         android:text="@string/btn_fragment"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewFeed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_activity" />
+        app:layout_constraintTop_toBottomOf="@+id/activityFeed" />
 
     <Button
-        android:id="@+id/btn_recycler_view"
+        android:id="@+id/recyclerViewFeed"
         style="@style/MainActivityButtonStyle"
         android:text="@string/btn_recycler_view"
+        app:layout_constraintBottom_toTopOf="@+id/addRemoveFeed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_fragment" />
+        app:layout_constraintTop_toBottomOf="@+id/fragmentFeed" />
 
     <Button
-        android:id="@+id/btn_add_remove"
+        android:id="@+id/addRemoveFeed"
         style="@style/MainActivityButtonStyle"
         android:text="@string/btn_add_remove"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_recycler_view" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewFeed" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

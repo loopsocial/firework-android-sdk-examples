@@ -8,17 +8,17 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import tv.fw.common.feed.FeedResource
 import tv.fw.feedintegration.R
-import tv.fw.feedintegration.databinding.ActivityIntegrationActivityBinding
+import tv.fw.feedintegration.databinding.ActivityActivityIntegrationBinding
 import tv.fw.videofeed.baseOptions
 import tv.fw.videofeed.viewOptions
 
 class ActivityIntegrationActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityIntegrationActivityBinding
+    private lateinit var binding: ActivityActivityIntegrationBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityIntegrationActivityBinding.inflate(LayoutInflater.from(this))
+        binding = ActivityActivityIntegrationBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
         setTitle(R.string.activity_screen_title)
         supportActionBar?.title = getString(R.string.activity_screen_title)
