@@ -14,7 +14,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -24,6 +23,8 @@
         <activity android:name=".fragment.FragmentIntegrationActivity" />
 
         <activity android:name=".recyclerview.RecyclerViewIntegrationActivity" />
+
+        <activity android:name=".addremove.AddRemoveIntegrationActivity" />
 
     </application>
 
