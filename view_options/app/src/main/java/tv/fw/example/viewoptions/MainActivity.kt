@@ -9,23 +9,24 @@ import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
-import tv.fw.common.PlayerMode
-import tv.fw.common.ad.AdBadgeTextType
-import tv.fw.common.cta.CtaDelay
-import tv.fw.common.cta.CtaDelayUnit
-import tv.fw.common.feed.FeedLayout
-import tv.fw.common.feed.FeedResource
-import tv.fw.common.feed.FeedTitlePosition
+import com.firework.common.PlayerMode
+import com.firework.common.ad.AdBadgeTextType
+import com.firework.common.cta.CtaDelay
+import com.firework.common.cta.CtaDelayUnit
+import com.firework.common.feed.FeedLayout
+import com.firework.common.feed.FeedResource
+import com.firework.common.feed.FeedTitlePosition
+import com.firework.videofeed.FwVideoFeedView
 import tv.fw.example.viewoptions.databinding.ActivityMainBinding
-import tv.fw.videofeed.VideoFeedView
-import tv.fw.videofeed.options.ViewOptions
+
+import com.firework.videofeed.options.ViewOptions
 
 @Suppress("MagicNumber")
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private val videoFeedView: VideoFeedView
+    private val videoFeedView: FwVideoFeedView
         get() = binding.videoFeedView
 
     override fun onCreate(savedInstanceState: Bundle?) {

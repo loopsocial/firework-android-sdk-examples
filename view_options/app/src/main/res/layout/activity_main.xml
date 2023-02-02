@@ -11,7 +11,7 @@
     <!-- Or set them programmatically -->
     <!-- Keep in mind if you use the Channel feedType then you must provide ChannelId too -->
     <!-- Keep in mind if you use the Playlist feedType then you must provide ChannelId and PlaylistId too -->
-    <tv.fw.videofeed.VideoFeedView
+    <com.firework.videofeed.FwVideoFeedView
         android:id="@+id/videoFeedView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
