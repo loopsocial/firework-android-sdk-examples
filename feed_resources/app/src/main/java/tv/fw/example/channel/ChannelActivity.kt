@@ -6,12 +6,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
-import tv.fw.common.feed.FeedResource
+import com.firework.common.feed.FeedResource
+import com.firework.videofeed.baseOptions
+import com.firework.videofeed.viewOptions
 import tv.fw.example.feedResources.BuildConfig.FW_CHANNEL_ID
 import tv.fw.example.feedResources.R
 import tv.fw.example.feedResources.databinding.ActivityChannelBinding
-import tv.fw.videofeed.baseOptions
-import tv.fw.videofeed.viewOptions
 
 class ChannelActivity : AppCompatActivity() {
 
