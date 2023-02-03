@@ -18,6 +18,7 @@ class ExampleApplication : Application() {
             .clientId(FW_CLIENT_ID) // Client OAUTH Id
             .userId("example app user ID") // User Id in your eco-system
             .imageLoader(GlideImageLoaderFactory.createInstance()) // glide, picasso, or your implementation
+            .muteOnLaunch(true)
             .build()
 
         // initialize Firework Android SDK v2

@@ -10,16 +10,22 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import com.firework.common.PlayerMode
+import com.firework.common.ad.AdBadgeOption
 import com.firework.common.ad.AdBadgeTextType
+import com.firework.common.ad.AdOption
 import com.firework.common.cta.CtaDelay
 import com.firework.common.cta.CtaDelayUnit
 import com.firework.common.feed.FeedLayout
 import com.firework.common.feed.FeedResource
 import com.firework.common.feed.FeedTitlePosition
 import com.firework.videofeed.FwVideoFeedView
-import tv.fw.example.viewoptions.databinding.ActivityMainBinding
-
+import com.firework.videofeed.options.BaseOption
+import com.firework.videofeed.options.CtaOption
+import com.firework.videofeed.options.LayoutOption
+import com.firework.videofeed.options.PlayerOption
+import com.firework.videofeed.options.TitleOption
 import com.firework.videofeed.options.ViewOptions
+import tv.fw.example.viewoptions.databinding.ActivityMainBinding
 
 @Suppress("MagicNumber")
 class MainActivity : AppCompatActivity() {
@@ -60,42 +66,67 @@ class MainActivity : AppCompatActivity() {
          * Initialization method 2:
          * - Using [ViewOptions.Builder] at runtime
          */
-        val viewOptions = ViewOptions.Builder()
+        val adBadgeOption = AdBadgeOption.Builder()
             .adBadgeBackColor(ContextCompat.getColor(this, R.color.cyan))
             .adBadgeIsHidden(false)
             .adBadgeLabel(AdBadgeTextType.SPONSORED)
             .adBadgeShowOnThumbnails(true)
             .adBadgeTextColor(ContextCompat.getColor(this, R.color.white))
             .adBadgeTypeface(ResourcesCompat.getFont(this, R.font.roboto_black)!!)
-            .autoPlayOnComplete(true)
-            .backgroundColor(ContextCompat.getColor(this, R.color.black))
-            .columnCount(3)
-            .ctaButtonBackgroundColor(ContextCompat.getColor(this, R.color.cyan))
-            .ctaButtonDelay(CtaDelay(0.2f, CtaDelayUnit.PERCENTAGE))
-            .ctaButtonTextColor(ContextCompat.getColor(this, R.color.white))
-            .ctaButtonTypeface(ResourcesCompat.getFont(this, R.font.roboto_black)!!)
-            .feedLayout(FeedLayout.GRID)
-            .feedResource(FeedResource.Discovery)
+            .build()
+
+        val ctaOption = CtaOption.Builder()
+            .ctaDelay(CtaDelay(0.2f, CtaDelayUnit.PERCENTAGE))
+            .build()
+
+        val titleOption = TitleOption.Builder()
             .feedTitleBackgroundColor(ContextCompat.getColor(this, R.color.purple_transparent))
-            .feedTitlePosition(FeedTitlePosition.NESTED)
             .feedTitleTextColor(ContextCompat.getColor(this, R.color.black))
             .feedTitleTextNumberOfLines(1)
             .feedTitleTextPadding(dpToPx(8f))
             .feedTitleTextSize(spToPx(14f))
             .feedTitleTextTypeface(ResourcesCompat.getFont(this, R.font.roboto_regular)!!)
+            .showFeedTitle(true)
+            .build()
+
+        val layoutOption = LayoutOption.Builder()
+            .feedLayout(FeedLayout.GRID)
+            .feedTitlePosition(FeedTitlePosition.NESTED)
             .itemSpacing(dpToPx(4f))
-            .muteOnLaunch(true)
+            .backgroundColor(ContextCompat.getColor(this, R.color.black))
+            .columnCount(3)
             .playIconWidth(dpToPx(24f))
-            .playerMode(PlayerMode.FIT_MODE)
             .roundedCorner(true)
             .roundedCornerRadius(dpToPx(16f))
-            .showFeedTitle(true)
+            .showPlayIcon(true)
+            .build()
+
+        val playerOption = PlayerOption.Builder()
+            .autoPlayOnComplete(true)
+            .autoplay(true)
+            .playerMode(PlayerMode.FIT_MODE)
             .showFireworkLogo(true)
             .showMuteButton(true)
-            .showPlayIcon(true)
             .showPlayPauseButton(true)
             .showShareButton(true)
+            .build()
+
+        val adOption = AdOption.Builder()
             .supportBackwardAds(true)
+            .build()
+
+        val baseOption = BaseOption.Builder()
+            .feedResource(FeedResource.Discovery)
+            .build()
+
+        val viewOptions = ViewOptions.Builder()
+            .adBadgeOption(adBadgeOption)
+            .ctaOption(ctaOption)
+            .titleOption(titleOption)
+            .layoutOption(layoutOption)
+            .playerOption(playerOption)
+            .adOption(adOption)
+            .baseOption(baseOption)
             .build()
 
         videoFeedView.init(viewOptions)
