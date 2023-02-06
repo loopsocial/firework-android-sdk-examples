@@ -59,7 +59,7 @@ detekt {
 }
 
 dependencies {
-    implementation("androidx.appcompat:appcompat:1.5.1")
+    implementation("androidx.appcompat:appcompat:1.6.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.6.10"))
@@ -69,12 +69,12 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.13.2")
 
     // Firework SDK
-    val fireworkSdkVersion = "6.0.0-beta.1"
-    implementation("com.github.loopsocial.firework_sdk_v2:fireworkSdk:$fireworkSdkVersion")
+    val fireworkSdkVersion = "6.0.0-beta.2"
+    implementation("com.firework:sdk:$fireworkSdkVersion")
 
     // Glide (optional image loader)
-    implementation("com.github.loopsocial.firework_sdk_v2:glideImageLoader:$fireworkSdkVersion")
+    implementation("com.firework.external.imageloading:glide:$fireworkSdkVersion")
 
     // Picasso (optional image loader)
-    // implementation("com.github.loopsocial.firework_sdk_v2:picassoImageLoader:$fireworkSdkVersion")
+    // implementation("com.firework.external.imageloading:picasso:$fireworkSdkVersion")
 }

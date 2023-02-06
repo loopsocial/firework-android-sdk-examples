@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="FwCtaButtonStyle" parent="FwCtaButtonParentStyle" tools:ignore="UnusedResources">
+        <item name="android:backgroundTint">@color/fw_cta_bg_bluelake</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+</resources>
