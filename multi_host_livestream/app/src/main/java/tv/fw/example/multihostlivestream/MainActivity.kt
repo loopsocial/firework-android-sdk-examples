@@ -4,11 +4,12 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
-import tv.fw.common.feed.FeedResource
+import com.firework.common.feed.FeedResource
+import com.firework.videofeed.baseOptions
+import com.firework.videofeed.viewOptions
 import tv.fw.example.multihostlivestream.BuildConfig.FW_CHANNEL_ID
 import tv.fw.example.multihostlivestream.BuildConfig.FW_PLAYLIST_ID
 import tv.fw.example.multihostlivestream.databinding.ActivityMainBinding
-import tv.fw.videofeed.options.ViewOptions
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,9 +37,11 @@ class MainActivity : AppCompatActivity() {
 
         val playlistFeedResource = FeedResource.Playlist(FW_CHANNEL_ID, FW_PLAYLIST_ID)
 
-        val viewOptions = ViewOptions.Builder()
-            .feedResource(playlistFeedResource)
-            .build()
+        val viewOptions = viewOptions {
+            baseOptions {
+                feedResource(playlistFeedResource)
+            }
+        }
 
         videoFeedView.init(viewOptions)
     }

@@ -2,11 +2,11 @@ package tv.fw.example.multihostlivestream
 
 import android.app.Application
 import android.util.Log
+import com.firework.imageloading.glide.GlideImageLoaderFactory
+import com.firework.livestream.multihost.MultihostLivestreamPlayerInitializer
+import com.firework.sdk.FireworkSdk
+import com.firework.sdk.FireworkSdkConfig
 import tv.fw.example.multihostlivestream.BuildConfig.FW_CLIENT_ID
-import tv.fw.fireworksdk.FireworkSdk
-import tv.fw.fireworksdk.FireworkSdkConfig
-import tv.fw.imageloading.glide.GlideImageLoaderFactory
-import tv.fw.livestream.multihostsupport.MultihostSupportLivestreamPlayerInitializer
 
 class ExampleApplication : Application() {
 
@@ -20,7 +20,7 @@ class ExampleApplication : Application() {
             .userId("example app user ID") // User Id in your eco-system
             .imageLoader(GlideImageLoaderFactory.createInstance()) // glide, picasso, or your implementation
             // Single-Host and Multi-Host Livestreams can be used together, and single-host will be used as a fallback if multi-host is missing
-            .addLivestreamPlayerInitializer(MultihostSupportLivestreamPlayerInitializer())
+            .addLivestreamPlayerInitializer(MultihostLivestreamPlayerInitializer())
             .build()
 
         // initialize Firework Android SDK v2
@@ -31,7 +31,7 @@ class ExampleApplication : Application() {
             },
             onError = { initError ->
                 Log.e("FireworkSDK", "Error initializing Firework - $initError")
-            }
+            },
         )
     }
 }
