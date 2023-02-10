@@ -3,9 +3,9 @@ package tv.fw.sharelink
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import tv.fw.fireworksdk.FireworkSdk
-import tv.fw.fireworksdk.PlayerLaunchResult
-import tv.fw.videofeed.options.ViewOptions
+import com.firework.sdk.FireworkSdk
+import com.firework.sdk.PlayerLaunchResult
+import com.firework.videofeed.options.ViewOptions
 
 class ShareLinkActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
