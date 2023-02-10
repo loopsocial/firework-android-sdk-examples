@@ -6,11 +6,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.lifecycle.Lifecycle
 import androidx.recyclerview.widget.RecyclerView
-import tv.fw.error.FwErrorListener
+import com.firework.error.FwErrorListener
+import com.firework.videofeed.FeedItemClickListener
+import com.firework.videofeed.FeedViewStateListener
+import com.firework.videofeed.FwLifecycleAwareVideoFeedView
 import tv.fw.feedintegration.R
-import tv.fw.videofeed.FeedItemClickListener
-import tv.fw.videofeed.FeedViewStateListener
-import tv.fw.videofeed.FwLifecycleAwareVideoFeedView
 
 class FeedListAdapter(
     private val values: List<ListItem>,

@@ -2,10 +2,10 @@ package tv.fw.feedintegration
 
 import android.app.Application
 import android.util.Log
+import com.firework.imageloading.glide.GlideImageLoaderFactory
+import com.firework.sdk.FireworkSdk
+import com.firework.sdk.FireworkSdkConfig
 import tv.fw.feedintegration.BuildConfig.FW_CLIENT_ID
-import tv.fw.fireworksdk.FireworkSdk
-import tv.fw.fireworksdk.FireworkSdkConfig
-import tv.fw.imageloading.glide.GlideImageLoaderFactory
 
 class ExampleApplication : Application() {
 

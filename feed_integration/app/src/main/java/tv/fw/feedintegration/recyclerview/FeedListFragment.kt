@@ -8,17 +8,17 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import tv.fw.common.feed.FeedResource
-import tv.fw.error.FwError
-import tv.fw.error.FwErrorListener
+import com.firework.common.feed.FeedResource
+import com.firework.error.FwError
+import com.firework.error.FwErrorListener
+import com.firework.videofeed.FeedItemClickListener
+import com.firework.videofeed.FeedViewState
+import com.firework.videofeed.FeedViewStateListener
+import com.firework.videofeed.baseOptions
+import com.firework.videofeed.viewOptions
 import tv.fw.feedintegration.BuildConfig.FW_CHANNEL_ID
 import tv.fw.feedintegration.BuildConfig.FW_PLAYLIST_ID
 import tv.fw.feedintegration.R
-import tv.fw.videofeed.FeedItemClickListener
-import tv.fw.videofeed.FeedViewState
-import tv.fw.videofeed.FeedViewStateListener
-import tv.fw.videofeed.baseOptions
-import tv.fw.videofeed.viewOptions
 import java.util.UUID
 
 class FeedListFragment : Fragment(), FeedItemClickListener, FwErrorListener, FeedViewStateListener {
@@ -41,7 +41,6 @@ class FeedListFragment : Fragment(), FeedItemClickListener, FwErrorListener, Fee
     private fun getListItems(): List<ListItem> {
         val playlistFeedViewOptions = viewOptions {
             baseOptions {
-                supportBackwardAds(true)
                 feedResource(FeedResource.Playlist(FW_CHANNEL_ID, FW_PLAYLIST_ID))
             }
         }

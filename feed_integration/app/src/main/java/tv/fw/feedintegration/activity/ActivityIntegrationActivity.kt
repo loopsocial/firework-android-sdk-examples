@@ -6,11 +6,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import tv.fw.common.feed.FeedResource
+import com.firework.common.feed.FeedResource
+import com.firework.videofeed.baseOptions
+import com.firework.videofeed.viewOptions
 import tv.fw.feedintegration.R
 import tv.fw.feedintegration.databinding.ActivityActivityIntegrationBinding
-import tv.fw.videofeed.baseOptions
-import tv.fw.videofeed.viewOptions
 
 class ActivityIntegrationActivity : AppCompatActivity() {
 
