@@ -7,12 +7,12 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
-import tv.fw.common.feed.FeedResource
+import com.firework.common.feed.FeedResource
+import com.firework.videofeed.FwVideoFeedView
+import com.firework.videofeed.baseOptions
+import com.firework.videofeed.viewOptions
 import tv.fw.feedintegration.R
 import tv.fw.feedintegration.databinding.ActivityAddRemoveIntegrationBinding
-import tv.fw.videofeed.FwVideoFeedView
-import tv.fw.videofeed.baseOptions
-import tv.fw.videofeed.viewOptions
 
 class AddRemoveIntegrationActivity : AppCompatActivity() {
 
@@ -51,7 +51,6 @@ class AddRemoveIntegrationActivity : AppCompatActivity() {
         val viewOptions = viewOptions {
             baseOptions {
                 feedResource(FeedResource.Discovery)
-                supportBackwardAds(true)
             }
         }
 
