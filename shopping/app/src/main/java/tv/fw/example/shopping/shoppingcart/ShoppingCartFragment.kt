@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.firework.imageloading.glide.GlideImageLoaderFactory
+import com.firework.sdk.FireworkSdk
 import tv.fw.example.shopping.databinding.FragmentCheckoutBinding
-import tv.fw.fireworksdk.FireworkSdk
-import tv.fw.imageloading.glide.GlideImageLoaderFactory
 
 class ShoppingCartFragment : Fragment() {
     private var _binding: FragmentCheckoutBinding? = null

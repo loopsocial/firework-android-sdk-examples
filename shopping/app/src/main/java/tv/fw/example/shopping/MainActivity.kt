@@ -6,32 +6,33 @@ import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.firework.common.feed.FeedResource
+import com.firework.common.product.CurrencyCode
+import com.firework.common.product.Product
+import com.firework.sdk.FireworkSdk
+import com.firework.shopping.EmbeddedCartFactory
+import com.firework.shopping.ProductHydrator
+import com.firework.shopping.Shopping
+import com.firework.videofeed.FwVideoFeedView
+import com.firework.videofeed.baseOptions
+import com.firework.videofeed.viewOptions
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import tv.fw.common.feed.FeedResource
-import tv.fw.common.product.CurrencyCode
-import tv.fw.common.product.Product
 import tv.fw.example.shopping.BuildConfig.FW_CHANNEL_ID
 import tv.fw.example.shopping.BuildConfig.FW_PLAYLIST_ID
 import tv.fw.example.shopping.databinding.ActivityMainBinding
 import tv.fw.example.shopping.shoppingcart.ShoppingActivity
 import tv.fw.example.shopping.shoppingcart.ShoppingCartFragment
 import tv.fw.example.shopping.shoppingcart.ShoppingCartRepository
-import tv.fw.fireworksdk.FireworkSdk
-import tv.fw.shopping.EmbeddedCartFactory
-import tv.fw.shopping.ProductHydrator
-import tv.fw.shopping.Shopping
-import tv.fw.videofeed.VideoFeedView
-import tv.fw.videofeed.options.ViewOptions
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private val videoFeedView: VideoFeedView
+    private val videoFeedView: FwVideoFeedView
         get() = binding.videoFeedView
 
     private val uiScope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
@@ -64,9 +65,11 @@ class MainActivity : AppCompatActivity() {
     private fun initVideoFeedView() {
         val playlistFeedResource = FeedResource.Playlist(channelId = FW_CHANNEL_ID, playlistId = FW_PLAYLIST_ID)
 
-        val viewOptions = ViewOptions.Builder()
-            .feedResource(playlistFeedResource)
-            .build()
+        val viewOptions = viewOptions {
+            baseOptions {
+                feedResource(playlistFeedResource)
+            }
+        }
 
         videoFeedView.init(viewOptions)
     }
@@ -83,7 +86,6 @@ class MainActivity : AppCompatActivity() {
                         val status = Shopping.AddToCartStatus.Success(
                             productId = productId,
                             unitId = unitId,
-                            numberOfItemsInCart = 1,
                         )
                         FireworkSdk.shopping.setAddToCartStatus(status)
                         ShoppingCartRepository.add(productId, unitId)

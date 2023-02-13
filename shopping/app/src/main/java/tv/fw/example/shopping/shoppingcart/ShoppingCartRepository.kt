@@ -1,7 +1,7 @@
 package tv.fw.example.shopping.shoppingcart
 
-import tv.fw.common.product.Product
-import tv.fw.common.product.ProductUnit
+import com.firework.common.product.Product
+import com.firework.common.product.ProductUnit
 
 /**
  * Dummy repository class that emulates adding items to the shopping cart

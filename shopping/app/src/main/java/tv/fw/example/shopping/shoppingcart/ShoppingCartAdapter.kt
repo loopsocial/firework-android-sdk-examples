@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.firework.imageloading.ImageLoader
 import tv.fw.example.shopping.databinding.ProductUnitItemBinding
-import tv.fw.imageloading.ImageLoader
 
 internal class ShoppingCartAdapter(
     private val imageLoader: ImageLoader,

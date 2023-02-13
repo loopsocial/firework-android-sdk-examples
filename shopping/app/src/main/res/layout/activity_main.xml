@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <tv.fw.videofeed.VideoFeedView
+    <com.firework.videofeed.FwVideoFeedView
         android:id="@+id/videoFeedView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
