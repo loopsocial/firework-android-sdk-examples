@@ -11,13 +11,17 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
-import tv.fw.common.PlayerMode
-import tv.fw.common.feed.FeedLayout
-import tv.fw.common.feed.FeedResource
-import tv.fw.common.feed.FeedTitlePosition
+import com.firework.common.PlayerMode
+import com.firework.common.feed.FeedLayout
+import com.firework.common.feed.FeedResource
+import com.firework.common.feed.FeedTitlePosition
+import com.firework.videofeed.baseOptions
+import com.firework.videofeed.fwVideoFeedView
+import com.firework.videofeed.layoutOptions
+import com.firework.videofeed.playerOptions
+import com.firework.videofeed.titleOptions
+import com.firework.videofeed.viewOptions
 import tv.fw.example.compose.ui.theme.FireworkComposeTheme
-import tv.fw.videofeed.VideoFeedView
-import tv.fw.videofeed.options.ViewOptions
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,37 +46,44 @@ private fun VideoFeed() {
     val backgroundColor = MaterialTheme.colors.background.hashCode()
 
     AndroidView(factory = { context ->
-        val viewOptions = ViewOptions.Builder()
-            .feedResource(FeedResource.Discovery)
-            .feedLayout(FeedLayout.GRID)
-            .columnCount(3)
-            .backgroundColor(backgroundColor)
-            .itemSpacing(context.dpToPx(16f))
-            .roundedCorner(true)
-            .roundedCornerRadius(context.dpToPx(16f))
-            .showFeedTitle(true)
-            .feedTitleTextColor(feedTitleTextColor)
-            .feedTitlePosition(FeedTitlePosition.NESTED)
-            .feedTitleTextPadding(context.dpToPx(8f))
-            .feedTitleTextSize(context.spToPx(14f))
-            .feedTitleTextNumberOfLines(1)
-            .playerMode(PlayerMode.FIT_MODE)
-            .showPlayIcon(true)
-            .muteOnLaunch(true)
-            .showShareButton(true)
-            .autoPlayOnComplete(true)
-            .build()
-
-        VideoFeedView(context).apply {
-            init(viewOptions)
+        fwVideoFeedView(context) {
+            viewOptions {
+                baseOptions {
+                    feedResource(FeedResource.Discovery)
+                }
+                layoutOptions {
+                    feedLayout(FeedLayout.GRID)
+                    columnCount(3)
+                    backgroundColor(backgroundColor)
+                    itemSpacing(context.dpToPx(16f))
+                    roundedCorner(true)
+                    roundedCornerRadius(context.dpToPx(16f))
+                    feedTitlePosition(FeedTitlePosition.NESTED)
+                    showPlayIcon(true)
+                }
+                titleOptions {
+                    showFeedTitle(true)
+                    feedTitleTextColor(feedTitleTextColor)
+                    feedTitleTextPadding(context.dpToPx(8f))
+                    feedTitleTextSize(context.spToPx(14f))
+                    feedTitleTextNumberOfLines(1)
+                }
+                playerOptions {
+                    playerMode(PlayerMode.FIT_MODE)
+                    showShareButton(true)
+                    autoPlayOnComplete(true)
+                }
+            }
         }
     })
 }
 
 private fun Context.spToPx(sp: Float): Int {
-    return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp, resources.displayMetrics).toInt()
+    return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp, resources.displayMetrics)
+        .toInt()
 }
 
 private fun Context.dpToPx(dp: Float): Int {
-    return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, resources.displayMetrics).toInt()
+    return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, resources.displayMetrics)
+        .toInt()
 }

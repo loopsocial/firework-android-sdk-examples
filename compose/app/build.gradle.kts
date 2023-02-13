@@ -26,12 +26,19 @@ android {
 
     buildTypes {
         defaultConfig {
-            buildConfigField("String", "FW_CLIENT_ID", "\"f6d6ec1275217f178cdff91363825cb390e038c1168f64f6efa23cb95ec6b325\"")
+            buildConfigField(
+                "String",
+                "FW_CLIENT_ID",
+                "\"f6d6ec1275217f178cdff91363825cb390e038c1168f64f6efa23cb95ec6b325\""
+            )
         }
 
         release {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
@@ -79,9 +86,12 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling:$composeUiVersion")
     debugImplementation("androidx.compose.ui:ui-test-manifest:$composeUiVersion")
 
-    val fireworkSdkVersion = "6.0.0-beta.1"
-    implementation("com.github.loopsocial.firework_sdk_v2:fireworkSdk:$fireworkSdkVersion")
+    val fireworkSdkVersion = "6.0.0-beta.2"
+    implementation("com.firework:sdk:$fireworkSdkVersion")
 
     // Glide Impl (Optional)
-    implementation("com.github.loopsocial.firework_sdk_v2:glideImageLoader:$fireworkSdkVersion")
+    implementation("com.firework.external.imageloading:glide:$fireworkSdkVersion")
+
+    // Picasso (optional image loader)
+    // implementation("com.firework.external.imageloading:picasso:$fireworkSdkVersion")
 }
