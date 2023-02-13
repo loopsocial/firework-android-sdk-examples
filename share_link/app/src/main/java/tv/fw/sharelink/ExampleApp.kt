@@ -2,9 +2,9 @@ package tv.fw.sharelink
 
 import android.app.Application
 import android.util.Log
-import tv.fw.fireworksdk.FireworkSdk
-import tv.fw.fireworksdk.FireworkSdkConfig
-import tv.fw.imageloading.glide.GlideImageLoaderFactory
+import com.firework.imageloading.glide.GlideImageLoaderFactory
+import com.firework.sdk.FireworkSdk
+import com.firework.sdk.FireworkSdkConfig
 
 class ExampleApp : Application() {
     override fun onCreate() {

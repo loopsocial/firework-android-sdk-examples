@@ -2,11 +2,11 @@ package tv.fw.sharelink
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import tv.fw.common.feed.FeedResource
-import tv.fw.videofeed.FwVideoFeedView
-import tv.fw.videofeed.baseOptions
-import tv.fw.videofeed.playerOptions
-import tv.fw.videofeed.viewOptions
+import com.firework.common.feed.FeedResource
+import com.firework.videofeed.FwVideoFeedView
+import com.firework.videofeed.baseOptions
+import com.firework.videofeed.playerOptions
+import com.firework.videofeed.viewOptions
 
 class MainActivity : AppCompatActivity() {
     private lateinit var videoFeedView: FwVideoFeedView

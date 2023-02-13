@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context="tv.fw.sharelink.ShareLinkActivity">
 
-    <tv.fw.videofeed.FwVideoFeedView
+    <com.firework.videofeed.FwVideoFeedView
         android:id="@+id/fwVideoFeedView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
