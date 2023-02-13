@@ -2,11 +2,11 @@ package tv.fw.example.singlehostlivestream
 
 import android.app.Application
 import android.util.Log
+import com.firework.imageloading.glide.GlideImageLoaderFactory
+import com.firework.livestream.singlehost.LivestreamPlayerInitializer
+import com.firework.sdk.FireworkSdk
+import com.firework.sdk.FireworkSdkConfig
 import tv.fw.example.singlehostlivestream.BuildConfig.FW_CLIENT_ID
-import tv.fw.fireworksdk.FireworkSdk
-import tv.fw.fireworksdk.FireworkSdkConfig
-import tv.fw.imageloading.glide.GlideImageLoaderFactory
-import tv.fw.livestream.singlehost.LivestreamPlayerInitializer
 
 class ExampleApplication : Application() {
 
@@ -31,7 +31,7 @@ class ExampleApplication : Application() {
             },
             onError = { initError ->
                 Log.e("FireworkSDK", "Error initializing Firework - $initError")
-            }
+            },
         )
     }
 }
