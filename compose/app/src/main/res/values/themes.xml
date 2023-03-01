@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="Theme.FireworkCompose" parent="android:Theme.Material.Light.NoActionBar">
+    <style name="Theme.FireworkExample" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:statusBarColor">@color/purple_700</item>
     </style>
 </resources>

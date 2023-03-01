@@ -1,4 +1,4 @@
-package tv.fw.example.compose.ui.theme
+package com.firework.example.compose.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

@@ -1,4 +1,4 @@
-package tv.fw.example.compose.ui.theme
+package com.firework.example.compose.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

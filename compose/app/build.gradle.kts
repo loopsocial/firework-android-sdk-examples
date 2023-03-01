@@ -6,12 +6,12 @@ plugins {
 }
 
 android {
-    namespace = "tv.fw.example.compose"
+    namespace = "com.firework.example.compose"
 
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "tv.fw.example.compose"
+        applicationId = "com.firework.example.compose"
 
         minSdk = 21
         targetSdk = 33
@@ -62,7 +62,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.1.1"
+        kotlinCompilerExtensionVersion = "1.4.3"
     }
 }
 
@@ -80,13 +80,13 @@ dependencies {
     implementation("androidx.compose.material:material:1.3.1")
 
     // compose
-    val composeUiVersion = "1.3.1"
+    val composeUiVersion = "1.3.3"
     implementation("androidx.compose.ui:ui:$composeUiVersion")
     implementation("androidx.compose.ui:ui-tooling-preview:$composeUiVersion")
     debugImplementation("androidx.compose.ui:ui-tooling:$composeUiVersion")
     debugImplementation("androidx.compose.ui:ui-test-manifest:$composeUiVersion")
 
-    val fireworkSdkVersion = "6.0.0-beta.2"
+    val fireworkSdkVersion = "6.0.0"
     implementation("com.firework:sdk:$fireworkSdkVersion")
 
     // Glide Impl (Optional)

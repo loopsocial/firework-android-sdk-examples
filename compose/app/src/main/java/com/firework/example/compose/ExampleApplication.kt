@@ -1,17 +1,17 @@
-package tv.fw.example.compose
+package com.firework.example.compose
 
 import android.app.Application
 import android.util.Log
+import com.firework.example.compose.BuildConfig.FW_CLIENT_ID
 import com.firework.imageloading.glide.GlideImageLoaderFactory
 import com.firework.sdk.FireworkSdk
 import com.firework.sdk.FireworkSdkConfig
-import tv.fw.example.compose.BuildConfig.FW_CLIENT_ID
 
 class ExampleApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        // build Firework Android SDK v2 configuration
+        // build Firework Android SDK v6 configuration
         val config = FireworkSdkConfig.Builder(this)
             .checksumRequired(false)
             .clientId(FW_CLIENT_ID) // Client OAUTH Id
@@ -20,7 +20,7 @@ class ExampleApplication : Application() {
             .muteOnLaunch(true)
             .build()
 
-        // initialize Firework Android SDK v2
+        // initialize Firework Android SDK v6
         FireworkSdk.init(
             fireworkSdkConfig = config,
             onSuccess = {

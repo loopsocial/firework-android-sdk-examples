@@ -1,6 +1,6 @@
 @file:Suppress("MagicNumber")
 
-package tv.fw.example.compose.ui.theme
+package com.firework.example.compose.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

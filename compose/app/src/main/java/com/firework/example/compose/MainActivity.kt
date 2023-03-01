@@ -1,4 +1,4 @@
-package tv.fw.example.compose
+package com.firework.example.compose
 
 import android.content.Context
 import android.os.Bundle
@@ -15,13 +15,13 @@ import com.firework.common.PlayerMode
 import com.firework.common.feed.FeedLayout
 import com.firework.common.feed.FeedResource
 import com.firework.common.feed.FeedTitlePosition
-import com.firework.videofeed.baseOptions
+import com.firework.example.compose.ui.theme.FireworkComposeTheme
 import com.firework.videofeed.fwVideoFeedView
-import com.firework.videofeed.layoutOptions
-import com.firework.videofeed.playerOptions
-import com.firework.videofeed.titleOptions
 import com.firework.videofeed.viewOptions
-import tv.fw.example.compose.ui.theme.FireworkComposeTheme
+import com.firework.viewoptions.baseOptions
+import com.firework.viewoptions.layoutOptions
+import com.firework.viewoptions.playerOptions
+import com.firework.viewoptions.titleOptions
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,7 +42,8 @@ class MainActivity : ComponentActivity() {
 @Suppress("MagicNumber")
 @Composable
 private fun VideoFeed() {
-    val feedTitleTextColor = MaterialTheme.colors.primary.hashCode()
+    val feedTitleTextColor = MaterialTheme.colors.onPrimary.hashCode()
+    val feedTitleBackgroundColor = MaterialTheme.colors.primary.hashCode()
     val backgroundColor = MaterialTheme.colors.background.hashCode()
 
     AndroidView(factory = { context ->
@@ -55,14 +56,15 @@ private fun VideoFeed() {
                     feedLayout(FeedLayout.GRID)
                     columnCount(3)
                     backgroundColor(backgroundColor)
-                    itemSpacing(context.dpToPx(16f))
+                    itemSpacing(context.dpToPx(8f))
                     roundedCorner(true)
-                    roundedCornerRadius(context.dpToPx(16f))
+                    roundedCornerRadius(context.dpToPx(6f))
                     feedTitlePosition(FeedTitlePosition.NESTED)
                     showPlayIcon(true)
                 }
                 titleOptions {
                     showFeedTitle(true)
+                    feedTitleBackgroundColor(feedTitleBackgroundColor)
                     feedTitleTextColor(feedTitleTextColor)
                     feedTitleTextPadding(context.dpToPx(8f))
                     feedTitleTextSize(context.spToPx(14f))
