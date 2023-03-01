@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
-        android:name="tv.fw.example.ExampleApplication"
+        android:name=".ExampleApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -11,7 +12,7 @@
         android:theme="@style/Theme.FireworkExample">
 
         <activity
-            android:name="tv.fw.example.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,13 +21,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="tv.fw.example.discovery.DiscoveryActivity" />
+        <activity android:name=".discovery.DiscoveryActivity" />
 
-        <activity android:name="tv.fw.example.playlist.PlaylistActivity" />
+        <activity android:name=".playlist.PlaylistActivity" />
 
-        <activity android:name="tv.fw.example.channel.ChannelActivity" />
+        <activity android:name=".channel.ChannelActivity" />
 
-        <activity android:name="tv.fw.example.dynamiccontent.DynamicContentActivity" />
+        <activity android:name=".dynamiccontent.DynamicContentActivity" />
 
     </application>
 

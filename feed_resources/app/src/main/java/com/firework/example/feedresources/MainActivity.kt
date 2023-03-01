@@ -1,12 +1,12 @@
-package tv.fw.example
+package com.firework.example.feedresources
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import tv.fw.example.channel.ChannelActivity
-import tv.fw.example.discovery.DiscoveryActivity
-import tv.fw.example.dynamiccontent.DynamicContentActivity
-import tv.fw.example.feedResources.databinding.ActivityMainBinding
-import tv.fw.example.playlist.PlaylistActivity
+import com.firework.example.feedresources.channel.ChannelActivity
+import com.firework.example.feedresources.databinding.ActivityMainBinding
+import com.firework.example.feedresources.discovery.DiscoveryActivity
+import com.firework.example.feedresources.dynamiccontent.DynamicContentActivity
+import com.firework.example.feedresources.playlist.PlaylistActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

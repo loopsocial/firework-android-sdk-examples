@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="tv.fw.example.discovery.DiscoveryActivity">
+    tools:context="com.firework.example.feedresources.discovery.DiscoveryActivity">
 
     <com.firework.videofeed.FwVideoFeedView
         android:id="@+id/fwVideoFeedView"

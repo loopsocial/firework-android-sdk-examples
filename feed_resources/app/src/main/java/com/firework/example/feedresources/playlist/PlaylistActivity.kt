@@ -1,4 +1,4 @@
-package tv.fw.example.channel
+package com.firework.example.feedresources.playlist
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -7,21 +7,22 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import com.firework.common.feed.FeedResource
-import com.firework.videofeed.baseOptions
-import com.firework.videofeed.viewOptions
-import tv.fw.example.feedResources.BuildConfig.FW_CHANNEL_ID
-import tv.fw.example.feedResources.R
-import tv.fw.example.feedResources.databinding.ActivityChannelBinding
+import com.firework.example.feedresources.BuildConfig.FW_CHANNEL_ID
+import com.firework.example.feedresources.BuildConfig.FW_PLAYLIST_ID
+import com.firework.example.feedresources.R
+import com.firework.example.feedresources.databinding.ActivityPlaylistBinding
+import com.firework.viewoptions.baseOptions
+import com.firework.viewoptions.viewOptions
 
-class ChannelActivity : AppCompatActivity() {
+class PlaylistActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityChannelBinding
+    private lateinit var binding: ActivityPlaylistBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityChannelBinding.inflate(LayoutInflater.from(this))
+        binding = ActivityPlaylistBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
-        setTitle(R.string.channel_screen_title)
+        setTitle(R.string.playlist_screen_title)
 
         setupDetails()
 
@@ -30,9 +31,9 @@ class ChannelActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun setupDetails() {
-        binding.details.source.text = "Channel"
+        binding.details.source.text = "Playlist"
         binding.details.channel.text = FW_CHANNEL_ID
-        binding.details.playlist.text = "N/A"
+        binding.details.playlist.text = FW_PLAYLIST_ID
     }
 
     private fun initVideoFeedView() {
@@ -40,7 +41,7 @@ class ChannelActivity : AppCompatActivity() {
 
         val viewOptions = viewOptions {
             baseOptions {
-                feedResource(FeedResource.Channel(channelId = FW_CHANNEL_ID))
+                feedResource(FeedResource.Playlist(channelId = FW_CHANNEL_ID, playlistId = FW_PLAYLIST_ID))
             }
         }
 
@@ -53,6 +54,6 @@ class ChannelActivity : AppCompatActivity() {
     }
 
     companion object {
-        fun intent(context: Context) = Intent(context, ChannelActivity::class.java)
+        fun intent(context: Context) = Intent(context, PlaylistActivity::class.java)
     }
 }

@@ -1,4 +1,4 @@
-package tv.fw.example.dynamiccontent
+package com.firework.example.feedresources.dynamiccontent
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -7,11 +7,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import com.firework.common.feed.FeedResource
-import com.firework.videofeed.baseOptions
-import com.firework.videofeed.viewOptions
-import tv.fw.example.feedResources.BuildConfig.FW_CHANNEL_ID
-import tv.fw.example.feedResources.R
-import tv.fw.example.feedResources.databinding.ActivityDynamicContentBinding
+import com.firework.example.feedresources.BuildConfig.FW_CHANNEL_ID
+import com.firework.example.feedresources.R
+import com.firework.example.feedresources.databinding.ActivityDynamicContentBinding
+import com.firework.viewoptions.baseOptions
+import com.firework.viewoptions.viewOptions
 
 class DynamicContentActivity : AppCompatActivity() {
 

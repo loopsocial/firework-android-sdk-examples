@@ -1,4 +1,4 @@
-package tv.fw.example.discovery
+package com.firework.example.feedresources.discovery
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -7,10 +7,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import com.firework.common.feed.FeedResource
-import com.firework.videofeed.baseOptions
-import com.firework.videofeed.viewOptions
-import tv.fw.example.feedResources.R
-import tv.fw.example.feedResources.databinding.ActivityDiscoveryBinding
+import com.firework.example.feedresources.R
+import com.firework.example.feedresources.databinding.ActivityDiscoveryBinding
+import com.firework.viewoptions.baseOptions
+import com.firework.viewoptions.viewOptions
 
 class DiscoveryActivity : AppCompatActivity() {
 
