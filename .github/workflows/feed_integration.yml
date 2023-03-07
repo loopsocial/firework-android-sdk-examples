@@ -1,7 +1,7 @@
 name: Feed Integration CI
 
 concurrency:
-  group: feed_resources:${{ github.head_ref }}
+  group: feed_integration:${{ github.head_ref }}
   cancel-in-progress: true
 
 on:
