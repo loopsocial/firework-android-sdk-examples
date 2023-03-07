@@ -6,12 +6,12 @@ plugins {
 }
 
 android {
-    namespace = "tv.fw.example.multihostlivestream"
+    namespace = "com.firework.example.multihostlivestream"
 
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "tv.fw.example.multihostlivestream"
+        applicationId = "com.firework.example.multihostlivestream"
 
         minSdk = 21
         targetSdk = 33
@@ -71,7 +71,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.13.2")
 
     // Firework SDK
-    val fireworkSdkVersion = "6.0.0-beta.2"
+    val fireworkSdkVersion = "6.0.0"
     implementation("com.firework:sdk:$fireworkSdkVersion")
 
     // Glide (optional image loader)
