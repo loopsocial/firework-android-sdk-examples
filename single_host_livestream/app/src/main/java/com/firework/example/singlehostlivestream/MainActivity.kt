@@ -1,15 +1,15 @@
-package tv.fw.example.singlehostlivestream
+package com.firework.example.singlehostlivestream
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import com.firework.common.feed.FeedResource
-import com.firework.videofeed.baseOptions
-import com.firework.videofeed.viewOptions
-import tv.fw.example.singlehostlivestream.BuildConfig.FW_CHANNEL_ID
-import tv.fw.example.singlehostlivestream.BuildConfig.FW_PLAYLIST_ID
-import tv.fw.example.singlehostlivestream.databinding.ActivityMainBinding
+import com.firework.example.singlehostlivestream.BuildConfig.FW_CHANNEL_ID
+import com.firework.example.singlehostlivestream.BuildConfig.FW_PLAYLIST_ID
+import com.firework.example.singlehostlivestream.databinding.ActivityMainBinding
+import com.firework.viewoptions.baseOptions
+import com.firework.viewoptions.viewOptions
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
     private fun initVideoFeedView() {
         val videoFeedView = binding.videoFeedView
 
+        // Replace this playlist with one including SingleHost Livestream
         val playlistFeedResource = FeedResource.Playlist(FW_CHANNEL_ID, FW_PLAYLIST_ID)
 
         val viewOptions = viewOptions {

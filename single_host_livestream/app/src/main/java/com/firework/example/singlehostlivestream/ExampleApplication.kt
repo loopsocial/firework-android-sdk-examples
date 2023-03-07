@@ -1,19 +1,19 @@
-package tv.fw.example.singlehostlivestream
+package com.firework.example.singlehostlivestream
 
 import android.app.Application
 import android.util.Log
+import com.firework.example.singlehostlivestream.BuildConfig.FW_CLIENT_ID
 import com.firework.imageloading.glide.GlideImageLoaderFactory
 import com.firework.livestream.singlehost.LivestreamPlayerInitializer
 import com.firework.sdk.FireworkSdk
 import com.firework.sdk.FireworkSdkConfig
-import tv.fw.example.singlehostlivestream.BuildConfig.FW_CLIENT_ID
 
 class ExampleApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
 
-        // build Firework Android SDK v2 configuration
+        // build Firework Android SDK v6 configuration
         val config = FireworkSdkConfig.Builder(this)
             .checksumRequired(false)
             .clientId(FW_CLIENT_ID) // Client OAUTH Id
@@ -23,7 +23,7 @@ class ExampleApplication : Application() {
             .addLivestreamPlayerInitializer(LivestreamPlayerInitializer())
             .build()
 
-        // initialize Firework Android SDK v2
+        // initialize Firework Android SDK v6
         FireworkSdk.init(
             fireworkSdkConfig = config,
             onSuccess = {
