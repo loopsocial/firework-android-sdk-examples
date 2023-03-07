@@ -1,4 +1,4 @@
-name: Compose CI
+name: Jetpack Compose CI
 
 concurrency:
   group: compose:${{ github.head_ref }}
@@ -6,7 +6,7 @@ concurrency:
 
 on:
   pull_request:
-    branches: [ "develop" ]
+    branches: [ "main" ]
     paths: [ "compose/**" ]
 
 jobs:
