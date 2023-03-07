@@ -1,4 +1,4 @@
-package tv.fw.example.shopping.shoppingcart
+package com.firework.example.shopping.shoppingcart
 
 import com.firework.common.product.Product
 import com.firework.common.product.ProductUnit

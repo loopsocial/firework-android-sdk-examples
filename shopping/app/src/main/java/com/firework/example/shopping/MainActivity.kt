@@ -1,4 +1,4 @@
-package tv.fw.example.shopping
+package com.firework.example.shopping
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -9,24 +9,24 @@ import androidx.fragment.app.Fragment
 import com.firework.common.feed.FeedResource
 import com.firework.common.product.CurrencyCode
 import com.firework.common.product.Product
+import com.firework.example.shopping.BuildConfig.FW_CHANNEL_ID
+import com.firework.example.shopping.BuildConfig.FW_PLAYLIST_ID
+import com.firework.example.shopping.databinding.ActivityMainBinding
+import com.firework.example.shopping.shoppingcart.ShoppingActivity
+import com.firework.example.shopping.shoppingcart.ShoppingCartFragment
+import com.firework.example.shopping.shoppingcart.ShoppingCartRepository
 import com.firework.sdk.FireworkSdk
 import com.firework.shopping.EmbeddedCartFactory
 import com.firework.shopping.ProductHydrator
 import com.firework.shopping.Shopping
 import com.firework.videofeed.FwVideoFeedView
-import com.firework.videofeed.baseOptions
-import com.firework.videofeed.viewOptions
+import com.firework.viewoptions.baseOptions
+import com.firework.viewoptions.viewOptions
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import tv.fw.example.shopping.BuildConfig.FW_CHANNEL_ID
-import tv.fw.example.shopping.BuildConfig.FW_PLAYLIST_ID
-import tv.fw.example.shopping.databinding.ActivityMainBinding
-import tv.fw.example.shopping.shoppingcart.ShoppingActivity
-import tv.fw.example.shopping.shoppingcart.ShoppingCartFragment
-import tv.fw.example.shopping.shoppingcart.ShoppingCartRepository
 
 class MainActivity : AppCompatActivity() {
 

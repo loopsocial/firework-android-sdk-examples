@@ -1,12 +1,12 @@
-package tv.fw.example.shopping.shoppingcart
+package com.firework.example.shopping.shoppingcart
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.firework.example.shopping.databinding.ProductUnitItemBinding
 import com.firework.imageloading.ImageLoader
-import tv.fw.example.shopping.databinding.ProductUnitItemBinding
 
 internal class ShoppingCartAdapter(
     private val imageLoader: ImageLoader,

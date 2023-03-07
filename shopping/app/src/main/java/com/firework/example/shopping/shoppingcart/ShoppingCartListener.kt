@@ -1,4 +1,4 @@
-package tv.fw.example.shopping.shoppingcart
+package com.firework.example.shopping.shoppingcart
 
 interface ShoppingCartListener {
     fun onCheckout()

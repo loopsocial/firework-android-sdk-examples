@@ -1,4 +1,4 @@
-package tv.fw.example.shopping.shoppingcart
+package com.firework.example.shopping.shoppingcart
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.firework.example.shopping.databinding.FragmentCheckoutBinding
 import com.firework.imageloading.glide.GlideImageLoaderFactory
 import com.firework.sdk.FireworkSdk
-import tv.fw.example.shopping.databinding.FragmentCheckoutBinding
 
 class ShoppingCartFragment : Fragment() {
     private var _binding: FragmentCheckoutBinding? = null
