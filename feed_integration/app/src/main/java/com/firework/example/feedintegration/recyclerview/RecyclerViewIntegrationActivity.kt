@@ -1,4 +1,4 @@
-package tv.fw.feedintegration.fragment
+package com.firework.example.feedintegration.recyclerview
 
 import android.content.Context
 import android.content.Intent
@@ -6,23 +6,22 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import tv.fw.feedintegration.R
-import tv.fw.feedintegration.databinding.ActivityFragmentIntegrationBinding
+import com.firework.example.feedintegration.R
+import com.firework.example.feedintegration.databinding.ActivityRecyclerViewIntegrationBinding
 
-class FragmentIntegrationActivity : AppCompatActivity() {
+class RecyclerViewIntegrationActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityFragmentIntegrationBinding
+    private lateinit var binding: ActivityRecyclerViewIntegrationBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityFragmentIntegrationBinding.inflate(LayoutInflater.from(this))
+        binding = ActivityRecyclerViewIntegrationBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
-
-        supportActionBar?.title = getString(R.string.fragment_screen_title)
+        supportActionBar?.title = getString(R.string.recycler_view_screen_title)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
         if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction().add(R.id.container, FeedViewFragment.newInstance(), null).commit()
+            supportFragmentManager.beginTransaction().add(R.id.container, FeedListFragment.newInstance(), null).commit()
         }
     }
 
@@ -34,6 +33,6 @@ class FragmentIntegrationActivity : AppCompatActivity() {
     }
 
     companion object {
-        fun intent(context: Context) = Intent(context, FragmentIntegrationActivity::class.java)
+        fun intent(context: Context) = Intent(context, RecyclerViewIntegrationActivity::class.java)
     }
 }

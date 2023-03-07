@@ -1,4 +1,4 @@
-package tv.fw.feedintegration.addremove
+package com.firework.example.feedintegration.addremove
 
 import android.content.Context
 import android.content.Intent
@@ -8,11 +8,11 @@ import android.view.MenuItem
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.firework.common.feed.FeedResource
+import com.firework.example.feedintegration.R
+import com.firework.example.feedintegration.databinding.ActivityAddRemoveIntegrationBinding
 import com.firework.videofeed.FwVideoFeedView
-import com.firework.videofeed.baseOptions
-import com.firework.videofeed.viewOptions
-import tv.fw.feedintegration.R
-import tv.fw.feedintegration.databinding.ActivityAddRemoveIntegrationBinding
+import com.firework.viewoptions.baseOptions
+import com.firework.viewoptions.viewOptions
 
 class AddRemoveIntegrationActivity : AppCompatActivity() {
 

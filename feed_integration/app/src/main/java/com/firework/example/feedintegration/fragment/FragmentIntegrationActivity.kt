@@ -1,4 +1,4 @@
-package tv.fw.feedintegration.recyclerview
+package com.firework.example.feedintegration.fragment
 
 import android.content.Context
 import android.content.Intent
@@ -6,22 +6,23 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import tv.fw.feedintegration.R
-import tv.fw.feedintegration.databinding.ActivityRecyclerViewIntegrationBinding
+import com.firework.example.feedintegration.R
+import com.firework.example.feedintegration.databinding.ActivityFragmentIntegrationBinding
 
-class RecyclerViewIntegrationActivity : AppCompatActivity() {
+class FragmentIntegrationActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityRecyclerViewIntegrationBinding
+    private lateinit var binding: ActivityFragmentIntegrationBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityRecyclerViewIntegrationBinding.inflate(LayoutInflater.from(this))
+        binding = ActivityFragmentIntegrationBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
-        supportActionBar?.title = getString(R.string.recycler_view_screen_title)
+
+        supportActionBar?.title = getString(R.string.fragment_screen_title)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
         if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction().add(R.id.container, FeedListFragment.newInstance(), null).commit()
+            supportFragmentManager.beginTransaction().add(R.id.container, FeedViewFragment.newInstance(), null).commit()
         }
     }
 
@@ -33,6 +34,6 @@ class RecyclerViewIntegrationActivity : AppCompatActivity() {
     }
 
     companion object {
-        fun intent(context: Context) = Intent(context, RecyclerViewIntegrationActivity::class.java)
+        fun intent(context: Context) = Intent(context, FragmentIntegrationActivity::class.java)
     }
 }

@@ -1,4 +1,4 @@
-package tv.fw.feedintegration.recyclerview
+package com.firework.example.feedintegration.recyclerview
 
 import android.os.Bundle
 import android.util.Log
@@ -11,14 +11,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.firework.common.feed.FeedResource
 import com.firework.error.FwError
 import com.firework.error.FwErrorListener
+import com.firework.example.feedintegration.BuildConfig.FW_CHANNEL_ID
+import com.firework.example.feedintegration.BuildConfig.FW_PLAYLIST_ID
+import com.firework.example.feedintegration.R
 import com.firework.videofeed.FeedItemClickListener
 import com.firework.videofeed.FeedViewState
 import com.firework.videofeed.FeedViewStateListener
-import com.firework.videofeed.baseOptions
-import com.firework.videofeed.viewOptions
-import tv.fw.feedintegration.BuildConfig.FW_CHANNEL_ID
-import tv.fw.feedintegration.BuildConfig.FW_PLAYLIST_ID
-import tv.fw.feedintegration.R
+import com.firework.viewoptions.baseOptions
+import com.firework.viewoptions.viewOptions
 import java.util.UUID
 
 class FeedListFragment : Fragment(), FeedItemClickListener, FwErrorListener, FeedViewStateListener {

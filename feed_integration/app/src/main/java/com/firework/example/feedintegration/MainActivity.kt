@@ -1,12 +1,12 @@
-package tv.fw.feedintegration
+package com.firework.example.feedintegration
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import tv.fw.feedintegration.activity.ActivityIntegrationActivity
-import tv.fw.feedintegration.addremove.AddRemoveIntegrationActivity
-import tv.fw.feedintegration.databinding.ActivityMainBinding
-import tv.fw.feedintegration.fragment.FragmentIntegrationActivity
-import tv.fw.feedintegration.recyclerview.RecyclerViewIntegrationActivity
+import com.firework.example.feedintegration.activity.ActivityIntegrationActivity
+import com.firework.example.feedintegration.addremove.AddRemoveIntegrationActivity
+import com.firework.example.feedintegration.databinding.ActivityMainBinding
+import com.firework.example.feedintegration.fragment.FragmentIntegrationActivity
+import com.firework.example.feedintegration.recyclerview.RecyclerViewIntegrationActivity
 
 class MainActivity : AppCompatActivity() {
 

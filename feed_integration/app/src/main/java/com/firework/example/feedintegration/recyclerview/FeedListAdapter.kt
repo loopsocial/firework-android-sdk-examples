@@ -1,4 +1,4 @@
-package tv.fw.feedintegration.recyclerview
+package com.firework.example.feedintegration.recyclerview
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,10 +7,10 @@ import android.widget.TextView
 import androidx.lifecycle.Lifecycle
 import androidx.recyclerview.widget.RecyclerView
 import com.firework.error.FwErrorListener
+import com.firework.example.feedintegration.R
 import com.firework.videofeed.FeedItemClickListener
 import com.firework.videofeed.FeedViewStateListener
 import com.firework.videofeed.FwLifecycleAwareVideoFeedView
-import tv.fw.feedintegration.R
 
 class FeedListAdapter(
     private val values: List<ListItem>,

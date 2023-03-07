@@ -1,4 +1,4 @@
-package tv.fw.feedintegration.activity
+package com.firework.example.feedintegration.activity
 
 import android.content.Context
 import android.content.Intent
@@ -7,10 +7,10 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.firework.common.feed.FeedResource
-import com.firework.videofeed.baseOptions
-import com.firework.videofeed.viewOptions
-import tv.fw.feedintegration.R
-import tv.fw.feedintegration.databinding.ActivityActivityIntegrationBinding
+import com.firework.example.feedintegration.R
+import com.firework.example.feedintegration.databinding.ActivityActivityIntegrationBinding
+import com.firework.viewoptions.baseOptions
+import com.firework.viewoptions.viewOptions
 
 class ActivityIntegrationActivity : AppCompatActivity() {
 

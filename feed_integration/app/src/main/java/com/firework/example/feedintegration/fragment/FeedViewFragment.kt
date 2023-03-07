@@ -1,4 +1,4 @@
-package tv.fw.feedintegration.fragment
+package com.firework.example.feedintegration.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.firework.common.feed.FeedResource
+import com.firework.example.feedintegration.R
 import com.firework.videofeed.FwVideoFeedView
-import com.firework.videofeed.baseOptions
-import com.firework.videofeed.viewOptions
-import tv.fw.feedintegration.R
+import com.firework.viewoptions.baseOptions
+import com.firework.viewoptions.viewOptions
 
 class FeedViewFragment : Fragment() {
     private lateinit var videoFeedView: FwVideoFeedView
