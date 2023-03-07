@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FW Picture-in-picture</string>
+
+    <string name="source_type">Source Type:</string>
+    <string name="channel_id">Channel ID:</string>
+    <string name="playlist_id">Playlist ID:</string>
+
+    <string name="enter_pip_mode">Enter PiP mode in 5 sec</string>
+    <string name="close_pip_mode">Close PiP mode</string>
+</resources>
