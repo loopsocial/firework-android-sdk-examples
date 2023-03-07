@@ -1,4 +1,4 @@
-package tv.fw.sharelink
+package com.firework.example.sharelink
 
 import android.app.Application
 import android.util.Log
@@ -24,11 +24,12 @@ class ExampleApp : Application() {
             },
             onError = { error ->
                 Log.e("XXXX-init", "Init Failed: $error")
-            },
+            }
         )
     }
 
     companion object {
+        // Replace this with your website domain -->
         private const val BASE_SHARE_URL = "https://example.com/"
     }
 }

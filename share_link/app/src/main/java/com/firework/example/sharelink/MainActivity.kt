@@ -1,20 +1,23 @@
-package tv.fw.sharelink
+package com.firework.example.sharelink
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import com.firework.common.feed.FeedResource
-import com.firework.videofeed.FwVideoFeedView
-import com.firework.videofeed.baseOptions
-import com.firework.videofeed.playerOptions
-import com.firework.videofeed.viewOptions
+import com.firework.example.sharelink.databinding.ActivityMainBinding
+import com.firework.viewoptions.baseOptions
+import com.firework.viewoptions.playerOptions
+import com.firework.viewoptions.viewOptions
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var videoFeedView: FwVideoFeedView
+
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val videoFeedView = findViewById<FwVideoFeedView>(R.id.fwVideoFeedView)
+        binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
+        setContentView(binding.root)
+
         val viewOptions = viewOptions {
             baseOptions {
                 feedResource(FeedResource.Discovery)
@@ -23,11 +26,12 @@ class MainActivity : AppCompatActivity() {
                 showShareButton(true)
             }
         }
-        videoFeedView.init(viewOptions)
+
+        binding.fwVideoFeedView.init(viewOptions)
     }
 
     override fun onDestroy() {
-        videoFeedView.destroy()
+        binding.fwVideoFeedView.destroy()
         super.onDestroy()
     }
 }
