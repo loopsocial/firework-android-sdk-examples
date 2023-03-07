@@ -6,12 +6,12 @@ plugins {
 }
 
 android {
-    namespace = "tv.fw.feedintegration"
+    namespace = "com.firework.example.feedintegration"
 
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "tv.fw.feedintegration"
+        applicationId = "com.firework.example.feedintegration"
 
         minSdk = 21
         targetSdk = 33
@@ -72,7 +72,7 @@ dependencies {
     implementation("com.google.android.material:material:1.8.0")
 
     // Firework SDK
-    val fireworkSdkVersion = "6.0.0-beta.2"
+    val fireworkSdkVersion = "6.0.0"
     implementation("com.firework:sdk:$fireworkSdkVersion")
 
     // Glide (optional image loader)

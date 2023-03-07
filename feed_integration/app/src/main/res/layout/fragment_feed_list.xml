@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rvList"
-    android:name="tv.fw.sdkarchitecturetemplate.bottomnavigation.FeedListFragment"
+    android:name="com.firework.sdkarchitecturetemplate.bottomnavigation.FeedListFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context="tv.fw.sdkarchitecturetemplate.feedintegration.feedlistfragment.FeedListFragment"
+    tools:context=".recyclerview.FeedListFragment"
     tools:listitem="@layout/feed_list_item" />
