@@ -1,8 +1,8 @@
-package tv.fw.example.shopping
+package com.firework.example.shopping
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import tv.fw.example.shopping.databinding.ActivityMainBinding
+import com.firework.example.shopping.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

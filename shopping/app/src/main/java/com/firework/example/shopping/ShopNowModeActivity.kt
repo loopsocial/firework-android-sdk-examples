@@ -1,4 +1,4 @@
-package tv.fw.example.shopping
+package com.firework.example.shopping
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -12,6 +12,10 @@ import com.firework.common.feed.FeedResource
 import com.firework.common.product.CurrencyCode
 import com.firework.common.product.Product
 import com.firework.error.shopping.ShoppingError
+import com.firework.example.shopping.BuildConfig.FW_CHANNEL_ID
+import com.firework.example.shopping.BuildConfig.FW_PLAYLIST_ID
+import com.firework.example.shopping.databinding.ActivityShopNowModeBinding
+import com.firework.example.shopping.shoppingcart.ShoppingCartRepository
 import com.firework.sdk.FireworkSdk
 import com.firework.shopping.LinkButtonOptions
 import com.firework.shopping.ProductDetailsOptions
@@ -27,10 +31,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import tv.fw.example.shopping.BuildConfig.FW_CHANNEL_ID
-import tv.fw.example.shopping.BuildConfig.FW_PLAYLIST_ID
-import tv.fw.example.shopping.databinding.ActivityShopNowModeBinding
-import tv.fw.example.shopping.shoppingcart.ShoppingCartRepository
 
 class ShopNowModeActivity : AppCompatActivity(), Shopping.OnShoppingErrorListener {
     private lateinit var binding: ActivityShopNowModeBinding

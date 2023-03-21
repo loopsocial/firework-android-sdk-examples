@@ -1,4 +1,4 @@
-package tv.fw.example.shopping
+package com.firework.example.shopping
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -11,6 +11,12 @@ import androidx.fragment.app.Fragment
 import com.firework.common.feed.FeedResource
 import com.firework.common.product.CurrencyCode
 import com.firework.common.product.Product
+import com.firework.example.shopping.BuildConfig.FW_CHANNEL_ID
+import com.firework.example.shopping.BuildConfig.FW_PLAYLIST_ID
+import com.firework.example.shopping.databinding.ActivityAddToCartModeBinding
+import com.firework.example.shopping.shoppingcart.ShoppingActivity
+import com.firework.example.shopping.shoppingcart.ShoppingCartFragment
+import com.firework.example.shopping.shoppingcart.ShoppingCartRepository
 import com.firework.sdk.FireworkSdk
 import com.firework.shopping.EmbeddedCartFactory
 import com.firework.shopping.ProductHydrator
@@ -23,12 +29,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import tv.fw.example.shopping.BuildConfig.FW_CHANNEL_ID
-import tv.fw.example.shopping.BuildConfig.FW_PLAYLIST_ID
-import tv.fw.example.shopping.databinding.ActivityAddToCartModeBinding
-import tv.fw.example.shopping.shoppingcart.ShoppingActivity
-import tv.fw.example.shopping.shoppingcart.ShoppingCartFragment
-import tv.fw.example.shopping.shoppingcart.ShoppingCartRepository
 
 class AddToCartModeActivity : AppCompatActivity() {
 
@@ -51,6 +51,8 @@ class AddToCartModeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initVideoFeedView()
+
+        setupDetails()
 
         setupShopping()
     }
