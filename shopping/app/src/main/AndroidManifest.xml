@@ -21,6 +21,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".AddToCartModeActivity" />
+
+        <activity android:name=".ShopNowModeActivity" />
     </application>
 
 </manifest>

@@ -5,7 +5,7 @@
     android:id="@+id/detailsContainer"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_add_to_cart_mode">
 
     <TextView
         android:id="@+id/sourceLabel"

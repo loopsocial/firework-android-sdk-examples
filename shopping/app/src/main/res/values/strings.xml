@@ -6,4 +6,6 @@
     <string name="playlist_id">Playlist ID:</string>
 
     <string name="checkout">Checkout</string>
+    <string name="shop_now">Shop now mode</string>
+    <string name="add_to_cart">Add to cart mode</string>
 </resources>
