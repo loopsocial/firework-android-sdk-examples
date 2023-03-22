@@ -93,6 +93,9 @@ class AddToCartModeActivity : AppCompatActivity() {
         }
 
         shopping.setOnProductHydrationListener { products: List<Product>, hydrator: ProductHydrator ->
+            if (!ALLOW_PRODUCTS_HYDRATION) {
+                return@setOnProductHydrationListener
+            }
             ShoppingCartRepository.setProducts(products)
             uiScope.launch {
                 delay(LONG_OPERATION_DELAY)
@@ -134,6 +137,7 @@ class AddToCartModeActivity : AppCompatActivity() {
 
     companion object {
         private const val LONG_OPERATION_DELAY = 2000L
+        private const val ALLOW_PRODUCTS_HYDRATION = false
         fun getIntent(context: Context): Intent {
             return Intent(context, AddToCartModeActivity::class.java)
         }

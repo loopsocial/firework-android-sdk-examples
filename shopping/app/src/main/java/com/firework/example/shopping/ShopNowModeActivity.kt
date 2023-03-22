@@ -92,6 +92,9 @@ class ShopNowModeActivity : AppCompatActivity(), Shopping.OnShoppingErrorListene
             FireworkSdk.enterPip()
         }
         shopping.setOnProductHydrationListener { products, hydrator ->
+            if (!ALLOW_PRODUCTS_HYDRATION) {
+                return@setOnProductHydrationListener
+            }
             ShoppingCartRepository.setProducts(products)
             uiScope.launch {
                 delay(LONG_OPERATION_DELAY)
@@ -129,6 +132,7 @@ class ShopNowModeActivity : AppCompatActivity(), Shopping.OnShoppingErrorListene
 
     companion object {
         private val TAG = ShopNowModeActivity::class.java.simpleName
+        private const val ALLOW_PRODUCTS_HYDRATION = false
         private const val LONG_OPERATION_DELAY = 2000L
         fun getIntent(context: Context): Intent {
             return Intent(context, ShopNowModeActivity::class.java)
