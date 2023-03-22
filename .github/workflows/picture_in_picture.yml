@@ -1,13 +1,13 @@
-name: Feed Integration CI
+name: Picture-in-picture CI
 
 concurrency:
-  group: feed_resources:${{ github.head_ref }}
+  group: picture_in_picture:${{ github.head_ref }}
   cancel-in-progress: true
 
 on:
   pull_request:
     branches: [ "main" ]
-    paths: [ "feed_integration/**" ]
+    paths: [ "picture_in_picture/**" ]
 
 jobs:
 
@@ -27,6 +27,6 @@ jobs:
 
       - name: Build with Gradle
         run: |
-          cd feed_integration
+          cd picture_in_picture
           chmod +x ./gradlew
           ./gradlew build
