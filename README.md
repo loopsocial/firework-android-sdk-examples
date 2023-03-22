@@ -11,6 +11,7 @@ This repo holds the Firework Android SDK example applications.
 * [Share Link](#share-link-example-app)
 * [Picture In Picture](#picture-in-picture-example-app)
 * [Jetpack Compose](#jetpack-compose-example-app)
+* [Story Block](#story-block-example-app)
 
 **Read more about the integration here** https://docs.firework.tv/
 
@@ -144,5 +145,18 @@ In this example app, the `FwVideoFeedView` is initialized for showing a discover
 | Discovery Feed                                   | Player screen                                 |
 | ------------------------------------------------ | --------------------------------------------- |
 | ![discovery Screenshot](compose/Screenshot1.png) | ![player Screenshot](compose/Screenshot2.png) |
+
+---
+
+## Story block example app
+
+This example app demonstrates the usage of StoryBlock component.
+This component allows to embed pager player directly in the host app's view hierarchy.
+
+[Story block example app](story_block)
+
+| Story block                                             | Fullscreen Story Block                                    |
+|---------------------------------------------------------|-----------------------------------------------------------|
+| ![Story block example app](story_block/Screenshot1.jpeg) | ![Story block example app](story_block/Screenshot2.jpeg)    |
 
 ---

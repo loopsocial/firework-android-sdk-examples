@@ -1,0 +1,13 @@
+style:
+  MaxLineLength:
+    maxLineLength: 150
+
+  ReturnCount:
+    max: 5
+
+complexity:
+  LongParameterList:
+    constructorThreshold: 15
+
+  TooManyFunctions:
+    ignorePrivate: true
