@@ -1,8 +1,8 @@
-package com.firework.example.feedresources
+package com.firework.example.storyblock
 
 import android.app.Application
 import android.util.Log
-import com.firework.example.feedresources.BuildConfig.FW_CLIENT_ID
+import com.firework.example.storyblock.BuildConfig.FW_CLIENT_ID
 import com.firework.imageloading.glide.GlideImageLoaderFactory
 import com.firework.sdk.FireworkSdk
 import com.firework.sdk.FireworkSdkConfig
