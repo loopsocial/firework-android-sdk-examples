@@ -147,10 +147,10 @@ In this example app, the `FwVideoFeedView` is initialized for showing a discover
 This example app demonstrates the usage of StoryBlock component.
 This component allows to embed pager player directly in the host app's view hierarchy.
 
-[Story block example app](storyblock)
+[Story block example app](story_block)
 
 | Story block                                             | Fullscreen Story Block                                    |
 |---------------------------------------------------------|-----------------------------------------------------------|
-| ![Story block example app](storyblock/Screenshot1.jpeg) | ![Story block example app](storyblock/Screenshot2.jpeg)    |
+| ![Story block example app](story_block/Screenshot1.jpeg) | ![Story block example app](story_block/Screenshot2.jpeg)    |
 
 ---

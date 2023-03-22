@@ -21,5 +21,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Feed Resources"
+rootProject.name = "Story Block"
 include(":app")

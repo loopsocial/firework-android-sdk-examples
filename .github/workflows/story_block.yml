@@ -1,13 +1,13 @@
-name: Storyblock CI
+name: Story Block CI
 
 concurrency:
-  group: storyblock:${{ github.head_ref }}
+  group: story_block:${{ github.head_ref }}
   cancel-in-progress: true
 
 on:
   pull_request:
     branches: [ "main" ]
-    paths: [ "storyblock/**" ]
+    paths: [ "story_block/**" ]
 
 jobs:
 
@@ -27,6 +27,6 @@ jobs:
 
       - name: Build with Gradle
         run: |
-          cd storyblock
+          cd story_block
           chmod +x ./gradlew
           ./gradlew build
