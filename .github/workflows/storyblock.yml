@@ -1,4 +1,4 @@
-name: Shopping CI
+name: Storyblock CI
 
 concurrency:
   group: storyblock:${{ github.head_ref }}
