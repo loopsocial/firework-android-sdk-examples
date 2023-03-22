@@ -19,8 +19,12 @@ import com.firework.example.shopping.shoppingcart.ShoppingCartFragment
 import com.firework.example.shopping.shoppingcart.ShoppingCartRepository
 import com.firework.sdk.FireworkSdk
 import com.firework.shopping.EmbeddedCartFactory
+import com.firework.shopping.LinkButtonOptions
+import com.firework.shopping.ProductDetailsOptions
 import com.firework.shopping.ProductHydrator
 import com.firework.shopping.Shopping
+import com.firework.shopping.ShoppingCtaButtonOptions
+import com.firework.shopping.ShoppingViewOptions
 import com.firework.videofeed.FwVideoFeedView
 import com.firework.viewoptions.baseOptions
 import com.firework.viewoptions.viewOptions
@@ -78,6 +82,14 @@ class AddToCartModeActivity : AppCompatActivity() {
     private fun setupShopping() {
         val shopping = FireworkSdk.shopping
         shopping.setEmbeddedCartFactory(checkoutFragmentFactory)
+        shopping.setShoppingViewOptions(
+            ShoppingViewOptions(
+                ProductDetailsOptions(
+                    linkButtonOptions = LinkButtonOptions(true),
+                    shoppingCtaButtonOptions = ShoppingCtaButtonOptions(text = ShoppingCtaButtonOptions.Text.ADD_TO_CART),
+                ),
+            ),
+        )
         shopping.setShoppingCartBehaviour(Shopping.CartBehaviour.Embedded("some title"))
         shopping.setOnCtaButtonClicked { productId, unitId, _ ->
             uiScope.launch {
