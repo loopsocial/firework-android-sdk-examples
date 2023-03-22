@@ -89,17 +89,18 @@ You need a feed resource with a Multiple Host Livestream item.
 ## Shopping example app
 
 In this example app, the `FwVideoFeedView` is initialized and integrated with the shopping features of the SDK.
-The app has two screen which demonstrate how to setup shopping for "Shopping cart mode" and "Shop now mode".
+The app has two screens which demonstrate how to setup shopping for "Shopping cart mode" and "Shop now mode".
 
 [Shopping example app](shopping)
 
-| Shopping Button                                  | Shopping Cart                                    |
-| ------------------------------------------------ | ------------------------------------------------ |
+| Video with products                              | Product details page                             |
+|--------------------------------------------------|--------------------------------------------------|
 | ![shopping Screenshot](shopping/Screenshot1.png) | ![shopping Screenshot](shopping/Screenshot2.png) |
 
-| Shopping cart mode                               | Shop now mode                                    |
-|--------------------------------------------------|--------------------------------------------------|
-| ![shopping Screenshot](shopping/Screenshot3.png) | ![shopping Screenshot](shopping/Screenshot4.png) |
+
+| Shopping cart mode                                | Shop now mode                                     |
+|---------------------------------------------------|---------------------------------------------------|
+| ![shopping Screenshot](shopping/Screenshot3.jpeg) | ![shopping Screenshot](shopping/Screenshot4.jpeg) |
 
 ---
 ## Share link example app

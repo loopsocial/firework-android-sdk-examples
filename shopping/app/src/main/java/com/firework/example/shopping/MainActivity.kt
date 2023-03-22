@@ -1,7 +1,7 @@
 package com.firework.example.shopping
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.firework.example.shopping.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
