@@ -4,6 +4,7 @@ This repo holds the Firework Android SDK example applications.
 **List of example apps:**
 
 * [View Options](#view-options-example-app)
+* [Feed Integration](#feed-integration-example-app)
 * [Feed Resources](#feed-resources-example-app)
 * [Single-Host Livestream](#single-host-livestream-example-app)
 * [Multi-Host Livestream](#multi-host-livestream-example-app)
@@ -32,6 +33,26 @@ The view options can be set in 3 different methods:
 | Customized View Options                                  | Player screen                                            |
 | -------------------------------------------------------- | -------------------------------------------------------- |
 | ![View Options Screenshot](view_options/Screenshot1.png) | ![View Options Screenshot](view_options/Screenshot2.png) |
+
+---
+
+## Feed Integration example app
+
+This example app demonstrates the following scenarios of `FwVideoFeedView` integration: The app
+shows how to integrate
+`FwVideoFeedView` in activity, fragment, recycler view, and remove/add `FwVideoFeedView` from the
+container on the runtime.
+
+* `FwVideoFeedView` integrated in activity
+* `FwVideoFeedView` integrated in fragment
+* `FwVideoFeedView` integrated in recycler view
+* `FwVideoFeedView` add/removed from the container on the runtime.
+
+[Feed Integration example app](feed_integration)
+
+| FwVideoFeedView in Activity                                        | FwVideoFeedView in recycler view                                   |
+|--------------------------------------------------------------------|--------------------------------------------------------------------|
+| ![Feed Integration example app](feed_integration/Screenshot1.jpeg) | ![Feed Integration example app](feed_integration/Screenshot2.jpeg) |
 
 ---
 
