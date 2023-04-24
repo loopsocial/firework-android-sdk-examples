@@ -71,7 +71,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.13.2")
 
     // Firework SDK
-    val fireworkSdkVersion = "6.1.0"
+    val fireworkSdkVersion = "6.2.0"
     implementation("com.firework:sdk:$fireworkSdkVersion")
 
     // Glide (optional image loader)

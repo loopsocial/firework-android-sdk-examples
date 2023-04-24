@@ -85,7 +85,6 @@ class MainActivity : AppCompatActivity() {
 
             adOptions {
                 adsFetchTimeoutInSeconds(15)
-                adsRequiredToLoadFeeds(true)
                 vastAttributes(mapOf())
             }
 
@@ -122,6 +121,13 @@ class MainActivity : AppCompatActivity() {
 
             titleOptions {
                 feedTitleBackgroundColor(getContextCompatColor(R.color.purple_transparent))
+                // This is an example of how to set a gradient background for the feed title, Note: This will get priority over the above color
+                // feedTitleBackgroundDrawable(
+                //     GradientDrawable(
+                //         GradientDrawable.Orientation.TOP_BOTTOM,
+                //         arrayOf(Color.BLUE, Color.CYAN, Color.MAGENTA).toIntArray()
+                //     ),
+                // )
                 feedTitleTextColor(getContextCompatColor(R.color.black))
                 feedTitleTextNumberOfLines(1)
                 feedTitleTextPadding(dpToPx(8f))

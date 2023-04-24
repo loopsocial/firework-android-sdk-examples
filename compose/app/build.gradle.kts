@@ -74,10 +74,10 @@ detekt {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.0")
-    implementation("androidx.activity:activity-compose:1.6.1")
-    implementation("androidx.compose.material:material:1.3.1")
+    implementation("androidx.core:core-ktx:1.10.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
+    implementation("androidx.activity:activity-compose:1.7.1")
+    implementation("androidx.compose.material:material:1.4.2")
 
     // compose
     val composeUiVersion = "1.3.3"
@@ -86,7 +86,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling:$composeUiVersion")
     debugImplementation("androidx.compose.ui:ui-test-manifest:$composeUiVersion")
 
-    val fireworkSdkVersion = "6.1.0"
+    val fireworkSdkVersion = "6.2.0"
     implementation("com.firework:sdk:$fireworkSdkVersion")
 
     // Glide Impl (Optional)

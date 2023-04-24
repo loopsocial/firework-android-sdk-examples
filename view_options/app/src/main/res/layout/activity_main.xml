@@ -22,7 +22,6 @@
         app:fw_adBadgeTextColor="@color/white"
         app:fw_adBadgeTextTypeface="@font/roboto_black"
         app:fw_adsFetchTimeoutInSeconds="15"
-        app:fw_adsRequiredToLoadFeeds="true"
         app:fw_autoPlayOnComplete="true"
         app:fw_backColor="@color/black"
         app:fw_columns="3"
