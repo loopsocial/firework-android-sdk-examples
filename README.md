@@ -60,7 +60,7 @@ container on the runtime.
 
 [Feed Resources example app](feed_resources)
 
-In this example app, the `FwVideoFeedView` is initialized with different feedResources: Discovery, Playlist, Channel, Dynamic Content.
+In this example app, the `FwVideoFeedView` is initialized with different feedResources: Discovery, Playlist, Channel, Dynamic Content, Channel Hashtags.
 
 | Discovery Feed                                               | Player screen                                                |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -77,6 +77,10 @@ In this example app, the `FwVideoFeedView` is initialized with different feedRes
 | Dynamic Feed                                                 | Player screen                                                |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![dynamic Screenshot](feed_resources/DynamicScreenshot1.png) | ![dynamic Screenshot](feed_resources/DynamicScreenshot2.png) |
+
+| Channel Hashtags Feed                                                          | Player screen                                                                 |
+|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| ![channel_hashtags Screenshot](feed_resources/ChannelHashtagsScreenshot1.jpeg) | ![channel_hashtags Screenshot](feed_resources/ChannelHashtagsScreenshot2.jpeg) |
 
 ---
 
