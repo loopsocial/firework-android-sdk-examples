@@ -29,6 +29,8 @@
 
         <activity android:name=".dynamiccontent.DynamicContentActivity" />
 
+        <activity android:name=".channelhashtags.ChannelHashtagsActivity" />
+
     </application>
 
 </manifest>
