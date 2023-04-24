@@ -3,6 +3,7 @@ package com.firework.example.feedresources
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.firework.example.feedresources.channel.ChannelActivity
+import com.firework.example.feedresources.channelhashtags.ChannelHashtagsActivity
 import com.firework.example.feedresources.databinding.ActivityMainBinding
 import com.firework.example.feedresources.discovery.DiscoveryActivity
 import com.firework.example.feedresources.dynamiccontent.DynamicContentActivity
@@ -27,6 +28,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.dynamicContent.setOnClickListener {
             startActivity(DynamicContentActivity.intent(this))
+        }
+        binding.channelHashtags.setOnClickListener {
+            startActivity(ChannelHashtagsActivity.intent(this))
         }
     }
 }

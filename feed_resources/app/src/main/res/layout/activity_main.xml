@@ -46,10 +46,21 @@
         android:layout_width="200dp"
         android:layout_height="75dp"
         android:text="@string/dynamic_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/channelHashtags"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playlist" />
+
+    <Button
+        android:id="@+id/channelHashtags"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:text="@string/channel_hashtags"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dynamicContent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

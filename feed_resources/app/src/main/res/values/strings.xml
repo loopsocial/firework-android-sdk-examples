@@ -3,14 +3,19 @@
 
     <string name="source_type">Source Type:</string>
     <string name="channel_id">Channel ID:</string>
+    <string name="channel_hashtag_filter_expression">Hashtag Filter Expression:</string>
     <string name="playlist_id">Playlist ID:</string>
     <string name="categories">Categories:</string>
     <string name="discovery">Discovery</string>
     <string name="channel">Channel</string>
     <string name="playlist">Playlist</string>
     <string name="dynamic_content">Dynamic content</string>
+    <string name="channel_hashtags">Channel hashtags</string>
     <string name="discovery_screen_title">FW Discovery</string>
     <string name="playlist_screen_title">FW Playlist</string>
     <string name="channel_screen_title">FW Channel</string>
+    <string name="channel_hashtags_screen_title">FW Channel Hashtags</string>
     <string name="dynamic_content_screen_title">FW Dynamic Content</string>
+    <string name="enter_hashtag_filter_expression">Enter hashtag filter expression</string>
+    <string name="search">Search</string>
 </resources>
