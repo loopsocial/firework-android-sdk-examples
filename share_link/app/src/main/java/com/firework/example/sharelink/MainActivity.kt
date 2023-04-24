@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import com.firework.common.feed.FeedResource
+import com.firework.example.sharelink.Constants.BASE_SHARE_URL
 import com.firework.example.sharelink.databinding.ActivityMainBinding
 import com.firework.viewoptions.baseOptions
 import com.firework.viewoptions.playerOptions
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
             }
             playerOptions {
                 showShareButton(true)
+                shareBaseUrl(BASE_SHARE_URL)
             }
         }
 

@@ -14,7 +14,6 @@ class ExampleApp : Application() {
             .checksumRequired(false)
             .clientId(BuildConfig.FW_CLIENT_ID)
             .enableCache(true)
-            .shareBaseUrl(BASE_SHARE_URL)
             .imageLoader(GlideImageLoaderFactory.createInstance())
             .build()
         FireworkSdk.init(
@@ -26,10 +25,5 @@ class ExampleApp : Application() {
                 Log.e("XXXX-init", "Init Failed: $error")
             }
         )
-    }
-
-    companion object {
-        // Replace this with your website domain -->
-        private const val BASE_SHARE_URL = "https://example.com/"
     }
 }

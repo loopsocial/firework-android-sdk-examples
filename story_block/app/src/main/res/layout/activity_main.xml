@@ -34,7 +34,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.firework.storyblock.StoryBlockView
+            <com.firework.storyblock.FwStoryBlockView
                 android:id="@+id/story_block"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
