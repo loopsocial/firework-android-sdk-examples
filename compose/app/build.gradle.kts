@@ -86,7 +86,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling:$composeUiVersion")
     debugImplementation("androidx.compose.ui:ui-test-manifest:$composeUiVersion")
 
-    val fireworkSdkVersion = "6.2.0"
+    val fireworkSdkVersion = "6.2.1"
     implementation("com.firework:sdk:$fireworkSdkVersion")
 
     // Glide Impl (Optional)
