@@ -8,6 +8,7 @@ import com.firework.example.feedresources.databinding.ActivityMainBinding
 import com.firework.example.feedresources.discovery.DiscoveryActivity
 import com.firework.example.feedresources.dynamiccontent.DynamicContentActivity
 import com.firework.example.feedresources.playlist.PlaylistActivity
+import com.firework.example.feedresources.sku.SkuActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -31,6 +32,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.channelHashtags.setOnClickListener {
             startActivity(ChannelHashtagsActivity.intent(this))
+        }
+        binding.sku.setOnClickListener {
+            startActivity(SkuActivity.intent(this))
         }
     }
 }

@@ -82,6 +82,10 @@ In this example app, the `FwVideoFeedView` is initialized with different feedRes
 |--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 | ![channel_hashtags Screenshot](feed_resources/ChannelHashtagsScreenshot1.jpeg) | ![channel_hashtags Screenshot](feed_resources/ChannelHashtagsScreenshot2.jpeg) |
 
+| Sku Feed                                                          | Player screen                                                                 |
+|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| ![sku Screenshot](feed_resources/SkuScreenshot1.jpeg) | ![sku Screenshot](feed_resources/SkuScreenshot2.jpeg) |
+
 ---
 
 ## Single-Host Livestream example app
@@ -134,7 +138,7 @@ The app has two screens which demonstrate how to setup shopping for "Shopping ca
 [Share link example app](share_link)
 
 This example app demonstrates the share link functionality.
-It contains two activities: 
+It contains two activities:
 
 1. `MainActivity` - allows to lunch player and share the video
 2. `ShareLinkActivity` - handles the deep link and opens the shared video.
