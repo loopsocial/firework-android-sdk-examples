@@ -25,6 +25,7 @@ android {
             buildConfigField("String", "FW_CLIENT_ID", "\"f6d6ec1275217f178cdff91363825cb390e038c1168f64f6efa23cb95ec6b325\"")
             buildConfigField("String", "FW_CHANNEL_ID", "\"7RXwK8k\"")
             buildConfigField("String", "FW_PLAYLIST_ID", "\"g4lA0g\"")
+            buildConfigField("String", "FW_CONTENT_ID", "\"gle8W8\"")
         }
         release {
             isMinifyEnabled = false

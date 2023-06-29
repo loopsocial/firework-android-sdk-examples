@@ -68,10 +68,21 @@
         android:layout_width="200dp"
         android:layout_height="75dp"
         android:text="@string/sku"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/singleElement"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/channelHashtags" />
+
+    <Button
+        android:id="@+id/singleElement"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:text="@string/single_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sku" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
