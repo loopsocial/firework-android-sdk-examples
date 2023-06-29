@@ -14,7 +14,7 @@ android {
         applicationId = "com.firework.example.feedresources"
 
         minSdk = 21
-        targetSdk = 33
+//        targetSdk = 33
 
         versionCode = 1
         versionName = "1.0.0"
