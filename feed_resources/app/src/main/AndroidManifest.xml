@@ -33,6 +33,8 @@
 
         <activity android:name=".sku.SkuActivity" />
 
+        <activity android:name=".singlecontent.SingleContentActivity" />
+
     </application>
 
 </manifest>

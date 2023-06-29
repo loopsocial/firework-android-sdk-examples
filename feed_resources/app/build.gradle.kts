@@ -14,7 +14,7 @@ android {
         applicationId = "com.firework.example.feedresources"
 
         minSdk = 21
-        targetSdk = 33
+//        targetSdk = 33
 
         versionCode = 1
         versionName = "1.0.0"
@@ -25,6 +25,7 @@ android {
             buildConfigField("String", "FW_CLIENT_ID", "\"f6d6ec1275217f178cdff91363825cb390e038c1168f64f6efa23cb95ec6b325\"")
             buildConfigField("String", "FW_CHANNEL_ID", "\"7RXwK8k\"")
             buildConfigField("String", "FW_PLAYLIST_ID", "\"g4lA0g\"")
+            buildConfigField("String", "FW_CONTENT_ID", "\"gle8W8\"")
         }
         release {
             isMinifyEnabled = false
@@ -33,13 +34,13 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
         allWarningsAsErrors = true
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 
     lint {

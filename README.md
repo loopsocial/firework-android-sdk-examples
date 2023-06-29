@@ -86,6 +86,10 @@ In this example app, the `FwVideoFeedView` is initialized with different feedRes
 |--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 | ![sku Screenshot](feed_resources/SkuScreenshot1.jpeg) | ![sku Screenshot](feed_resources/SkuScreenshot2.jpeg) |
 
+| Single Content Feed                                                          | Player screen                                                                 |
+|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| ![Single Content Screenshot](feed_resources/SingleContentScreenshot1.png) | ![Single Element Screenshot](feed_resources/SingleContentScreenshot2.png) |
+
 ---
 
 ## Single-Host Livestream example app
