@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
                 playerMode(PlayerMode.FIT_MODE)
                 showFireworkLogo(true)
                 showMuteButton(true)
-                showPlayPauseButton(true)
+                showPlayPauseButtonInReplay(true)
                 showShareButton(true)
             }
 
