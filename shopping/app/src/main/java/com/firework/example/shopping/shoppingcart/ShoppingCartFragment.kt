@@ -15,7 +15,7 @@ class ShoppingCartFragment : Fragment() {
     private val binding: FragmentCheckoutBinding get() = _binding!!
 
     private val imageLoader by lazy {
-        GlideImageLoaderFactory.createInstance()
+        GlideImageLoaderFactory.createInstance(context = requireContext())
     }
 
     private val checkoutAdapter by lazy {
