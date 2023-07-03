@@ -47,7 +47,7 @@
         app:fw_showFireworkLogo="true"
         app:fw_showMuteButton="true"
         app:fw_showPlayIcon="true"
-        app:fw_showPlayPauseButton="true"
+        app:fw_showPlayPauseButtonInReplay="true"
         app:fw_showShareButton="true"
         app:layout_constraintBottom_toTopOf="@id/details"
         app:layout_constraintTop_toTopOf="parent" />
