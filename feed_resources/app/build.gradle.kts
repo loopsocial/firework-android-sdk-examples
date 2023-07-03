@@ -8,13 +8,13 @@ plugins {
 android {
     namespace = "com.firework.example.feedresources"
 
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.firework.example.feedresources"
 
         minSdk = 21
-//        targetSdk = 33
+        targetSdk = 34
 
         versionCode = 1
         versionName = "1.0.0"
