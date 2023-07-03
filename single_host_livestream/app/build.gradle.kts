@@ -8,13 +8,13 @@ plugins {
 android {
     namespace = "com.firework.example.singlehostlivestream"
 
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.firework.example.singlehostlivestream"
 
         minSdk = 21
-        targetSdk = 33
+        targetSdk = 34
 
         versionCode = 1
         versionName = "1.0.0"
@@ -33,13 +33,13 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
         allWarningsAsErrors = true
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 
     lint {
@@ -71,7 +71,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.13.2")
 
     // Firework SDK
-    val fireworkSdkVersion = "6.2.1"
+    val fireworkSdkVersion = "6.3.4"
     implementation("com.firework:sdk:$fireworkSdkVersion")
 
     // Glide (optional image loader)
