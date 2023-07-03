@@ -14,7 +14,7 @@ class ExampleApp : Application() {
             .checksumRequired(false)
             .clientId(BuildConfig.FW_CLIENT_ID)
             .enableCache(true)
-            .imageLoader(GlideImageLoaderFactory.createInstance())
+            .imageLoader(GlideImageLoaderFactory.createInstance(context = this))
             .build()
         FireworkSdk.init(
             config,
