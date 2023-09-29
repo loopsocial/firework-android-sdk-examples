@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.storyBlock.init(
-            supportFragmentManager,
-            lifecycle,
-            viewOptions {
+            fragmentManager = supportFragmentManager,
+            lifecycleOwner = this,
+            viewOptions = viewOptions {
                 baseOptions {
                     feedResource(FeedResource.Discovery)
                 }
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
                     playerMode(PlayerMode.FIT_MODE)
                 }
             },
-            binding.storyBlockContainer,
+            pauseWhenNotVisible = true,
         )
         binding.storyBlock.setOnErrorListener {
             Log.i("StoryBlock-Fragment", it.toString())
