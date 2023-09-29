@@ -24,6 +24,7 @@ import com.firework.shopping.ProductDetailsOptions
 import com.firework.shopping.ProductHydrator
 import com.firework.shopping.Shopping
 import com.firework.shopping.ShoppingCtaButtonOptions
+import com.firework.shopping.ShoppingTheme
 import com.firework.shopping.ShoppingViewOptions
 import com.firework.videofeed.FwVideoFeedView
 import com.firework.viewoptions.baseOptions
@@ -84,7 +85,8 @@ class AddToCartModeActivity : AppCompatActivity() {
         shopping.setEmbeddedCartFactory(checkoutFragmentFactory)
         shopping.setShoppingViewOptions(
             ShoppingViewOptions(
-                ProductDetailsOptions(
+                theme = ShoppingTheme.DARK,
+                productDetailsOptions = ProductDetailsOptions(
                     linkButtonOptions = LinkButtonOptions(true),
                     shoppingCtaButtonOptions = ShoppingCtaButtonOptions(text = ShoppingCtaButtonOptions.Text.ADD_TO_CART),
                 ),
