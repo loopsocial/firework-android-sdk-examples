@@ -14,7 +14,6 @@ import com.firework.viewoptions.baseOptions
 import com.firework.viewoptions.viewOptions
 
 class SingleContentActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivitySingleContentBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,12 +36,13 @@ class SingleContentActivity : AppCompatActivity() {
     private fun initVideoFeedView() {
         val videoFeedView = binding.fwVideoFeedView
 
-        val viewOptions = viewOptions {
-            baseOptions {
-                // Check Channel, Playlist, or Dynamic screens for other feed sources
-                feedResource(FeedResource.SingleContent(FW_CONTENT_ID))
+        val viewOptions =
+            viewOptions {
+                baseOptions {
+                    // Check Channel, Playlist, or Dynamic screens for other feed sources
+                    feedResource(FeedResource.SingleContent(FW_CONTENT_ID))
+                }
             }
-        }
 
         videoFeedView.init(viewOptions)
     }

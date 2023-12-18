@@ -15,7 +15,6 @@ import com.firework.viewoptions.baseOptions
 import com.firework.viewoptions.viewOptions
 
 class PlaylistActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityPlaylistBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,11 +38,12 @@ class PlaylistActivity : AppCompatActivity() {
     private fun initVideoFeedView() {
         val videoFeedView = binding.fwVideoFeedView
 
-        val viewOptions = viewOptions {
-            baseOptions {
-                feedResource(FeedResource.Playlist(channelId = FW_CHANNEL_ID, playlistId = FW_PLAYLIST_ID))
+        val viewOptions =
+            viewOptions {
+                baseOptions {
+                    feedResource(FeedResource.Playlist(channelId = FW_CHANNEL_ID, playlistId = FW_PLAYLIST_ID))
+                }
             }
-        }
 
         videoFeedView.init(viewOptions)
     }

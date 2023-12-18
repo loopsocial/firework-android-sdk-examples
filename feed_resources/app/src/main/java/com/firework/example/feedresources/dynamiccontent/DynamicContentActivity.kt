@@ -14,7 +14,6 @@ import com.firework.viewoptions.baseOptions
 import com.firework.viewoptions.viewOptions
 
 class DynamicContentActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityDynamicContentBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,11 +41,12 @@ class DynamicContentActivity : AppCompatActivity() {
         val categories = listOf("Test category")
         val parameters = mapOf("category" to categories)
         val feedResource = FeedResource.DynamicContent(channelId = FW_CHANNEL_ID, parameters = parameters)
-        val viewOptions = viewOptions {
-            baseOptions {
-                feedResource(feedResource)
+        val viewOptions =
+            viewOptions {
+                baseOptions {
+                    feedResource(feedResource)
+                }
             }
-        }
         videoFeedView.init(viewOptions)
     }
 
