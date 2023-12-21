@@ -31,7 +31,10 @@ class ShoppingCartFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(
+        view: View,
+        savedInstanceState: Bundle?,
+    ) {
         super.onViewCreated(view, savedInstanceState)
         binding.rvList.adapter = checkoutAdapter
         binding.checkoutBtn.setOnClickListener {

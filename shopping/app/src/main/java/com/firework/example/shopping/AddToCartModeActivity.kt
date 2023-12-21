@@ -36,7 +36,6 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class AddToCartModeActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityAddToCartModeBinding
 
     private val videoFeedView: FwVideoFeedView
@@ -44,11 +43,12 @@ class AddToCartModeActivity : AppCompatActivity() {
 
     private val uiScope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
 
-    private val checkoutFragmentFactory = object : EmbeddedCartFactory {
-        override fun getInstance(): Fragment {
-            return ShoppingCartFragment()
+    private val checkoutFragmentFactory =
+        object : EmbeddedCartFactory {
+            override fun getInstance(): Fragment {
+                return ShoppingCartFragment()
+            }
         }
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,11 +65,12 @@ class AddToCartModeActivity : AppCompatActivity() {
     private fun initVideoFeedView() {
         val playlistFeedResource = FeedResource.Playlist(channelId = FW_CHANNEL_ID, playlistId = FW_PLAYLIST_ID)
 
-        val viewOptions = viewOptions {
-            baseOptions {
-                feedResource(playlistFeedResource)
+        val viewOptions =
+            viewOptions {
+                baseOptions {
+                    feedResource(playlistFeedResource)
+                }
             }
-        }
         videoFeedView.init(viewOptions)
     }
 
@@ -86,10 +87,11 @@ class AddToCartModeActivity : AppCompatActivity() {
         shopping.setShoppingViewOptions(
             ShoppingViewOptions(
                 theme = ShoppingTheme.DARK,
-                productDetailsOptions = ProductDetailsOptions(
-                    linkButtonOptions = LinkButtonOptions(true),
-                    shoppingCtaButtonOptions = ShoppingCtaButtonOptions(text = ShoppingCtaButtonOptions.Text.ADD_TO_CART),
-                ),
+                productDetailsOptions =
+                    ProductDetailsOptions(
+                        linkButtonOptions = LinkButtonOptions(true),
+                        shoppingCtaButtonOptions = ShoppingCtaButtonOptions(text = ShoppingCtaButtonOptions.Text.ADD_TO_CART),
+                    ),
             ),
         )
         shopping.setShoppingCartBehaviour(Shopping.CartBehaviour.Embedded("some title"))
@@ -130,7 +132,11 @@ class AddToCartModeActivity : AppCompatActivity() {
         }
     }
 
-    private fun hydrateProduct(product: Product, hydrator: ProductHydrator, position: Int) {
+    private fun hydrateProduct(
+        product: Product,
+        hydrator: ProductHydrator,
+        position: Int,
+    ) {
         product.id?.let { id ->
             hydrator.hydrate(id) {
                 name("new product name")
@@ -152,6 +158,7 @@ class AddToCartModeActivity : AppCompatActivity() {
     companion object {
         private const val LONG_OPERATION_DELAY = 2000L
         private const val ALLOW_PRODUCTS_HYDRATION = false
+
         fun getIntent(context: Context): Intent {
             return Intent(context, AddToCartModeActivity::class.java)
         }

@@ -19,8 +19,10 @@ class FeedListAdapter(
     private val onFeedViewStateListener: FeedViewStateListener,
     private val onFeedErrorListener: FwErrorListener,
 ) : RecyclerView.Adapter<FeedListAdapter.BaseViewHolder>() {
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int,
+    ): BaseViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         return when (viewType) {
             R.layout.feed_list_item -> {
@@ -33,7 +35,10 @@ class FeedListAdapter(
         }
     }
 
-    override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: BaseViewHolder,
+        position: Int,
+    ) {
         val item = values[position]
         holder.bind(item)
     }
@@ -54,15 +59,17 @@ class FeedListAdapter(
 
     inner class FeedItemViewHolder(view: View) : BaseViewHolder(view) {
         private var feedView: FwLifecycleAwareVideoFeedView? = null
+
         override fun bind(item: ListItem) {
             // This check is needed to avoid calling init() every time view goes in and out of the view port
             if (feedView == null) {
-                val feedView: FwLifecycleAwareVideoFeedView = view.findViewById<FwLifecycleAwareVideoFeedView?>(R.id.feedView).apply {
-                    init((item as FeedViewItem).viewOptions, lifecycle)
-                    setOnErrorListener(onFeedErrorListener)
-                    setOnFeedItemClickListener(onFeedItemClickListener)
-                    setOnFeedViewStateListener(onFeedViewStateListener)
-                }
+                val feedView: FwLifecycleAwareVideoFeedView =
+                    view.findViewById<FwLifecycleAwareVideoFeedView?>(R.id.feedView).apply {
+                        init((item as FeedViewItem).viewOptions, lifecycle)
+                        setOnErrorListener(onFeedErrorListener)
+                        setOnFeedItemClickListener(onFeedItemClickListener)
+                        setOnFeedViewStateListener(onFeedViewStateListener)
+                    }
                 this.feedView = feedView
             }
         }
@@ -70,6 +77,7 @@ class FeedListAdapter(
 
     inner class TextItemViewHolder(view: View) : BaseViewHolder(view) {
         private val textView = view.findViewById<TextView>(R.id.text)
+
         override fun bind(item: ListItem) {
             textView.text = (item as TextItem).text
         }

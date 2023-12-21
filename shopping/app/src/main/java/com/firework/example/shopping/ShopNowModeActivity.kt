@@ -56,11 +56,12 @@ class ShopNowModeActivity : AppCompatActivity(), Shopping.OnShoppingErrorListene
     private fun initVideoFeedView() {
         val playlistFeedResource = FeedResource.Playlist(channelId = FW_CHANNEL_ID, playlistId = FW_PLAYLIST_ID)
 
-        val viewOptions = viewOptions {
-            baseOptions {
-                feedResource(playlistFeedResource)
+        val viewOptions =
+            viewOptions {
+                baseOptions {
+                    feedResource(playlistFeedResource)
+                }
             }
-        }
 
         videoFeedView.init(viewOptions)
     }
@@ -79,17 +80,19 @@ class ShopNowModeActivity : AppCompatActivity(), Shopping.OnShoppingErrorListene
         shopping.setShoppingViewOptions(
             ShoppingViewOptions(
                 theme = ShoppingTheme.DARK,
-                productDetailsOptions = ProductDetailsOptions(
-                    linkButtonOptions = LinkButtonOptions(false),
-                    shoppingCtaButtonOptions = ShoppingCtaButtonOptions(text = ShoppingCtaButtonOptions.Text.SHOP_NOW),
-                ),
+                productDetailsOptions =
+                    ProductDetailsOptions(
+                        linkButtonOptions = LinkButtonOptions(false),
+                        shoppingCtaButtonOptions = ShoppingCtaButtonOptions(text = ShoppingCtaButtonOptions.Text.SHOP_NOW),
+                    ),
             ),
         )
         shopping.setOnCtaButtonClicked { _, _, productWebUrl ->
             val webpage: Uri = Uri.parse(productWebUrl)
-            val intent = Intent(Intent.ACTION_VIEW, webpage).apply {
-                flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            }
+            val intent =
+                Intent(Intent.ACTION_VIEW, webpage).apply {
+                    flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                }
             startActivity(intent)
             FireworkSdk.enterPip()
         }
@@ -109,7 +112,11 @@ class ShopNowModeActivity : AppCompatActivity(), Shopping.OnShoppingErrorListene
         }
     }
 
-    private fun hydrateProduct(product: Product, hydrator: ProductHydrator, position: Int) {
+    private fun hydrateProduct(
+        product: Product,
+        hydrator: ProductHydrator,
+        position: Int,
+    ) {
         product.id?.let { id ->
             hydrator.hydrate(id) {
                 name("new product name")
@@ -136,6 +143,7 @@ class ShopNowModeActivity : AppCompatActivity(), Shopping.OnShoppingErrorListene
         private val TAG = ShopNowModeActivity::class.java.simpleName
         private const val ALLOW_PRODUCTS_HYDRATION = false
         private const val LONG_OPERATION_DELAY = 2000L
+
         fun getIntent(context: Context): Intent {
             return Intent(context, ShopNowModeActivity::class.java)
         }

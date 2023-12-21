@@ -15,7 +15,6 @@ import com.firework.viewoptions.baseOptions
 import com.firework.viewoptions.viewOptions
 
 class AddRemoveIntegrationActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityAddRemoveIntegrationBinding
 
     private var videoFeedView: FwVideoFeedView? = null
@@ -48,11 +47,12 @@ class AddRemoveIntegrationActivity : AppCompatActivity() {
     private fun addFeed() {
         val videoFeedView = FwVideoFeedView(this)
 
-        val viewOptions = viewOptions {
-            baseOptions {
-                feedResource(FeedResource.Discovery)
+        val viewOptions =
+            viewOptions {
+                baseOptions {
+                    feedResource(FeedResource.Discovery)
+                }
             }
-        }
 
         videoFeedView.init(viewOptions)
 

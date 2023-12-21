@@ -11,7 +11,6 @@ import com.firework.viewoptions.playerOptions
 import com.firework.viewoptions.viewOptions
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,15 +18,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
-        val viewOptions = viewOptions {
-            baseOptions {
-                feedResource(FeedResource.Discovery)
+        val viewOptions =
+            viewOptions {
+                baseOptions {
+                    feedResource(FeedResource.Discovery)
+                }
+                playerOptions {
+                    showShareButton(true)
+                    shareBaseUrl(BASE_SHARE_URL)
+                }
             }
-            playerOptions {
-                showShareButton(true)
-                shareBaseUrl(BASE_SHARE_URL)
-            }
-        }
 
         binding.fwVideoFeedView.init(viewOptions)
     }

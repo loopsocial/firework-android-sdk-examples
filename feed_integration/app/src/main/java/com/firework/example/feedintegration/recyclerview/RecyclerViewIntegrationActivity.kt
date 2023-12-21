@@ -10,7 +10,6 @@ import com.firework.example.feedintegration.R
 import com.firework.example.feedintegration.databinding.ActivityRecyclerViewIntegrationBinding
 
 class RecyclerViewIntegrationActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityRecyclerViewIntegrationBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

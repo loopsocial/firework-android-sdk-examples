@@ -20,7 +20,10 @@ object ShoppingCartRepository {
         return orders.toMutableList().toList()
     }
 
-    fun add(productId: String, unitId: String) {
+    fun add(
+        productId: String,
+        unitId: String,
+    ) {
         val product = products.firstOrNull { it.id == productId } ?: return
         val unit = product.units.firstOrNull { it.id == unitId } ?: return
         orders.add(Order(product = product, unit = unit))

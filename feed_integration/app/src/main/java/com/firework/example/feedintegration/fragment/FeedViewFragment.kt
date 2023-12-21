@@ -22,14 +22,18 @@ class FeedViewFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_feed_view, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(
+        view: View,
+        savedInstanceState: Bundle?,
+    ) {
         super.onViewCreated(view, savedInstanceState)
         videoFeedView = view.findViewById(R.id.videoFeedView)
-        val viewOptions = viewOptions {
-            baseOptions {
-                feedResource(FeedResource.Discovery)
+        val viewOptions =
+            viewOptions {
+                baseOptions {
+                    feedResource(FeedResource.Discovery)
+                }
             }
-        }
         videoFeedView.init(viewOptions)
     }
 

@@ -20,13 +20,19 @@ internal class ShoppingCartAdapter(
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int,
+    ): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = ProductUnitItemBinding.inflate(inflater, parent, false)
         return HeaderViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: ViewHolder,
+        position: Int,
+    ) {
         holder.bind(items[position])
     }
 

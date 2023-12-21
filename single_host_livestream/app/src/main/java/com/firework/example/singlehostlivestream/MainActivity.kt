@@ -12,7 +12,6 @@ import com.firework.viewoptions.baseOptions
 import com.firework.viewoptions.viewOptions
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,11 +37,12 @@ class MainActivity : AppCompatActivity() {
         // Replace this playlist with one including SingleHost Livestream
         val playlistFeedResource = FeedResource.Playlist(FW_CHANNEL_ID, FW_PLAYLIST_ID)
 
-        val viewOptions = viewOptions {
-            baseOptions {
-                feedResource(playlistFeedResource)
+        val viewOptions =
+            viewOptions {
+                baseOptions {
+                    feedResource(playlistFeedResource)
+                }
             }
-        }
 
         videoFeedView.init(viewOptions)
     }
