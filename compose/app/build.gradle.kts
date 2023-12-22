@@ -29,7 +29,7 @@ android {
             buildConfigField(
                 "String",
                 "FW_CLIENT_ID",
-                "\"f6d6ec1275217f178cdff91363825cb390e038c1168f64f6efa23cb95ec6b325\""
+                "\"f6d6ec1275217f178cdff91363825cb390e038c1168f64f6efa23cb95ec6b325\"",
             )
         }
 
@@ -37,7 +37,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -62,7 +62,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = "1.5.7"
     }
 }
 
@@ -76,8 +76,8 @@ detekt {
 dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
-    implementation("androidx.activity:activity-compose:1.7.2")
-    implementation("androidx.compose.material:material:1.5.2")
+    implementation("androidx.activity:activity-compose:1.8.2")
+    implementation("androidx.compose.material:material:1.5.4")
 
     // compose
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
@@ -88,12 +88,9 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
-    val fireworkSdkVersion = "6.7.0"
-    implementation("com.firework:sdk:$fireworkSdkVersion")
-
-    // Glide Impl (Optional)
-    implementation("com.firework.external.imageloading:glide:$fireworkSdkVersion")
-
-    // Picasso (optional image loader)
-    // implementation("com.firework.external.imageloading:picasso:$fireworkSdkVersion")
+    val fireworkBomVersion = "2023.11.01"
+    implementation(platform("com.firework:firework-bom:$fireworkBomVersion"))
+    implementation("com.firework:sdk")
+    implementation("com.firework.external.imageloading:glide") // Glide (optional image loader)
+    // implementation("com.firework.external.imageloading:picasso") // Picasso (optional image loader)
 }

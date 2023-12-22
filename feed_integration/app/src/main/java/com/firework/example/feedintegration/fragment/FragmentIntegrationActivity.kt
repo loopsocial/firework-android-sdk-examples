@@ -10,7 +10,6 @@ import com.firework.example.feedintegration.R
 import com.firework.example.feedintegration.databinding.ActivityFragmentIntegrationBinding
 
 class FragmentIntegrationActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityFragmentIntegrationBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

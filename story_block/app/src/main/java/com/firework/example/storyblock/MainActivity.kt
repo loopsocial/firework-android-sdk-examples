@@ -12,6 +12,7 @@ import com.firework.viewoptions.viewOptions
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -21,14 +22,15 @@ class MainActivity : AppCompatActivity() {
         binding.storyBlock.init(
             fragmentManager = supportFragmentManager,
             lifecycleOwner = this,
-            viewOptions = viewOptions {
-                baseOptions {
-                    feedResource(FeedResource.Discovery)
-                }
-                playerOptions {
-                    playerMode(PlayerMode.FIT_MODE)
-                }
-            },
+            viewOptions =
+                viewOptions {
+                    baseOptions {
+                        feedResource(FeedResource.Discovery)
+                    }
+                    playerOptions {
+                        playerMode(PlayerMode.FIT_MODE)
+                    }
+                },
             pauseWhenNotVisible = true,
         )
         binding.storyBlock.setOnErrorListener {

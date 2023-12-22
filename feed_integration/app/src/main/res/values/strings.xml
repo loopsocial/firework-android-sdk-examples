@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Feed Integration</string>
+    <string name="app_name">FW Feed Integration</string>
     <string name="btn_activity">Feed in Activity</string>
     <string name="btn_fragment">Feed in Fragment</string>
     <string name="btn_recycler_view">Feed in RecyclerView</string>

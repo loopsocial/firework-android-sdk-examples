@@ -32,7 +32,6 @@ import com.firework.viewoptions.viewOptions
 
 @Suppress("MagicNumber")
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
 
     private val videoFeedView: FwVideoFeedView
@@ -60,91 +59,90 @@ class MainActivity : AppCompatActivity() {
     private fun initVideoFeedView() {
         /**
          * Initialization method 1:
-         * - Using [FwVideoFeedView]'s attributes in the XML layout file
-         */
-        // videoFeedView.init()
-
-        /**
+         * - Using [FwVideoFeedView]'s attributes in the XML layout file by calling [VideoFeedView.init] with no parameters
+         *
          * Initialization method 2:
          * - Using [ViewOptions] Builders at runtime
-         */
-
-        /**
+         *
          * Initialization method 3:
          * - Using [viewOptions] Kotlin DSL methods at runtime
          */
-        val viewOptions = viewOptions {
-            adBadgeOptions {
-                adBadgeBackColor(getContextCompatColor(R.color.cyan))
-                adBadgeIsHidden(false)
-                adBadgeLabel(AdBadgeTextType.SPONSORED)
-                adBadgeShowOnThumbnails(true)
-                adBadgeTextColor(getContextCompatColor(R.color.white))
-                adBadgeTypeface(getContextCompatFont(R.font.roboto_black))
-            }
 
-            adOptions {
-                adsFetchTimeoutInSeconds(15)
-                vastAttributes(mapOf())
-            }
+        val viewOptions =
+            viewOptions {
+                adBadgeOptions {
+                    adBadgeBackColor(getContextCompatColor(R.color.cyan))
+                    adBadgeIsHidden(false)
+                    adBadgeLabel(AdBadgeTextType.SPONSORED)
+                    adBadgeShowOnThumbnails(true)
+                    adBadgeTextColor(getContextCompatColor(R.color.white))
+                    adBadgeTypeface(getContextCompatFont(R.font.roboto_black))
+                }
 
-            baseOptions {
-                feedResource(FeedResource.Discovery)
-            }
+                adOptions {
+                    adsFetchTimeoutInSeconds(15)
+                    vastAttributes(mapOf())
+                }
 
-            ctaOptions {
-                ctaDelay(CtaDelay(0.2f, CtaDelayUnit.PERCENTAGE))
-            }
+                baseOptions {
+                    feedResource(FeedResource.Discovery)
+                }
 
-            layoutOptions {
-                backgroundColor(getContextCompatColor(R.color.black))
-                columnCount(3)
-                feedLayout(FeedLayout.GRID)
-                feedTitlePosition(FeedTitlePosition.NESTED)
-                itemSpacing(dpToPx(4f))
-                playIconWidth(dpToPx(24f))
-                roundedCorner(true)
-                roundedCornerRadius(dpToPx(16f))
-                showPlayIcon(true)
-            }
+                ctaOptions {
+                    ctaDelay(CtaDelay(0.2f, CtaDelayUnit.PERCENTAGE))
+                }
 
-            playerOptions {
-                autoPlayOnComplete(true)
-                autoplay(true)
-                enablePipMode(true)
-                playerMode(PlayerMode.FIT_MODE)
-                showFireworkLogo(true)
-                showMuteButton(true)
-                showPlayPauseButtonInReplay(true)
-                showShareButton(true)
-            }
+                layoutOptions {
+                    backgroundColor(getContextCompatColor(R.color.black))
+                    columnCount(3)
+                    feedLayout(FeedLayout.GRID)
+                    feedTitlePosition(FeedTitlePosition.NESTED)
+                    itemSpacing(dpToPx(4f))
+                    playIconWidth(dpToPx(24f))
+                    roundedCorner(true)
+                    roundedCornerRadius(dpToPx(16f))
+                    showPlayIcon(true)
+                }
 
-            titleOptions {
-                feedTitleBackgroundColor(getContextCompatColor(R.color.purple_transparent))
-                // This is an example of how to set a gradient background for the feed title, Note: This will get priority over the above color
-                // feedTitleBackgroundDrawable(
-                //     GradientDrawable(
-                //         GradientDrawable.Orientation.TOP_BOTTOM,
-                //         arrayOf(Color.BLUE, Color.CYAN, Color.MAGENTA).toIntArray()
-                //     ),
-                // )
-                feedTitleTextColor(getContextCompatColor(R.color.black))
-                feedTitleTextNumberOfLines(1)
-                feedTitleTextPadding(dpToPx(8f))
-                feedTitleTextSize(spToPx(14f))
-                feedTitleTextTypeface(getContextCompatFont(R.font.roboto_regular))
-                showFeedTitle(true)
+                playerOptions {
+                    autoPlayOnComplete(true)
+                    autoplay(true)
+                    enablePipMode(true)
+                    playerMode(PlayerMode.FIT_MODE)
+                    showFireworkLogo(true)
+                    showMuteButton(true)
+                    showPlayPauseButtonInReplay(true)
+                    showShareButton(true)
+                }
+
+                titleOptions {
+                    feedTitleBackgroundColor(getContextCompatColor(R.color.purple_transparent))
+                    // This is an example of how to set a gradient background for the feed title, Note: This will get priority over the above color
+                    // feedTitleBackgroundDrawable(
+                    //     GradientDrawable(
+                    //         GradientDrawable.Orientation.TOP_BOTTOM,
+                    //         arrayOf(Color.BLUE, Color.CYAN, Color.MAGENTA).toIntArray()
+                    //     ),
+                    // )
+                    feedTitleTextColor(getContextCompatColor(R.color.black))
+                    feedTitleTextNumberOfLines(1)
+                    feedTitleTextPadding(dpToPx(8f))
+                    feedTitleTextSize(spToPx(14f))
+                    feedTitleTextTypeface(getContextCompatFont(R.font.roboto_regular))
+                    showFeedTitle(true)
+                }
             }
-        }
 
         videoFeedView.init(viewOptions)
     }
 
-    private fun getContextCompatColor(@ColorRes colorId: Int) =
-        ContextCompat.getColor(this, colorId)
+    private fun getContextCompatColor(
+        @ColorRes colorId: Int,
+    ) = ContextCompat.getColor(this, colorId)
 
-    private fun getContextCompatFont(@FontRes fontId: Int) =
-        ResourcesCompat.getFont(this, fontId)!!
+    private fun getContextCompatFont(
+        @FontRes fontId: Int,
+    ) = ResourcesCompat.getFont(this, fontId)!!
 
     private fun setupVideoFeedViewCallbacks() {
         // All errors related to this video feed view can be collected using this callback to handle

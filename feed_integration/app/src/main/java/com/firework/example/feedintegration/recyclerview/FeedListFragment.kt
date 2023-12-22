@@ -22,7 +22,6 @@ import com.firework.viewoptions.viewOptions
 import java.util.UUID
 
 class FeedListFragment : Fragment(), FeedItemClickListener, FwErrorListener, FeedViewStateListener {
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -31,7 +30,10 @@ class FeedListFragment : Fragment(), FeedItemClickListener, FwErrorListener, Fee
         return inflater.inflate(R.layout.fragment_feed_list, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(
+        view: View,
+        savedInstanceState: Bundle?,
+    ) {
         super.onViewCreated(view, savedInstanceState)
         val recyclerView = view.findViewById<RecyclerView>(R.id.rvList)
         recyclerView.layoutManager = LinearLayoutManager(context)
@@ -39,11 +41,12 @@ class FeedListFragment : Fragment(), FeedItemClickListener, FwErrorListener, Fee
     }
 
     private fun getListItems(): List<ListItem> {
-        val playlistFeedViewOptions = viewOptions {
-            baseOptions {
-                feedResource(FeedResource.Playlist(FW_CHANNEL_ID, FW_PLAYLIST_ID))
+        val playlistFeedViewOptions =
+            viewOptions {
+                baseOptions {
+                    feedResource(FeedResource.Playlist(FW_CHANNEL_ID, FW_PLAYLIST_ID))
+                }
             }
-        }
         return listOf(
             TextItem(LOREN_IPSUM),
             TextItem(LOREN_IPSUM),
@@ -68,6 +71,7 @@ class FeedListFragment : Fragment(), FeedItemClickListener, FwErrorListener, Fee
 
     companion object {
         fun newInstance() = FeedListFragment()
+
         private val TAG = FeedListFragment::class.simpleName
         private const val LOREN_IPSUM = """ Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,

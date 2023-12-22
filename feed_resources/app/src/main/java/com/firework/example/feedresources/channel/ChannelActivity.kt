@@ -14,7 +14,6 @@ import com.firework.viewoptions.baseOptions
 import com.firework.viewoptions.viewOptions
 
 class ChannelActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityChannelBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,11 +37,12 @@ class ChannelActivity : AppCompatActivity() {
     private fun initVideoFeedView() {
         val videoFeedView = binding.fwVideoFeedView
 
-        val viewOptions = viewOptions {
-            baseOptions {
-                feedResource(FeedResource.Channel(channelId = FW_CHANNEL_ID))
+        val viewOptions =
+            viewOptions {
+                baseOptions {
+                    feedResource(FeedResource.Channel(channelId = FW_CHANNEL_ID))
+                }
             }
-        }
 
         videoFeedView.init(viewOptions)
     }

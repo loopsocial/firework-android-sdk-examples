@@ -13,11 +13,12 @@ class ShareLinkActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val viewOptions = viewOptions {
-            playerOptions {
-                shareBaseUrl(BASE_SHARE_URL)
+        val viewOptions =
+            viewOptions {
+                playerOptions {
+                    shareBaseUrl(BASE_SHARE_URL)
+                }
             }
-        }
 
         val url = intent.data?.toString()!!
         val playerLaunchResult = FireworkSdk.startPlayer(viewOptions = viewOptions, url = url)

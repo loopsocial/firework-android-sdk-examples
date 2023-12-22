@@ -15,7 +15,6 @@ import com.firework.viewoptions.playerOptions
 import com.firework.viewoptions.viewOptions
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,16 +39,17 @@ class MainActivity : AppCompatActivity() {
     private fun initVideoFeedView() {
         val videoFeedView = binding.fwVideoFeedView
 
-        val viewOptions = viewOptions {
-            baseOptions {
-                // Check Channel, Playlist, or Dynamic screens for other feed sources
-                feedResource(FeedResource.Discovery)
-            }
+        val viewOptions =
+            viewOptions {
+                baseOptions {
+                    // Check Channel, Playlist, or Dynamic screens for other feed sources
+                    feedResource(FeedResource.Discovery)
+                }
 
-            playerOptions {
-                enablePipMode(true)
+                playerOptions {
+                    enablePipMode(true)
+                }
             }
-        }
 
         videoFeedView.init(viewOptions)
     }
@@ -68,13 +68,14 @@ class MainActivity : AppCompatActivity() {
                             }
                         },
                         onError = { pipEnterError ->
-                            val cause = when (pipEnterError) {
-                                PipEnterError.SdkIsNotInitialized -> "SDK is not initialized yet"
-                                PipEnterError.NoActivePlayer -> "there is no active player"
-                                PipEnterError.NotSupported -> "PiP feature is not supported by device"
-                                PipEnterError.DisabledByClient -> "PiP feature is not enabled in SDK config"
-                                PipEnterError.DisabledByUser -> "PiP feature is disabled by user"
-                            }
+                            val cause =
+                                when (pipEnterError) {
+                                    PipEnterError.SdkIsNotInitialized -> "SDK is not initialized yet"
+                                    PipEnterError.NoActivePlayer -> "there is no active player"
+                                    PipEnterError.NotSupported -> "PiP feature is not supported by device"
+                                    PipEnterError.DisabledByClient -> "PiP feature is not enabled in SDK config"
+                                    PipEnterError.DisabledByUser -> "PiP feature is disabled by user"
+                                }
                             Log.i(TAG, "Failed to enter PiP mode cause $cause")
                         },
                     )

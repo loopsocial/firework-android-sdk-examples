@@ -9,13 +9,14 @@ import com.firework.sdk.FireworkSdkConfig
 class ExampleApp : Application() {
     override fun onCreate() {
         super.onCreate()
-        val config = FireworkSdkConfig
-            .Builder(this)
-            .checksumRequired(false)
-            .clientId(BuildConfig.FW_CLIENT_ID)
-            .enableCache(true)
-            .imageLoader(GlideImageLoaderFactory.createInstance(context = this))
-            .build()
+        val config =
+            FireworkSdkConfig
+                .Builder(this)
+                .checksumRequired(false)
+                .clientId(BuildConfig.FW_CLIENT_ID)
+                .enableCache(true)
+                .imageLoader(GlideImageLoaderFactory.createInstance(context = this))
+                .build()
         FireworkSdk.init(
             config,
             onSuccess = {
@@ -23,7 +24,7 @@ class ExampleApp : Application() {
             },
             onError = { error ->
                 Log.e("XXXX-init", "Init Failed: $error")
-            }
+            },
         )
     }
 }

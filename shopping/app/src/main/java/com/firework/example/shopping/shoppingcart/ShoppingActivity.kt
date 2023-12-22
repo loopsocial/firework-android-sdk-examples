@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import com.firework.example.shopping.R
 
 class ShoppingActivity : AppCompatActivity(), ShoppingCartListener {
-
     @Suppress("UNCHECKED_CAST", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

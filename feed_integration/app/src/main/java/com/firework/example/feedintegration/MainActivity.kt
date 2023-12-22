@@ -9,7 +9,6 @@ import com.firework.example.feedintegration.fragment.FragmentIntegrationActivity
 import com.firework.example.feedintegration.recyclerview.RecyclerViewIntegrationActivity
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -43,11 +43,12 @@ class ChannelHashtagsActivity : AppCompatActivity() {
     private fun initVideoFeedView() {
         val videoFeedView = binding.fwVideoFeedView
 
-        val viewOptions = viewOptions {
-            baseOptions {
-                feedResource(FeedResource.ChannelHashtag(channelId = FW_CHANNEL_ID, HASHTAG_FILTER_EXPRESSION))
+        val viewOptions =
+            viewOptions {
+                baseOptions {
+                    feedResource(FeedResource.ChannelHashtag(channelId = FW_CHANNEL_ID, HASHTAG_FILTER_EXPRESSION))
+                }
             }
-        }
 
         videoFeedView.init(viewOptions)
     }
@@ -56,11 +57,12 @@ class ChannelHashtagsActivity : AppCompatActivity() {
         binding.fwVideoFeedView.destroy()
         binding.feedContainer.removeAllViews()
         val videoFeedView = FwVideoFeedView(this)
-        val viewOptions = viewOptions {
-            baseOptions {
-                feedResource(FeedResource.ChannelHashtag(channelId = FW_CHANNEL_ID, hashTagFilter))
+        val viewOptions =
+            viewOptions {
+                baseOptions {
+                    feedResource(FeedResource.ChannelHashtag(channelId = FW_CHANNEL_ID, hashTagFilter))
+                }
             }
-        }
         binding.feedContainer.addView(videoFeedView)
         videoFeedView.init(viewOptions)
     }

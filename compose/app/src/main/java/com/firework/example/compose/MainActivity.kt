@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
             FireworkComposeTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
+                    color = MaterialTheme.colors.background,
                 ) {
                     VideoFeed()
                 }

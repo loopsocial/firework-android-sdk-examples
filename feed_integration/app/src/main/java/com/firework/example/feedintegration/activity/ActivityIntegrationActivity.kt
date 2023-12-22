@@ -13,7 +13,6 @@ import com.firework.viewoptions.baseOptions
 import com.firework.viewoptions.viewOptions
 
 class ActivityIntegrationActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityActivityIntegrationBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,11 +29,12 @@ class ActivityIntegrationActivity : AppCompatActivity() {
     private fun initVideoFeedView() {
         val videoFeedView = binding.fwVideoFeedView
 
-        val viewOptions = viewOptions {
-            baseOptions {
-                feedResource(FeedResource.Discovery)
+        val viewOptions =
+            viewOptions {
+                baseOptions {
+                    feedResource(FeedResource.Discovery)
+                }
             }
-        }
 
         videoFeedView.init(viewOptions)
     }

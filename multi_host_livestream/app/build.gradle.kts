@@ -71,15 +71,10 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.13.2")
 
     // Firework SDK
-    val fireworkSdkVersion = "6.7.0"
-    implementation("com.firework:sdk:$fireworkSdkVersion")
-
-    // Glide (optional image loader)
-    implementation("com.firework.external.imageloading:glide:$fireworkSdkVersion")
-
-    // Picasso (optional image loader)
-    // implementation("com.firework.external.imageloading:picasso:$fireworkSdkVersion")
-
-    // Livestream player
-    implementation("com.firework.external.livestream:multiHostPlayer:$fireworkSdkVersion")
+    val fireworkBomVersion = "2023.11.01"
+    implementation(platform("com.firework:firework-bom:$fireworkBomVersion"))
+    implementation("com.firework:sdk")
+    implementation("com.firework.external.imageloading:glide") // Glide (optional image loader)
+    // implementation("com.firework.external.imageloading:picasso") // Picasso (optional image loader)
+    implementation("com.firework.external.livestream:multiHostPlayer") // Livestream player
 }

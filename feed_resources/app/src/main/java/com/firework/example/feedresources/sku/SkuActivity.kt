@@ -44,11 +44,12 @@ class SkuActivity : AppCompatActivity() {
     private fun initVideoFeedView() {
         val videoFeedView = binding.fwVideoFeedView
 
-        val viewOptions = viewOptions {
-            baseOptions {
-                feedResource(FeedResource.Sku(channelId = FW_CHANNEL_ID, DEFAULT_IDS))
+        val viewOptions =
+            viewOptions {
+                baseOptions {
+                    feedResource(FeedResource.Sku(channelId = FW_CHANNEL_ID, DEFAULT_IDS))
+                }
             }
-        }
 
         videoFeedView.init(viewOptions)
     }
@@ -57,11 +58,12 @@ class SkuActivity : AppCompatActivity() {
         binding.fwVideoFeedView.destroy()
         binding.feedContainer.removeAllViews()
         val videoFeedView = FwVideoFeedView(this)
-        val viewOptions = viewOptions {
-            baseOptions {
-                feedResource(FeedResource.Sku(channelId = FW_CHANNEL_ID, productIds = skuIds))
+        val viewOptions =
+            viewOptions {
+                baseOptions {
+                    feedResource(FeedResource.Sku(channelId = FW_CHANNEL_ID, productIds = skuIds))
+                }
             }
-        }
         binding.feedContainer.addView(videoFeedView)
         videoFeedView.init(viewOptions)
     }

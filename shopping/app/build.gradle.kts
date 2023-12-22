@@ -64,7 +64,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
-    implementation("com.google.android.material:material:1.9.0")
+    implementation("com.google.android.material:material:1.11.0")
 
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.6.10"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
@@ -73,12 +73,9 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.13.2")
 
     // Firework SDK
-    val fireworkSdkVersion = "6.7.0"
-    implementation("com.firework:sdk:$fireworkSdkVersion")
-
-    // Glide (optional image loader)
-    implementation("com.firework.external.imageloading:glide:$fireworkSdkVersion")
-
-    // Picasso (optional image loader)
-    // implementation("com.firework.external.imageloading:picasso:$fireworkSdkVersion")
+    val fireworkBomVersion = "2023.11.01"
+    implementation(platform("com.firework:firework-bom:$fireworkBomVersion"))
+    implementation("com.firework:sdk")
+    implementation("com.firework.external.imageloading:glide") // Glide (optional image loader)
+    // implementation("com.firework.external.imageloading:picasso") // Picasso (optional image loader)
 }
