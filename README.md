@@ -1,4 +1,4 @@
-# Firework Android SDK Examples
+# Firework Android SDK Examples ![GitHub Release](https://img.shields.io/github/v/release/loopsocial/firework-android-sdk-examples?label=GitHub%20Release)
 This repo holds the Firework Android SDK example applications.
 
 **List of example apps:**
