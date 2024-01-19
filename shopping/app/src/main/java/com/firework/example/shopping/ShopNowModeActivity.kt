@@ -81,10 +81,10 @@ class ShopNowModeActivity : AppCompatActivity(), Shopping.OnShoppingErrorListene
             ShoppingViewOptions(
                 theme = ShoppingTheme.DARK,
                 productDetailsOptions =
-                ProductDetailsOptions(
-                    linkButtonOptions = LinkButtonOptions(false),
-                    shoppingCtaButtonOptions = ShoppingCtaButtonOptions(text = ShoppingCtaButtonOptions.Text.SHOP_NOW),
-                ),
+                    ProductDetailsOptions(
+                        linkButtonOptions = LinkButtonOptions(false),
+                        shoppingCtaButtonOptions = ShoppingCtaButtonOptions(text = ShoppingCtaButtonOptions.Text.SHOP_NOW),
+                    ),
             ),
         )
         shopping.setOnCtaButtonClicked { _, _, productWebUrl, _ ->

@@ -88,10 +88,10 @@ class AddToCartModeActivity : AppCompatActivity() {
             ShoppingViewOptions(
                 theme = ShoppingTheme.DARK,
                 productDetailsOptions =
-                ProductDetailsOptions(
-                    linkButtonOptions = LinkButtonOptions(true),
-                    shoppingCtaButtonOptions = ShoppingCtaButtonOptions(text = ShoppingCtaButtonOptions.Text.ADD_TO_CART),
-                ),
+                    ProductDetailsOptions(
+                        linkButtonOptions = LinkButtonOptions(true),
+                        shoppingCtaButtonOptions = ShoppingCtaButtonOptions(text = ShoppingCtaButtonOptions.Text.ADD_TO_CART),
+                    ),
             ),
         )
         shopping.setShoppingCartBehaviour(Shopping.CartBehaviour.Embedded("some title"))
