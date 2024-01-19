@@ -87,7 +87,7 @@ class ShopNowModeActivity : AppCompatActivity(), Shopping.OnShoppingErrorListene
                     ),
             ),
         )
-        shopping.setOnCtaButtonClicked { _, _, productWebUrl ->
+        shopping.setOnCtaButtonClicked { _, _, productWebUrl, _ ->
             val webpage: Uri = Uri.parse(productWebUrl)
             val intent =
                 Intent(Intent.ACTION_VIEW, webpage).apply {
