@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.firework.example.feedintegration.recyclerview
 
 import android.view.LayoutInflater
