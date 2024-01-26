@@ -77,7 +77,7 @@ dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.activity:activity-compose:1.8.2")
-    implementation("androidx.compose.material:material:1.5.4")
+    implementation("androidx.compose.material:material:1.6.0")
 
     // compose
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
@@ -88,7 +88,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
-    val fireworkBomVersion = "2024.01.18"
+    val fireworkBomVersion = "2024.01.26"
     implementation(platform("com.firework:firework-bom:$fireworkBomVersion"))
     implementation("com.firework:sdk")
     implementation("com.firework.external.imageloading:glide") // Glide (optional image loader)

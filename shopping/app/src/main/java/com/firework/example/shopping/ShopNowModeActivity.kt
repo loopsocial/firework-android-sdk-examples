@@ -96,7 +96,7 @@ class ShopNowModeActivity : AppCompatActivity(), Shopping.OnShoppingErrorListene
             startActivity(intent)
             FireworkSdk.enterPip()
         }
-        shopping.setOnProductHydrationListener { products, hydrator ->
+        shopping.setOnProductHydrationListener { products, hydrator, _ ->
             if (!ALLOW_PRODUCTS_HYDRATION) {
                 return@setOnProductHydrationListener
             }
