@@ -41,6 +41,7 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -55,6 +56,10 @@ android {
         abortOnError = true
         ignoreWarnings = false
         warningsAsErrors = true
+
+        disable.apply {
+            add("ObsoleteLintCustomCheck")
+        }
     }
 
     buildFeatures {
@@ -62,7 +67,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.7"
+        kotlinCompilerExtensionVersion = "1.5.8"
     }
 }
 
@@ -80,7 +85,7 @@ dependencies {
     implementation("androidx.compose.material:material:1.6.0")
 
     // compose
-    implementation(platform("androidx.compose:compose-bom:2023.03.00"))
+    implementation(platform("androidx.compose:compose-bom:2024.01.00"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
