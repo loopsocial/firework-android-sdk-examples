@@ -108,7 +108,7 @@ class AddToCartModeActivity : AppCompatActivity() {
             ShoppingActivity.start(this@AddToCartModeActivity)
         }
 
-        shopping.setOnProductHydrationListener { products: List<Product>, hydrator: ProductHydrator ->
+        shopping.setOnProductHydrationListener { products: List<Product>, hydrator: ProductHydrator, _ ->
             if (!ALLOW_PRODUCTS_HYDRATION) {
                 return@setOnProductHydrationListener
             }
