@@ -89,7 +89,19 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onStop() {
+        Log.i(TAG, "onStop - isFinishing: $isFinishing")
+        if (binding.closePipOnStop.isChecked && isFinishing) {
+            FireworkSdk.closePip()
+        }
+        super.onStop()
+    }
+
     override fun onDestroy() {
+        Log.i(TAG, "onDestroy")
+        if (binding.closePipOnDestroy.isChecked) {
+            FireworkSdk.closePip()
+        }
         binding.fwVideoFeedView.destroy()
         super.onDestroy()
     }
