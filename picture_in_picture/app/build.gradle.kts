@@ -8,13 +8,13 @@ plugins {
 android {
     namespace = "com.firework.example.pictureinpicture"
 
-    compileSdk = 34
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "com.firework.example.pictureinpicture"
 
         minSdk = 21
-        targetSdk = 34
+        targetSdk = 33
 
         versionCode = 1
         versionName = "1.0.0"
@@ -51,6 +51,11 @@ android {
         abortOnError = true
         ignoreWarnings = false
         warningsAsErrors = true
+
+        disable.apply {
+            add("OldTargetApi")
+            add("GradleDependency")
+        }
     }
 
     buildFeatures {
@@ -69,7 +74,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
-    implementation("com.google.android.material:material:1.11.0")
+    implementation("com.google.android.material:material:1.9.0")
 
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.6.10"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
