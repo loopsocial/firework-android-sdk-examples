@@ -1,4 +1,5 @@
 # Firework Android SDK Examples ![GitHub Release](https://img.shields.io/github/v/release/loopsocial/firework-android-sdk-examples?label=GitHub%20Release)
+
 This repo holds the Firework Android SDK example applications.
 
 **List of example apps:**
@@ -31,7 +32,7 @@ The view options can be set in 3 different methods:
 [View Options example app](view_options)
 
 | Customized View Options                                  | Player screen                                            |
-| -------------------------------------------------------- | -------------------------------------------------------- |
+|----------------------------------------------------------|----------------------------------------------------------|
 | ![View Options Screenshot](view_options/Screenshot1.png) | ![View Options Screenshot](view_options/Screenshot2.png) |
 
 ---
@@ -60,34 +61,35 @@ container on the runtime.
 
 [Feed Resources example app](feed_resources)
 
-In this example app, the `FwVideoFeedView` is initialized with different feedResources: Discovery, Playlist, Channel, Dynamic Content, Channel Hashtags.
+In this example app, the `FwVideoFeedView` is initialized with different feedResources: Discovery, Playlist, Channel, Dynamic Content, Channel
+Hashtags.
 
-| Discovery Feed                                               | Player screen                                                |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Discovery Feed                                                   | Player screen                                                    |
+|------------------------------------------------------------------|------------------------------------------------------------------|
 | ![discovery Screenshot](feed_resources/DiscoveryScreenshot1.png) | ![discovery Screenshot](feed_resources/DiscoveryScreenshot2.png) |
 
 | Channel Feed                                                 | Player screen                                                |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+|--------------------------------------------------------------|--------------------------------------------------------------|
 | ![channel Screenshot](feed_resources/ChannelScreenshot1.png) | ![channel Screenshot](feed_resources/ChannelScreenshot2.png) |
 
-| Playlist Feed                                                | Player screen                                                |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Playlist Feed                                                  | Player screen                                                  |
+|----------------------------------------------------------------|----------------------------------------------------------------|
 | ![playlist Screenshot](feed_resources/PlaylistScreenshot1.png) | ![playlist Screenshot](feed_resources/PlaylistScreenshot2.png) |
 
 | Dynamic Feed                                                 | Player screen                                                |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+|--------------------------------------------------------------|--------------------------------------------------------------|
 | ![dynamic Screenshot](feed_resources/DynamicScreenshot1.png) | ![dynamic Screenshot](feed_resources/DynamicScreenshot2.png) |
 
-| Channel Hashtags Feed                                                          | Player screen                                                                 |
-|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| Channel Hashtags Feed                                                          | Player screen                                                                  |
+|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
 | ![channel_hashtags Screenshot](feed_resources/ChannelHashtagsScreenshot1.jpeg) | ![channel_hashtags Screenshot](feed_resources/ChannelHashtagsScreenshot2.jpeg) |
 
-| Sku Feed                                                          | Player screen                                                                 |
-|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| Sku Feed                                              | Player screen                                         |
+|-------------------------------------------------------|-------------------------------------------------------|
 | ![sku Screenshot](feed_resources/SkuScreenshot1.jpeg) | ![sku Screenshot](feed_resources/SkuScreenshot2.jpeg) |
 
-| Single Content Feed                                                          | Player screen                                                                 |
-|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| Single Content Feed                                                       | Player screen                                                             |
+|---------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | ![Single Content Screenshot](feed_resources/SingleContentScreenshot1.png) | ![Single Element Screenshot](feed_resources/SingleContentScreenshot2.png) |
 
 ---
@@ -100,8 +102,8 @@ You need a feed resource with a Single Host Livestream item.
 
 [Single-Host Livestream example app](single_host_livestream)
 
-| Livestream Feed                                              | Livestream Player                                            | Livestream Features                                          |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Livestream Feed                                                              | Livestream Player                                                            | Livestream Features                                                          |
+|------------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|
 | ![single host livestream Screenshot](single_host_livestream/Screenshot1.png) | ![single host livestream Screenshot](single_host_livestream/Screenshot2.png) | ![single host livestream Screenshot](single_host_livestream/Screenshot3.png) |
 
 ---
@@ -114,8 +116,8 @@ You need a feed resource with a Multiple Host Livestream item.
 
 [Multi-Host Livestream example app](multi_host_livestream)
 
-| Livestream Feed                                              | Livestream Player                                            | Livestream Features                                          |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Livestream Feed                                                            | Livestream Player                                                          | Livestream Features                                                        |
+|----------------------------------------------------------------------------|----------------------------------------------------------------------------|----------------------------------------------------------------------------|
 | ![multi host livestream Screenshot](multi_host_livestream/Screenshot1.png) | ![multi host livestream Screenshot](multi_host_livestream/Screenshot2.png) | ![multi host livestream Screenshot](multi_host_livestream/Screenshot3.png) |
 
 ---
@@ -131,12 +133,12 @@ The app has two screens which demonstrate how to setup shopping for "Shopping ca
 |--------------------------------------------------|--------------------------------------------------|
 | ![shopping Screenshot](shopping/Screenshot1.png) | ![shopping Screenshot](shopping/Screenshot2.png) |
 
-
 | Shopping cart mode                                | Shop now mode                                     |
 |---------------------------------------------------|---------------------------------------------------|
 | ![shopping Screenshot](shopping/Screenshot3.jpeg) | ![shopping Screenshot](shopping/Screenshot4.jpeg) |
 
 ---
+
 ## Share link example app
 
 [Share link example app](share_link)
@@ -149,9 +151,12 @@ It contains two activities:
 
 Also, this example demonstrates how to replace the base URL of the shared video with a custom one.
 
-**Note**: [Starting in Android 12 (API level 31)](https://developer.android.com/about/versions/12/behavior-changes-all#web-intent-resolution), a generic web intent resolves to an activity in your app only if your app is approved for the specific domain contained in that web intent. If your app isn't approved for the domain, the web intent resolves to the user's default browser app instead.
+**Note**: [Starting in Android 12 (API level 31)](https://developer.android.com/about/versions/12/behavior-changes-all#web-intent-resolution), a
+generic web intent resolves to an activity in your app only if your app is approved for the specific domain contained in that web intent. If your app
+isn't approved for the domain, the web intent resolves to the user's default browser app instead.
 
 ---
+
 ## Picture-in-picture example app
 
 In this example app, the `FwVideoFeedView` is initialized with the picture-in-picture feature enabled.
@@ -164,11 +169,12 @@ The user can switch to the PiP mode if the device supports and this feature is n
 
 [Picture-in-picture example app](picture_in_picture )
 
-| PiP Feed                                              | Player screen in PiP mode                                    |
-| ----------------------------------------------------- | ------------------------------------------------------------ |
+| PiP Feed                                              | Player screen in PiP mode                                            |
+|-------------------------------------------------------|----------------------------------------------------------------------|
 | ![pip Screenshot](picture_in_picture/Screenshot1.png) | ![player in pip mode Screenshot](picture_in_picture/Screenshot2.png) |
 
 ---
+
 ## Jetpack Compose example app
 
 In this example app, the `FwVideoFeedView` is initialized for showing a discovery feed using Jetpack Compose.
@@ -176,7 +182,7 @@ In this example app, the `FwVideoFeedView` is initialized for showing a discover
 [Jetpack Compose example app](compose)
 
 | Discovery Feed                                   | Player screen                                 |
-| ------------------------------------------------ | --------------------------------------------- |
+|--------------------------------------------------|-----------------------------------------------|
 | ![discovery Screenshot](compose/Screenshot1.png) | ![player Screenshot](compose/Screenshot2.png) |
 
 ---
@@ -188,8 +194,21 @@ This component allows to embed pager player directly in the host app's view hier
 
 [Story block example app](story_block)
 
-| Story block                                             | Fullscreen Story Block                                    |
-|---------------------------------------------------------|-----------------------------------------------------------|
-| ![Story block example app](story_block/Screenshot1.jpeg) | ![Story block example app](story_block/Screenshot2.jpeg)    |
+| Story block                                              | Fullscreen Story Block                                   |
+|----------------------------------------------------------|----------------------------------------------------------|
+| ![Story block example app](story_block/Screenshot1.jpeg) | ![Story block example app](story_block/Screenshot2.jpeg) |
+
+---
+
+## Language example app
+
+This example app demonstrates how the host app can change the SDK language.
+The SDK Views follow the host app context language so any changes to the host app language will be applied to SDK, too.
+
+[Language example app](language)
+
+| Language Selector                                  | Supported Languages                                   |
+|----------------------------------------------------|-------------------------------------------------------|
+| ![Language example app](language/Screenshot1.jpeg) | ![language example app](story_block/Screenshot2.jpeg) |
 
 ---
