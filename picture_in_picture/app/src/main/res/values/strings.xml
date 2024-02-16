@@ -7,4 +7,6 @@
 
     <string name="enter_pip_mode">Enter PiP mode in 5 sec</string>
     <string name="close_pip_mode">Close PiP mode</string>
+    <string name="close_pip_on_stop">Close PiP mode onStop</string>
+    <string name="close_pip_on_destroy">Close PiP mode onDestroy</string>
 </resources>
