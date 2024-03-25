@@ -11,6 +11,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
         // SNAPSHOTS repo is for the test purpose, and should not be used in production
         maven {
             setUrl("https://s01.oss.sonatype.org/content/repositories/snapshots/")

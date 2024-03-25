@@ -12,7 +12,6 @@ class ExampleApp : Application() {
         val config =
             FireworkSdkConfig
                 .Builder(this)
-                .checksumRequired(false)
                 .clientId(BuildConfig.FW_CLIENT_ID)
                 .enableCache(true)
                 .imageLoader(GlideImageLoaderFactory.createInstance(context = this))
