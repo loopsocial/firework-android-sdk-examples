@@ -6,8 +6,8 @@ import android.util.TypedValue
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
@@ -15,7 +15,6 @@ import com.firework.common.PlayerMode
 import com.firework.common.feed.FeedLayout
 import com.firework.common.feed.FeedResource
 import com.firework.common.feed.FeedTitlePosition
-import com.firework.example.compose.ui.theme.FireworkComposeTheme
 import com.firework.videofeed.fwVideoFeedView
 import com.firework.videofeed.viewOptions
 import com.firework.viewoptions.baseOptions
@@ -27,10 +26,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            FireworkComposeTheme {
+            MaterialTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background,
+                    color = MaterialTheme.colorScheme.background,
                 ) {
                     VideoFeed()
                 }
@@ -42,9 +41,9 @@ class MainActivity : ComponentActivity() {
 @Suppress("MagicNumber")
 @Composable
 private fun VideoFeed() {
-    val feedTitleTextColor = MaterialTheme.colors.onPrimary.hashCode()
-    val feedTitleBackgroundColor = MaterialTheme.colors.primary.hashCode()
-    val backgroundColor = MaterialTheme.colors.background.hashCode()
+    val feedTitleTextColor = MaterialTheme.colorScheme.onPrimary.hashCode()
+    val feedTitleBackgroundColor = MaterialTheme.colorScheme.primary.hashCode()
+    val backgroundColor = MaterialTheme.colorScheme.background.hashCode()
 
     AndroidView(factory = { context ->
         fwVideoFeedView(context) {

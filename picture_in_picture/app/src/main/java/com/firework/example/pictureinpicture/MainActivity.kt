@@ -75,6 +75,7 @@ class MainActivity : AppCompatActivity() {
                                     PipEnterError.NotSupported -> "PiP feature is not supported by device"
                                     PipEnterError.DisabledByClient -> "PiP feature is not enabled in SDK config"
                                     PipEnterError.DisabledByUser -> "PiP feature is disabled by user"
+                                    PipEnterError.NoPlayingPlayer -> "there is no playing player"
                                 }
                             Log.i(TAG, "Failed to enter PiP mode cause $cause")
                         },

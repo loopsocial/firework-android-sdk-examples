@@ -54,6 +54,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -68,14 +69,14 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
-    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.6.10"))
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.22"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     // Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
     // Firework SDK
-    val fireworkBomVersion = "2024.02.16"
+    val fireworkBomVersion = "2024.03.26"
     implementation(platform("com.firework:firework-bom:$fireworkBomVersion"))
     implementation("com.firework:sdk")
     implementation("com.firework.external.imageloading:glide") // Glide (optional image loader)
