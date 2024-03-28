@@ -14,6 +14,7 @@ This repo holds the Firework Android SDK example applications.
 * [Picture In Picture](#picture-in-picture-example-app)
 * [Jetpack Compose](#jetpack-compose-example-app)
 * [Story Block](#story-block-example-app)
+* [In-app Language](#in-app-language-example-app)
 
 **Read more about the integration here** https://docs.firework.tv/
 
@@ -200,7 +201,7 @@ This component allows to embed pager player directly in the host app's view hier
 
 ---
 
-## Language example app
+## In-app Language example app
 
 This example app demonstrates how the host app can change the SDK language.
 The SDK Views follow the host app context language so any changes to the host app language will be applied to SDK, too.
@@ -209,6 +210,6 @@ The SDK Views follow the host app context language so any changes to the host ap
 
 | Language Selector                                  | Supported Languages                                   |
 |----------------------------------------------------|-------------------------------------------------------|
-| ![Language example app](language/Screenshot1.jpeg) | ![language example app](story_block/Screenshot2.jpeg) |
+| ![Language example app](language/Screenshot1.png) | ![Language example app](language/Screenshot2.png) |
 
 ---
