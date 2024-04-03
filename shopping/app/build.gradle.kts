@@ -67,14 +67,14 @@ dependencies {
 
     implementation("com.google.android.material:material:1.11.0")
 
-    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.22"))
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.9.0"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     // Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
     // Firework SDK
-    val fireworkBomVersion = "2024.03.28"
+    val fireworkBomVersion = "2024.04.03"
     implementation(platform("com.firework:firework-bom:$fireworkBomVersion"))
     implementation("com.firework:sdk")
     implementation("com.firework.external.imageloading:glide") // Glide (optional image loader)
