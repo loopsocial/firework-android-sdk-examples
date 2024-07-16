@@ -39,7 +39,9 @@ class MainActivity : AppCompatActivity() {
         val adapter: ArrayAdapter<LocaleItem> = ArrayAdapter(this, android.R.layout.simple_spinner_item, supportedLocaleItems)
         languageSpinner.adapter = adapter
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        languageSpinner.setSelection(adapter.getPosition(supportedLocaleItems.firstOrNull { it.locale == localeStorage.getLocale() }), false)
+        languageSpinner.setSelection(adapter.getPosition(supportedLocaleItems.firstOrNull {
+            it.locale.toString().equals(localeStorage.getLocale().toString(), true)
+        }), false)
 
         languageSpinner.onItemSelectedListener =
             object : AdapterView.OnItemSelectedListener {
@@ -108,11 +110,20 @@ class MainActivity : AppCompatActivity() {
             listOf(
                 LocaleItem("English", Locale("en")),
                 LocaleItem("Arabic", Locale("ar")),
-                LocaleItem("Spanish", Locale("es")),
-                LocaleItem("Persian", Locale("fa")),
+                LocaleItem("Arabic (Saudi Arabia)", Locale("ar", "SA")),
+                LocaleItem("Arabic (United Arab Emirates)", Locale("ar", "AE")),
+                LocaleItem("German", Locale("de")),
+                LocaleItem("Italian", Locale("it")),
                 LocaleItem("Japanese", Locale("ja")),
                 LocaleItem("Polish", Locale("pl")),
-                LocaleItem("Portuguese", Locale("pt")),
+                LocaleItem("Portuguese (Brazil)", Locale("pt", "BR")),
+                LocaleItem("Russian", Locale("ru")),
+                LocaleItem("Spanish", Locale("es")),
+                LocaleItem("Spanish (Mexico)", Locale("es", "MX")),
+                LocaleItem("Spanish (Colombia)", Locale("es", "CO")),
+                LocaleItem("Vietnamese", Locale("vi")),
+                LocaleItem("Thailand", Locale("th")),
+                LocaleItem("Persian", Locale("fa")),
             )
     }
 }
