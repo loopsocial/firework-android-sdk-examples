@@ -15,18 +15,25 @@ import com.firework.common.PlayerMode
 import com.firework.common.ad.AdBadgeTextType
 import com.firework.common.cta.CtaDelay
 import com.firework.common.cta.CtaDelayUnit
+import com.firework.common.cta.CtaStyle
 import com.firework.common.feed.FeedLayout
 import com.firework.common.feed.FeedResource
 import com.firework.common.feed.FeedTitlePosition
+import com.firework.common.widget.ActionButton
+import com.firework.common.widget.Shape
+import com.firework.common.widget.WidgetImage
 import com.firework.example.viewoptions.databinding.ActivityMainBinding
 import com.firework.videofeed.FwVideoFeedView
 import com.firework.viewoptions.ViewOptions
+import com.firework.viewoptions.actionButtonOptions
 import com.firework.viewoptions.adBadgeOptions
 import com.firework.viewoptions.adOptions
 import com.firework.viewoptions.baseOptions
 import com.firework.viewoptions.ctaOptions
 import com.firework.viewoptions.layoutOptions
+import com.firework.viewoptions.pipButtonOptions
 import com.firework.viewoptions.playerOptions
+import com.firework.viewoptions.playerUiOptions
 import com.firework.viewoptions.titleOptions
 import com.firework.viewoptions.viewOptions
 
@@ -90,6 +97,14 @@ class MainActivity : AppCompatActivity() {
 
                 ctaOptions {
                     ctaDelay(CtaDelay(0.2f, CtaDelayUnit.PERCENTAGE))
+                    ctaStyle(
+                        CtaStyle(
+                            shape = Shape.SHAPE_OVAL,
+                            backgroundColor = getContextCompatColor(R.color.purple_200),
+                            textColor = getContextCompatColor(R.color.cyan),
+                            fontSize = spToPx(18f).toFloat(),
+                        ),
+                    )
                 }
 
                 layoutOptions {
@@ -113,6 +128,28 @@ class MainActivity : AppCompatActivity() {
                     showMuteButton(true)
                     showPlayPauseButtonInReplay(true)
                     showShareButton(true)
+                    playerUiOptions {
+                        pipButtonOptions {
+                            icon(WidgetImage(R.drawable.ic_pip))
+                        }
+                    }
+                    actionButtonOptions {
+                        actionButton(
+                            ActionButton(
+                                backgroundColor = getContextCompatColor(R.color.purple_200),
+                                dividingLineColor = getContextCompatColor(R.color.cyan),
+                                shape = Shape.SHAPE_OVAL,
+                                textColor = getContextCompatColor(R.color.black),
+                            ),
+                        )
+                        cancelButton(
+                            ActionButton(
+                                backgroundColor = getContextCompatColor(R.color.teal_200),
+                                shape = Shape.SHAPE_OVAL,
+                                textColor = getContextCompatColor(R.color.purple_200),
+                            ),
+                        )
+                    }
                 }
 
                 titleOptions {

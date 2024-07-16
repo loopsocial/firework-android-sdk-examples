@@ -10,6 +10,12 @@ class LocaleStorage(context: Context) {
     fun getLocale(): Locale {
         val defaultLocaleLanguage: String = Locale.getDefault().language.toString()
         val localeValue: String = sharedPreferences.getString(LOCALE_KEY, defaultLocaleLanguage) ?: defaultLocaleLanguage
+        if (localeValue.contains("_")) {
+            val locales = localeValue.split("_")
+            if (locales.size > 1) {
+                return Locale(locales[0], locales[1])
+            }
+        }
         return Locale(localeValue)
     }
 
