@@ -95,7 +95,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     // Firework SDK
-    val fireworkBomVersion = "2024.10.16"
+    val fireworkBomVersion = "2024.10.22"
     implementation(platform("com.firework:firework-bom:$fireworkBomVersion"))
     implementation("com.firework:sdk")
     implementation("com.firework.external.imageloading:glide") // Glide (optional image loader)
