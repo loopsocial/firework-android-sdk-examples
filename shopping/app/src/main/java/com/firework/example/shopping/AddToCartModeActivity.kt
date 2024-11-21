@@ -95,7 +95,7 @@ class AddToCartModeActivity : AppCompatActivity() {
             ),
         )
         shopping.setShoppingCartBehaviour(Shopping.CartBehaviour.Embedded("some title"))
-        shopping.setOnCtaButtonClicked { productId, unitId, _, _ ->
+        shopping.setOnCtaButtonClicked { productId, unitId, _, _, _ ->
             uiScope.launch {
                 FireworkSdk.shopping.setCtaButtonStatus(Shopping.CtaButtonStatus.Loading)
                 delay(LONG_OPERATION_DELAY)
@@ -122,7 +122,7 @@ class AddToCartModeActivity : AppCompatActivity() {
                 ShoppingCartRepository.setProducts(hydratedProducts)
             }
         }
-        shopping.setOnProductLinkClickListener { _, _, productWebUrl, _ ->
+        shopping.setOnProductLinkClickListener { _, _, productWebUrl, _, _ ->
             Toast.makeText(
                 this@AddToCartModeActivity,
                 "Host App: Product Url: $productWebUrl",
