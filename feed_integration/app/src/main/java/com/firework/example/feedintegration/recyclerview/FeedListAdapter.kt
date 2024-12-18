@@ -13,6 +13,7 @@ import com.firework.example.feedintegration.R
 import com.firework.videofeed.FeedItemClickListener
 import com.firework.videofeed.FeedViewStateListener
 import com.firework.videofeed.FwLifecycleAwareVideoFeedView
+import com.firework.videofeed.FwVideoFeedView
 
 class FeedListAdapter(
     private val values: List<ListItem>,
@@ -60,14 +61,14 @@ class FeedListAdapter(
     }
 
     inner class FeedItemViewHolder(view: View) : BaseViewHolder(view) {
-        private var feedView: FwLifecycleAwareVideoFeedView? = null
+        private var feedView: FwVideoFeedView? = null
 
         override fun bind(item: ListItem) {
             // This check is needed to avoid calling init() every time view goes in and out of the view port
             if (feedView == null) {
-                val feedView: FwLifecycleAwareVideoFeedView =
-                    view.findViewById<FwLifecycleAwareVideoFeedView?>(R.id.feedView).apply {
-                        init((item as FeedViewItem).viewOptions, lifecycle)
+                val feedView: FwVideoFeedView =
+                    view.findViewById<FwVideoFeedView?>(R.id.feedView).apply {
+                        init((item as FeedViewItem).viewOptions)
                         setOnErrorListener(onFeedErrorListener)
                         setOnFeedItemClickListener(onFeedItemClickListener)
                         setOnFeedViewStateListener(onFeedViewStateListener)
