@@ -93,6 +93,7 @@ private fun VideoFeed() {
                     )
                 }
                 playerOptions {
+                    autoplay(true)
                     playerMode(PlayerMode.FIT_MODE)
                     showShareButton(true)
                     autoPlayOnComplete(true)
