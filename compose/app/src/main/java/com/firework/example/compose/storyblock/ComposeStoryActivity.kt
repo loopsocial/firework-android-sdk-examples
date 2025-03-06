@@ -30,11 +30,10 @@ class ComposeStoryActivity : FragmentActivity() {
 
         setContent {
             MaterialTheme {
-                Scaffold(
-                    modifier = Modifier.fillMaxSize()
-                ) { innerPadding ->
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     StoryblockItem(
-                        modifier = Modifier
+                        modifier =
+                        Modifier
                             .padding(innerPadding)
                             .fillMaxSize()
                     )

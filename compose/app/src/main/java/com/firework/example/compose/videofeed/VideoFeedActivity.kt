@@ -37,7 +37,6 @@ import com.firework.viewoptions.playerUiOptions
 import com.firework.viewoptions.titleOptions
 
 class VideoFeedActivity : ComponentActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

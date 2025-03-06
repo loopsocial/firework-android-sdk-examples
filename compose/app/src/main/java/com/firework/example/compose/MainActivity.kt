@@ -23,7 +23,6 @@ import com.firework.example.compose.storyblock.ComposeStoryActivity
 import com.firework.example.compose.videofeed.VideoFeedActivity
 
 class MainActivity : ComponentActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -32,8 +31,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background,
                 ) {
-                    Scaffold(
-                    ) { innerPadding ->
+                    Scaffold { innerPadding ->
                         NavigationButtons(innerPadding)
                     }
                 }
