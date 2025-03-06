@@ -19,6 +19,14 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".videofeed.VideoFeedActivity"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+
+        <activity android:name=".storyblock.ComposeStoryActivity" />
+
+        <activity android:name=".storyblock.ComposeLazyVerticalGridStoryActivity"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+
     </application>
 
 </manifest>
