@@ -8,13 +8,13 @@ plugins {
 android {
     namespace = "com.firework.example.compose"
 
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.firework.example.compose"
 
         minSdk = 21
-        targetSdk = 34
+        targetSdk = 35
 
         versionCode = 1
         versionName = "1.0.0"
@@ -80,13 +80,14 @@ detekt {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.13.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
-    implementation("androidx.activity:activity-compose:1.9.0")
-    implementation("androidx.compose.material:material:1.6.6")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("androidx.core:core-ktx:1.15.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
+    implementation("androidx.activity:activity-compose:1.10.1")
+    implementation("androidx.compose.material:material:1.7.8")
 
     // compose
-    implementation(platform("androidx.compose:compose-bom:2024.04.01"))
+    implementation(platform("androidx.compose:compose-bom:2025.02.00"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
