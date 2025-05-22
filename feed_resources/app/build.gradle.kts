@@ -82,7 +82,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
     // Firework SDK
-    val fireworkBomVersion = "2025.05.06"
+    val fireworkBomVersion = "2025.05.22"
     implementation(platform("com.firework:firework-bom:$fireworkBomVersion"))
     implementation("com.firework:sdk")
     implementation("com.firework.external.imageloading:glide") // Glide (optional image loader)
