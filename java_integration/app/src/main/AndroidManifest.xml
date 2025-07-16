@@ -59,6 +59,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".language.LanguageMainActivity" />
+
     </application>
 
 </manifest>

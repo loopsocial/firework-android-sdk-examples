@@ -36,5 +36,11 @@ public class HomeActivity extends AppCompatActivity {
             Intent intent = new Intent(this, com.firewok.example.java_integration.share.ShareLinkMainActivity.class);
             startActivity(intent);
         });
+
+        Button languageBtn = findViewById(R.id.languageBtn);
+        languageBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, com.firewok.example.java_integration.language.LanguageMainActivity.class);
+            startActivity(intent);
+        });
     }
 }

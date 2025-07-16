@@ -32,4 +32,9 @@
     <!-- Share Link related strings -->
     <string name="btn_share_link">Share Link Demo</string>
     <string name="share_link_title">Share Link Demo</string>
+    
+    <!-- Language related strings -->
+    <string name="btn_language">Language Demo</string>
+    <string name="language_title">Language Demo</string>
+    <string name="language">Language</string>
 </resources>
