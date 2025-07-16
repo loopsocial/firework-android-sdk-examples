@@ -40,4 +40,12 @@
         android:textSize="16sp"
         android:layout_margin="8dp" />
 
+    <Button
+        android:id="@+id/shareLinkBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_share_link"
+        android:textSize="16sp"
+        android:layout_margin="8dp" />
+
 </LinearLayout>

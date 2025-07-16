@@ -40,6 +40,25 @@
 
         <activity android:name=".pip.PictureInPictureActivity" />
 
+        <activity android:name=".share.ShareLinkMainActivity" />
+
+        <activity
+            android:name=".share.ShareLinkActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NoUiActivity">
+            <intent-filter android:label="Share link example">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Replace the host value with your website domain -->
+                <data
+                    android:host="example.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

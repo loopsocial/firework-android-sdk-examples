@@ -28,4 +28,8 @@
     <string name="close_pip_mode">Close PiP mode</string>
     <string name="close_pip_on_stop">Close PiP mode onStop</string>
     <string name="close_pip_on_destroy">Close PiP mode onDestroy</string>
+    
+    <!-- Share Link related strings -->
+    <string name="btn_share_link">Share Link Demo</string>
+    <string name="share_link_title">Share Link Demo</string>
 </resources>

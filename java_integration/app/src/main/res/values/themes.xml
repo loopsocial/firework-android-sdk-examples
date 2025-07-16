@@ -6,4 +6,12 @@
     </style>
 
     <style name="Theme.Java_integration" parent="Base.Theme.Java_integration" />
+
+    <style name="Theme.NoUiActivity" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
 </resources>
