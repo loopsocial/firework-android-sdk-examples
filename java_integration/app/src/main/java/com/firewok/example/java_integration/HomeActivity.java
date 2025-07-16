@@ -15,7 +15,13 @@ public class HomeActivity extends AppCompatActivity {
 
         Button feedIntegrationBtn = findViewById(R.id.feedIntegrationBtn);
         feedIntegrationBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, com.firewok.example.java_integration.feedintegration.MainActivity.class);
+            startActivity(intent);
+        });
+
+        Button storyBlockBtn = findViewById(R.id.storyBlockBtn);
+        storyBlockBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, com.firewok.example.java_integration.storyblock.MainActivity.class);
             startActivity(intent);
         });
     }

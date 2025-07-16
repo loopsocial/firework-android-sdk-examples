@@ -36,6 +36,8 @@
 
         <activity android:name=".feedintegration.addremove.AddRemoveIntegrationActivity" />
 
+        <activity android:name=".storyblock.MainActivity" />
+
     </application>
 
 </manifest>
