@@ -69,6 +69,8 @@
 
         <activity android:name=".shopping.shoppingcart.ShoppingActivity" />
 
+        <activity android:name=".live.LiveMainActivity" />
+
     </application>
 
 </manifest>

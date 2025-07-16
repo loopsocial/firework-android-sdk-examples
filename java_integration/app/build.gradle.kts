@@ -24,6 +24,7 @@ android {
             )
             buildConfigField("String", "FW_CHANNEL_ID", "\"7RXwK8k\"")
             buildConfigField("String", "FW_PLAYLIST_ID", "\"g4lA0g\"")
+            buildConfigField("String", "FW_CONTENT_ID", "\"gle8W8\"")
         }
         release {
             isMinifyEnabled = false
@@ -65,4 +66,5 @@ dependencies {
     implementation(platform("com.firework:firework-bom:$fireworkBomVersion"))
     implementation("com.firework:sdk")
     implementation("com.firework.external.imageloading:glide") // Glide (optional image loader)
+    implementation("com.firework.external.livestream:singleHostPlayer")
 }

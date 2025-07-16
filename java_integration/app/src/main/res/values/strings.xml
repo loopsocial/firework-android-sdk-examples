@@ -46,4 +46,8 @@
     <string name="add_to_cart_mode_title">Add to Cart Mode</string>
     <string name="shop_now_mode_title">Shop Now Mode</string>
     <string name="checkout">Checkout</string>
+    
+    <!-- Live Stream related strings -->
+    <string name="btn_live_stream">Single Host Livestream</string>
+    <string name="live_stream_title">Single Host Livestream Demo</string>
 </resources>
