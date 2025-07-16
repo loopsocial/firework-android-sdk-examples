@@ -6,6 +6,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import com.firewok.example.java_integration.feedintegration.MainActivity;
 import com.firewok.example.java_integration.live.LiveMainActivity;
+import com.firewok.example.java_integration.feedresource.FeedResourceMainActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -53,6 +54,12 @@ public class HomeActivity extends AppCompatActivity {
         Button liveStreamBtn = findViewById(R.id.liveStreamBtn);
         liveStreamBtn.setOnClickListener(v -> {
             Intent intent = LiveMainActivity.getIntent(this);
+            startActivity(intent);
+        });
+
+        Button feedResourceBtn = findViewById(R.id.feedResourceBtn);
+        feedResourceBtn.setOnClickListener(v -> {
+            Intent intent = FeedResourceMainActivity.getIntent(this);
             startActivity(intent);
         });
     }

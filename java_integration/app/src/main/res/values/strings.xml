@@ -50,4 +50,29 @@
     <!-- Live Stream related strings -->
     <string name="btn_live_stream">Single Host Livestream</string>
     <string name="live_stream_title">Single Host Livestream Demo</string>
+    
+    <!-- Feed Resource related strings -->
+    <string name="btn_feed_resource">Feed Resources</string>
+    <string name="feed_resource_title">Feed Resources Demo</string>
+    <string name="channel_hashtag_filter_expression">Hashtag Filter Expression:</string>
+    <string name="sku_ids">Sku ids:</string>
+    <string name="element_id">Element ID:</string>
+    <string name="categories">Categories:</string>
+    <string name="discovery">Discovery</string>
+    <string name="channel">Channel</string>
+    <string name="playlist">Playlist</string>
+    <string name="sku">Sku</string>
+    <string name="single_content">Single Content</string>
+    <string name="dynamic_content">Dynamic content</string>
+    <string name="channel_hashtags">Channel hashtags</string>
+    <string name="discovery_screen_title">FW Discovery</string>
+    <string name="playlist_screen_title">FW Playlist</string>
+    <string name="channel_screen_title">FW Channel</string>
+    <string name="channel_hashtags_screen_title">FW Channel Hashtags</string>
+    <string name="sku_screen_title">FW Sku feed</string>
+    <string name="single_content_screen_title">FW Single Content</string>
+    <string name="dynamic_content_screen_title">FW Dynamic Content</string>
+    <string name="enter_hashtag_filter_expression">Enter hashtag filter expression</string>
+    <string name="enter_sku_ids">Enter sku ids</string>
+    <string name="search">Search</string>
 </resources>

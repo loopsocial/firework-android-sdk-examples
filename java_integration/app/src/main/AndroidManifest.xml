@@ -71,6 +71,22 @@
 
         <activity android:name=".live.LiveMainActivity" />
 
+        <activity android:name=".feedresource.FeedResourceMainActivity" />
+
+        <activity android:name=".feedresource.discovery.DiscoveryActivity" />
+
+        <activity android:name=".feedresource.channel.ChannelActivity" />
+
+        <activity android:name=".feedresource.playlist.PlaylistActivity" />
+
+        <activity android:name=".feedresource.dynamiccontent.DynamicContentActivity" />
+
+        <activity android:name=".feedresource.singlecontent.SingleContentActivity" />
+
+        <activity android:name=".feedresource.sku.SkuActivity" />
+
+        <activity android:name=".feedresource.channelhashtags.ChannelHashtagsActivity" />
+
     </application>
 
 </manifest>
