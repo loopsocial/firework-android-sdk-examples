@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FW Java Integration</string>
+    <string name="home_title">Firework Android SDK Java Examples</string>
+    <string name="btn_feed_integration">Feed Integration</string>
+    <string name="btn_activity">Feed in Activity</string>
+    <string name="btn_fragment">Feed in Fragment</string>
+    <string name="btn_recycler_view">Feed in RecyclerView</string>
+    <string name="btn_add_remove">Feed Add/Remove programmatically</string>
+    <string name="activity_screen_title">Activity integration</string>
+    <string name="fragment_screen_title">Fragment integration</string>
+    <string name="recycler_view_screen_title">Recycler view integration</string>
+    <string name="add_remove_screen_title">Add/Remove integration</string>
+    <string name="add_feed">Add Feed</string>
+    <string name="remove_feed">Remove Feed</string>
+</resources>
