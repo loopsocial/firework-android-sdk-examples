@@ -17,4 +17,15 @@
     <string name="play">Play</string>
     <string name="pause">Pause</string>
     <string name="btn_storyblock">StoryBlock Demo</string>
+    
+    <!-- Picture-in-Picture related strings -->
+    <string name="btn_picture_in_picture">Picture-in-Picture Demo</string>
+    <string name="picture_in_picture_title">Picture-in-Picture Demo</string>
+    <string name="source_type">Source Type:</string>
+    <string name="channel_id">Channel ID:</string>
+    <string name="playlist_id">Playlist ID:</string>
+    <string name="enter_pip_mode">Enter PiP mode in 5 sec</string>
+    <string name="close_pip_mode">Close PiP mode</string>
+    <string name="close_pip_on_stop">Close PiP mode onStop</string>
+    <string name="close_pip_on_destroy">Close PiP mode onDestroy</string>
 </resources>

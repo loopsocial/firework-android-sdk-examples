@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pip.PictureInPictureActivity">
+
+    <com.firework.videofeed.FwVideoFeedView
+        android:id="@+id/fwVideoFeedView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/enterPip"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/enterPip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_pip_mode"
+        app:layout_constraintBottom_toTopOf="@id/closePip"
+        app:layout_constraintTop_toBottomOf="@id/fwVideoFeedView" />
+
+    <Button
+        android:id="@+id/closePip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/close_pip_mode"
+        app:layout_constraintBottom_toTopOf="@id/closePipOnStop"
+        app:layout_constraintTop_toBottomOf="@id/enterPip" />
+
+    <CheckBox
+        android:id="@+id/closePipOnStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/close_pip_on_stop"
+        app:layout_constraintBottom_toTopOf="@id/closePipOnDestroy"
+        app:layout_constraintTop_toBottomOf="@id/closePip" />
+
+    <CheckBox
+        android:id="@+id/closePipOnDestroy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/close_pip_on_destroy"
+        app:layout_constraintBottom_toTopOf="@id/details"
+        app:layout_constraintTop_toBottomOf="@id/closePipOnStop" />
+
+    <include
+        android:id="@+id/details"
+        layout="@layout/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/closePipOnDestroy" />
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

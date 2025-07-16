@@ -38,6 +38,8 @@
 
         <activity android:name=".storyblock.MainActivity" />
 
+        <activity android:name=".pip.PictureInPictureActivity" />
+
     </application>
 
 </manifest>

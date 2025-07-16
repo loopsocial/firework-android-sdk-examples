@@ -24,5 +24,11 @@ public class HomeActivity extends AppCompatActivity {
             Intent intent = new Intent(this, com.firewok.example.java_integration.storyblock.MainActivity.class);
             startActivity(intent);
         });
+
+        Button pictureInPictureBtn = findViewById(R.id.pictureInPictureBtn);
+        pictureInPictureBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, com.firewok.example.java_integration.pip.PictureInPictureActivity.class);
+            startActivity(intent);
+        });
     }
 }
