@@ -15,7 +15,7 @@ This repo holds the Firework Android SDK example applications.
 * [Jetpack Compose](#jetpack-compose-example-app)
 * [Story Block](#story-block-example-app)
 * [In-app Language](#in-app-language-example-app)
-
+* [Java Demo](#java_intergration)
 **Read more about the integration here** https://docs.firework.tv/
 
 ---

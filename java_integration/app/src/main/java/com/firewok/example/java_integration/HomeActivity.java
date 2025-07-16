@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.firewok.example.java_integration.feedintegration.MainActivity;
 import com.firewok.example.java_integration.live.LiveMainActivity;
 import com.firewok.example.java_integration.feedresource.FeedResourceMainActivity;
+import com.firewok.example.java_integration.viewoptions.ViewOptionsMainActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -60,6 +61,12 @@ public class HomeActivity extends AppCompatActivity {
         Button feedResourceBtn = findViewById(R.id.feedResourceBtn);
         feedResourceBtn.setOnClickListener(v -> {
             Intent intent = FeedResourceMainActivity.getIntent(this);
+            startActivity(intent);
+        });
+
+        Button viewOptionsBtn = findViewById(R.id.viewOptionsBtn);
+        viewOptionsBtn.setOnClickListener(v -> {
+            Intent intent = ViewOptionsMainActivity.getIntent(this);
             startActivity(intent);
         });
     }

@@ -75,4 +75,8 @@
     <string name="enter_hashtag_filter_expression">Enter hashtag filter expression</string>
     <string name="enter_sku_ids">Enter sku ids</string>
     <string name="search">Search</string>
+    
+    <!-- View Options related strings -->
+    <string name="btn_view_options">View Options</string>
+    <string name="view_options_title">View Options Demo</string>
 </resources>

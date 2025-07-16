@@ -80,4 +80,12 @@
         android:textSize="16sp"
         android:layout_margin="8dp" />
 
+    <Button
+        android:id="@+id/viewOptionsBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_view_options"
+        android:textSize="16sp"
+        android:layout_margin="8dp" />
+
 </LinearLayout>

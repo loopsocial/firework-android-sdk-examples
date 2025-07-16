@@ -87,6 +87,8 @@
 
         <activity android:name=".feedresource.channelhashtags.ChannelHashtagsActivity" />
 
+        <activity android:name=".viewoptions.ViewOptionsMainActivity" />
+
     </application>
 
 </manifest>
