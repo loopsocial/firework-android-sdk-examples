@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".shopping.ShoppingMainActivity">
+
+    <Button
+        android:id="@+id/btnAddToCart"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/add_to_cart" />
+
+    <Button
+        android:id="@+id/btnShopNow"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:text="@string/shop_now" />
+
+</LinearLayout> 

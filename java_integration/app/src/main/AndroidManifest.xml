@@ -61,6 +61,14 @@
 
         <activity android:name=".language.LanguageMainActivity" />
 
+        <activity android:name=".shopping.ShoppingMainActivity" />
+
+        <activity android:name=".shopping.AddToCartModeActivity" />
+
+        <activity android:name=".shopping.ShopNowModeActivity" />
+
+        <activity android:name=".shopping.shoppingcart.ShoppingActivity" />
+
     </application>
 
 </manifest>

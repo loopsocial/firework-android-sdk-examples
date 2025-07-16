@@ -37,4 +37,13 @@
     <string name="btn_language">Language Demo</string>
     <string name="language_title">Language Demo</string>
     <string name="language">Language</string>
+    
+    <!-- Shopping related strings -->
+    <string name="btn_shopping">Shopping Demo</string>
+    <string name="shopping_title">Shopping Demo</string>
+    <string name="add_to_cart">Add to cart mode</string>
+    <string name="shop_now">Shop now mode</string>
+    <string name="add_to_cart_mode_title">Add to Cart Mode</string>
+    <string name="shop_now_mode_title">Shop Now Mode</string>
+    <string name="checkout">Checkout</string>
 </resources>
